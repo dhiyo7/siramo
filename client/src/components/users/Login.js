@@ -5,13 +5,11 @@ import {
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 
-import { User } from '../../store/firebase'
-import SignUp from './SignUp'
-// import Container from '../customs/Container'
-// import Label from '../customs/Label'
-// import UserStore from '../../store/UserStore'
+// import { User, Fire } from '../../store/firebase'
+// import SignUp from './SignUp'
+import UserStore from '../../store/UserStore'
 
-// @inject('UserStore')
+@inject('UserStore')
 class Login extends Component {
   constructor() {
     super()
@@ -30,79 +28,84 @@ class Login extends Component {
     } else if (!password) {
       Alert.alert('Sorry!','Please fill your Password')
     } else {
-      this.firebaseLogin({email, password})
+      let navigation = this.props.navigation
+      UserStore.firebaseLogin({email, password}, navigation)
     }
   }
 
-  firebaseLogin = (data) => {
-    console.log(this.state)
-    User.signInAndRetrieveDataWithEmailAndPassword(data.email, data.password)
-      .then(user => {
-        console.log(user)
-        if (user) {
-          this.props.navigation.navigate('Home')
-        }
-      })
-      .catch(err => console.log(err))
-  }
-
-  // tambahan kalo bisa
+  // tambahan kalo bisa, belum bisa sampe sekarang
   googleLogin = () => {
     console.log('login Google')
+    let provider = new Fire.auth.GoogleAuthProvider()
+    User.signInWithPopup(provider)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
   
   render() {
     // tiap ngetik ngerender terus
     return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          autoCapitalize='none'
-          onSubmitEditing={() => this.passwordInput.focus()}
-          onChangeText={(email) => this.setState({email})}
-          autoCorrect={false}
-          keyboardType='email-address'
-          returnKeyType='next'
-          placeholder='Email'
-          placeholderTextColor='rgba(225,225,225,0.7)'
-        />
+      <View style={styles.mainContainer}>
+        <View style={styles.container}>
+          <TextInput
+            style={styles.input}
+            autoCapitalize='none'
+            onSubmitEditing={() => this.passwordInput.focus()}
+            onChangeText={(email) => this.setState({email})}
+            autoCorrect={false}
+            keyboardType='email-address'
+            returnKeyType='next'
+            placeholder='Email'
+            placeholderTextColor='rgba(225,225,225,0.7)'
+          />
 
-        <TextInput
-          style={styles.input}
-          returnKeyType='go'
-          ref={(input) => this.passwordInput = input}
-          onChangeText={(password) => this.setState({password})}
-          placeholder='Password'
-          placeholderTextColor='rgba(225,225,225,0.7)'
-          secureTextEntry
-        />
-        
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={this.submitLogin}
-        >
-          <Text style={styles.buttonText}>LOGIN</Text>
-        </TouchableOpacity>
+          <TextInput
+            style={styles.input}
+            returnKeyType='go'
+            ref={(input) => this.passwordInput = input}
+            onChangeText={(password) => this.setState({password})}
+            placeholder='Password'
+            placeholderTextColor='rgba(225,225,225,0.7)'
+            secureTextEntry
+          />
+          
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={this.submitLogin}
+          >
+            <Text style={styles.buttonText}>LOGIN</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={this.googleLogin}
-        >
-          <Text style={styles.buttonText}>Connect with Google</Text>
-        </TouchableOpacity>
+          {/* <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={this.googleLogin}
+          >
+            <Text style={styles.buttonText}>Connect with Google</Text>
+          </TouchableOpacity> */}
 
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() => this.props.navigation.navigate('SignUp')}
-        >
-          <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => this.props.navigation.navigate('SignUp')}
+          >
+            <Text style={styles.buttonText}>Sign Up</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    backgroundColor: '#151e2d',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   container: {
     backgroundColor: '#151e2d',
     padding: 20,
