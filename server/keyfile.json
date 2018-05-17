@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "spherical-proxy-197909",
+  "private_key_id": "53ae8c3180ebf4775936155de3f7c7a288333a46",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPdOFyu8if+c3E\nFfC2I6hU0Alv6ioEHrgA1dq3VVr5Oa4iWexueHHsfL4DPpYAnCJY93iuBkPHXyuG\n0LeeFRMiiiKEXxT1DUvA4lz6CZ+sbWpX8veWpa32zfm/VJPRVoPylwr7SxYUw19O\nNdMFfwrGNloF7AMmEnqkqL6eHmmwLNtZSY5ZVvoCJWtc6iZvz29OUo1hoCZvcgyF\ng1kpMIy4E00RsN6fYla+LI8SgFnEaErH8Vc3eurZkLkcDPwPk+6gVTbk6LwxNIOk\ndp3K5hjP6HRara6z6AvQcC1TmpqndpQJwunM0rDKnbsq2MlQQcy6KysGcCOOCRCI\noyga8H3/AgMBAAECggEAExjuXBJ/UIK9d2yRoSK9LzmLdNr4jTKKu8D0BmZ8Hm85\n4X2nry+1RRDiqQfM5Td6TfhSCqsW+DaBmkKCdLH59fcDYG4kTr6vl4z/BCF4qnXU\nEU6TjjGoRw0FDaDqjp3JPb67yxBJcxXdIyT/TQU5568/MEZer9WJprjF+2ZPUmFU\nOtGB37AL+AMHzVFNnlTs0eVWtMFTyeceIjtG89f9zSKoySYS1IysdQTrvBzRCeqX\niYjSdrr6ajjehSuHrUlOZJoEX4vvIb3d7LtYeLfVNMIKTHYhhrHbA4SO1u/aNFq2\niDENenG0tmMpaeQMd7+sowjmsPO5K0yCDizYgZn8OQKBgQD0kH1/AGqgoJTqkSvn\nq+t9gSGzgdM5t+JcL1MIUVUNGf30o10UhGyEaeOMsA0A4kwz+l7D2qL79J743Q59\niXU+DmhjnAPtVW/HMZtzVmrnnd6eXiE6wd4zzDNUgcJ8iQXm5C9QOTcNRQ2YF6SI\nl++Jjzlu7ECrFhebtxjN5Z9YOwKBgQDZKDLC9YxAmPt8PaEuW+fiZ+VWMyNWlAxw\n7TD8poKH7dah5CDJGlhEO7NFz0S/wLr7g1dseGgHy0110QFCRsSIWOCbCWaKTM+S\nHgVAQ1Sfn82JKTZw8KoVkkex2E6guEOo0pg9OH7yfHH5s0kHp+TEpN/spvYjWK79\nowmqbj3ZDQKBgAZXFJnNRfZiE1o9Zzj7UQCQ73G65OHzLXAcXfeyPBU53kaQUaJt\niG6qXBbSnZOvSjByxjAno+AKSHDFMlH41UxFjVk/uy5U76/nTlNgIydcBWBvqkbe\nrccD/TSspIEcAEYrFjrrMM0sRBz0R/Suk6wqRV/lygtlaDlGNuNnl4jvAoGBANCU\n6PUUb8vYZa53b+scggWY79K1Ods+Rxjs6yGyOiygCYnkmo0vjdq0UUTbilh4oeFV\nzdI1cQ8TeuqQf5oOaVXhsJOaGvD6SGI8DaUlRxIvp3d4q38d2vDvWYf8kcGUXAC7\nj1k2e9EkMUG7sIj2/ijXiPJBiKh41VRwlqcqTqO9AoGAfM9gnugJFd9MCGHVWLL+\naWOTXGmqBaiyJfEmEFihoPZA8mRyeYD4m+6NfoGDUeC+EYJSJ6aglzlba1PWLJ5A\nNQpwMnQnmRBZpM4rrjzy6fn/XjI654YvoedSFF4maUrw0qmT6qJJyxTOQ5lmOQAm\nMXue89HvdULpkeQxoPh79mM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "agrhaganteng@spherical-proxy-197909.iam.gserviceaccount.com",
+  "client_id": "107405053881800903307",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/agrhaganteng%40spherical-proxy-197909.iam.gserviceaccount.com"
+}
