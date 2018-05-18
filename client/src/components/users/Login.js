@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { 
   View, Text, TextInput,
-  StyleSheet, TouchableOpacity, Alert
+  StyleSheet, TouchableOpacity, Alert, Image
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 import Loader from '../customs/Loader'
 // import { User, Fire } from '../../store/firebase'
 // import SignUp from './SignUp'
 import UserStore from '../../store/UserStore'
+
+const background = require('../../assets/logo/Drawing1-ModelEdit.png')
 
 @inject('UserStore')
 @observer class Login extends Component {
@@ -19,6 +21,9 @@ import UserStore from '../../store/UserStore'
     }
   }
 
+  static navigationOptions = {
+    header: null
+  }
   submitLogin = () => {
     let email = this.state.email
     let password = this.state.password
@@ -51,6 +56,10 @@ import UserStore from '../../store/UserStore'
     // tiap ngetik ngerender terus
     return (
       <View style={styles.mainContainer}>
+        <Image
+           style={{width: '100%', height: '60%', marginTop: 24, marginLeft: 8, marginRight: 8}}
+           source={background}
+        ></Image>
         <View style={styles.container}>
           <Loader loading={loading}/>
           <TextInput
@@ -61,7 +70,7 @@ import UserStore from '../../store/UserStore'
             autoCorrect={false}
             keyboardType='email-address'
             returnKeyType='next'
-            placeholder='Email'
+            placeholder='Enter your email address'
             placeholderTextColor='rgba(225,225,225,0.7)'
           />
 
@@ -70,7 +79,7 @@ import UserStore from '../../store/UserStore'
             returnKeyType='go'
             ref={(input) => this.passwordInput = input}
             onChangeText={(password) => this.setState({password})}
-            placeholder='Password'
+            placeholder='Enter your password'
             placeholderTextColor='rgba(225,225,225,0.7)'
             secureTextEntry
           />
@@ -93,7 +102,8 @@ import UserStore from '../../store/UserStore'
             style={styles.buttonContainer}
             onPress={() => this.props.navigation.navigate('SignUp')}
           >
-            <Text style={styles.buttonText}>Sign Up</Text>
+            <Text style={styles.buttonText}>SIGN UP</Text>
+            
           </TouchableOpacity>
         </View>
       </View>
@@ -103,27 +113,42 @@ import UserStore from '../../store/UserStore'
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
-    backgroundColor: '#151e2d',
+    backgroundColor: '#F1F8E9',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 12,
+    paddingRight: 12
+  },
+  container: {
+    backgroundColor: '#F1F8E9',
+    width: '100%',
+    marginBottom: 10,
+    marginTop: 10,
+    marginRight: 8,
+    marginLeft: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  container: {
-    backgroundColor: '#151e2d',
-    padding: 20,
-    width: '100%'
-  },
   input: {
     height:40,
+    width: 320,
     backgroundColor: 'rgba(225,225,225,0.2)',
-    marginBottom: 10,
     padding: 10,
-    color: '#fff'
+    marginRight: 8,
+    marginLeft: 8,
+    marginTop: 2,
+    marginBottom: 2,
+    color: '#fff',
+    borderRadius: 4
   },
   buttonContainer: {
-    backgroundColor: '#2980b6',
+    backgroundColor: '#20b2aa',
     paddingVertical: 15,
-    marginBottom: 4
+    marginBottom: 8,
+    borderRadius: 4,
+    width: 320,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
     color: '#fff',

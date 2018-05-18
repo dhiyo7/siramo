@@ -10,7 +10,6 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text> Halaman Home ini ? </Text>
         <FarmDetail />
       </View>
     )
