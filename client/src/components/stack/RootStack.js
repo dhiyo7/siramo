@@ -15,5 +15,5 @@ export default RootStack = createStackNavigator({
     screen: HomeStack
   }
 },{
-  initialRouteName: 'Login'
+  initialRouteName: 'Login',
 })

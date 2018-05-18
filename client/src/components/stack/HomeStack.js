@@ -2,14 +2,15 @@ import { createStackNavigator, createDrawerNavigator, DrawerItems } from 'react-
 import { View, SafeAreaView, Button } from 'react-native'
 import Home from '../Home'
 import Graph from '../farm/Graph'
+import History from '../../views/History'
 
 export default HomeStack = createDrawerNavigator(
 {
   Home: {
     screen: Home
   },
-  Graph: {
-    screen: Graph
+  History: {
+    screen: History
   }
 // },
 // {

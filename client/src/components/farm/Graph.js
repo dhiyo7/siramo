@@ -8,35 +8,10 @@ import UserStore from '../../store/UserStore'
 @inject('FarmStore')
 @observer class Graph extends Component {
 
-  componentDidMount() {
-    FarmStore.getHistory()
-  }
-
   render() {
-    let waterRatioArr = [],
-        humidityArr = [],
-        temperatureArr = [],
-        waterLevelArr = []
-    FarmStore.farmData.historyHumidity.forEach(element => {
-      humidityArr.push({
-        x: UserStore.dateFormat(element.x),
-        y: element.y
-      })
-    })
-    FarmStore.farmData.historyWaterRatio.forEach(element => {
-      waterRatioArr.push({
-        x: UserStore.dateFormat(element.x),
-        y: element.y
-      })
-    })
-    FarmStore.farmData.historyTemperature.forEach(element => {
-      temperatureArr.push({
-        x: UserStore.dateFormat(element.x),
-        y: element.y
-      })
-    })
-    FarmStore.farmData.historyWaterLevel.forEach(element => {
-      waterLevelArr.push({
+    let sensorArr = []
+    this.props.sensorData.forEach(element => {
+      sensorArr.push({
         x: UserStore.dateFormat(element.x),
         y: element.y
       })
@@ -45,19 +20,7 @@ import UserStore from '../../store/UserStore'
       <ScrollView>
         <View style={styles.container}>
           <Text>Data Humidity</Text>
-          <PureChart style={styles.chart} data={humidityArr} type='line'/>
-        </View>
-        <View style={styles.container}>
-          <Text>Data Water Ratio</Text>
-          <PureChart style={styles.chart} data={waterRatioArr} type='line'/>
-        </View>
-        <View style={styles.container}>
-          <Text>Data Temperature</Text>
-          <PureChart style={styles.chart} data={temperatureArr} type='line'/>
-        </View>
-        <View style={styles.container}>
-          <Text>Data Water Level</Text>
-          <PureChart style={styles.chart} data={waterLevelArr} type='line'/>
+          <PureChart style={styles.chart} data={sensorArr} type='line'/>
         </View>
       </ScrollView>
     )
