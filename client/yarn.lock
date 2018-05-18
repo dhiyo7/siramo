@@ -5789,6 +5789,16 @@ react-native-photo-upload@^1.2.0:
     react-native-image-picker "^0.26.7"
     react-native-image-resizer "^1.0.0"
 
+<<<<<<< 61f3e4d74112cda383d3cf5a5b4872bb768d18a9
+=======
+react-native-pure-chart@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/react-native-pure-chart/-/react-native-pure-chart-0.0.21.tgz#0fd2e66223cc58887b473dfc5c0d3482e0eea42c"
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.6.0"
+
+>>>>>>> graph sebelum rebase
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"

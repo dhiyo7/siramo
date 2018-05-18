@@ -77,7 +77,7 @@ class UserStore {
     console.log("Masuk sini ?")
     this.userData.loading = true
     User.createUserWithEmailAndPassword(data.email, data.password)
-      .then(response => {
+      .then(response => {1
         console.log('Response Daftar', response.user.uid)
         if (response.user) {
           this.userData.uid = response.user.uid
