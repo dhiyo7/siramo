@@ -1,12 +1,16 @@
 import { createStackNavigator, createDrawerNavigator, DrawerItems } from 'react-navigation'
 import { View, SafeAreaView, Button } from 'react-native'
 import Home from '../Home'
+import Graph from '../farm/Graph'
 
 export default HomeStack = createDrawerNavigator(
 {
   Home: {
     screen: Home
   },
+  Graph: {
+    screen: Graph
+  }
 // },
 // {
 //   contentComponent:(props) => (
