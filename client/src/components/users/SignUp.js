@@ -11,8 +11,10 @@ import {
 import { inject, observer } from 'mobx-react'
 import { User } from '../../store/firebase'
 import UserStore from '../../store/UserStore'
+import Loader from '../customs/Loader';
 
-class SignUp extends Component {
+@inject('UserStore')
+@observer class SignUp extends Component {
   constructor() {
     super()
     this.state = {
@@ -56,9 +58,11 @@ class SignUp extends Component {
   }
 
   render() {
+    const { loading } = UserStore.userData
     return (
       <View style={styles.mainContainer}>
         <View style={styles.container}>
+        <Loader loading={loading} />
           <TextInput
             style={styles.input}
             autoCapitalize='none'

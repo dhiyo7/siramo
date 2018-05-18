@@ -4,13 +4,13 @@ import {
   StyleSheet, TouchableOpacity, Alert
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
-
+import Loader from '../customs/Loader'
 // import { User, Fire } from '../../store/firebase'
 // import SignUp from './SignUp'
 import UserStore from '../../store/UserStore'
 
 @inject('UserStore')
-class Login extends Component {
+@observer class Login extends Component {
   constructor() {
     super()
     this.state = {
@@ -47,10 +47,12 @@ class Login extends Component {
   }
   
   render() {
+    const { loading } = UserStore.userData
     // tiap ngetik ngerender terus
     return (
       <View style={styles.mainContainer}>
         <View style={styles.container}>
+          <Loader loading={loading}/>
           <TextInput
             style={styles.input}
             autoCapitalize='none'
