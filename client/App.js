@@ -26,11 +26,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 import RootStack from './src/components/stack/RootStack'
 import UserStore from './src/store/UserStore'
+import FarmStore from './src/store/FarmStore'
 
 export default class App extends React.Component {
   render() {
     return (
-      <Provider UserStore={UserStore}>
+      <Provider UserStore={UserStore} FarmStore={FarmStore}>
         <RootStack />
       </Provider>
     )

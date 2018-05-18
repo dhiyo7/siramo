@@ -70,6 +70,7 @@ class UserStore {
       })
       .catch(err => {
         Alert.alert(err.code, err.message)
+        this.userData.loading = false
       })
   }
 
@@ -90,6 +91,7 @@ class UserStore {
       })
       .catch(err => {
         Alert.alert(err.code, err.message)
+        this.userData.loading = false
       })
   }
 
