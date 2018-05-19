@@ -6,11 +6,15 @@ import {
   FlatList,
   Dimensions
 } from 'react-native';
-import { Icon } from 'react-native-elements'
 import { inject, observer } from 'mobx-react'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 import Graph from '../components/farm/Graph'
 import FarmStore from '../store/FarmStore'
+import TabBarLogo from '../components/logo/TabBarLogo'
+import Loader from '../components/customs/Loader'
+import LandscapeView from 'react-native-landscape-view'
+import { Ionicons } from '@expo/vector-icons'
+
 const initialLayout = {
   height: 0,
   width: Dimensions.get('window').width,
@@ -29,12 +33,19 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
     this.state = {  
       index: 0,
       routes: [
-        { key: 'first', title: 'HUMIDITY', icon: 'leaf'  },
-        { key: 'second', title: 'TEMPERATURE', icon: 'thermometer' },
-        { key: 'third', title: 'WATER RATIO', icon: 'water' },
-        { key: 'fourth', title: 'WATER LEVEL', icon: 'line-graph' },
+        { key: 'first', icon: 'md-cloudy'  },
+        { key: 'second', icon: 'md-thermometer' },
+        { key: 'third', icon: 'md-trending-up' },
+        { key: 'fourth', icon: 'md-water' },
       ],
     };
+  }
+
+  static navigationOptions = {
+    drawerLabel: 'History',
+    drawerIcon: () => (
+      <Ionicons name="md-analytics" size={24} color="green" />
+    )
   }
 
   componentDidMount() {
@@ -43,7 +54,7 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
 
   _handleIndexChange = index => this.setState({ index });
 
-  _renderHeader = props => <TabBar  {...props}/>;
+_renderHeader = props => <TabBar  {...props} renderIcon={this._renderIcon} tabStyle={{backgroundColor: '#AED581'}}/>;
 
   _renderScene = SceneMap({
     first: FirstRoute,
@@ -51,18 +62,27 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
     third: ThirdRoute,
     fourth: FourthRoute
   })
-  
+
+  _renderIcon = ({ route }: any) => {
+    return <Ionicons name={route.icon} size={24}  />;
+  };
 
   render() {
-    return (
-      <TabViewAnimated
-        navigationState={this.state}
-        renderScene={this._renderScene}
-        renderHeader={this._renderHeader}
-        onIndexChange={this._handleIndexChange}
-        initialLayout={initialLayout}
-      />
-    );
+    const loading = FarmStore.farmData.historyLoading
+    if (!loading) {
+      return (
+        <TabViewAnimated
+          navigationState={this.state}
+          renderScene={this._renderScene}
+          renderHeader={this._renderHeader}
+          onIndexChange={this._handleIndexChange}
+          initialLayout={initialLayout}
+        />
+      );
+    } else {
+      return <Loader loading={loading}/>
+    }
+    
   }
 }
 

@@ -8,31 +8,36 @@ class FarmStore {
     historyHumidity: [],
     historyWaterRatio: [],
     historyTemperature: [],
-    historyWaterLevel: []
+    historyWaterLevel: [],
+    historyLoading: false
   }
 
   getHistory = (key) => {
+    this.farmData.historyLoading = true
     db.ref('/history/17UFak7JqufG1RXUeVW30jwdfrQ2').on('value', (snapshot) => {
 
       snapshot.forEach(snap => {
         this.farmData.historyHumidity.push({
           x: snap.val().last_updated,
-          y: parseFloat(snap.val().humidity)})
+          y: parseFloat(snap.val().humidity)
+        })
         this.farmData.historyWaterRatio.push({
           x: snap.val().last_updated,
-          y: parseFloat(snap.val().water_ratio)})
+          y: Math.round(parseFloat(snap.val().water_ratio))
+        })
         this.farmData.historyTemperature.push({
           x: snap.val().last_updated,
-          y: parseFloat(snap.val().temperature)})
+          y: parseFloat(snap.val().temperature)
+        })
         this.farmData.historyWaterLevel.push({
           x: snap.val().last_updated,
-          y: parseFloat(snap.val().water_level)})
+          y: parseFloat(snap.val().water_level)
+        })
       })
-      // console.log(this.farmData.historyHumidity)
+      this.farmData.historyLoading = false
     })
   }
 
-  // Logout Belum
 }
 
 export default new FarmStore()

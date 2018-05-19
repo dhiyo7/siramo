@@ -3,6 +3,8 @@ import { View, SafeAreaView, Button } from 'react-native'
 import Home from '../Home'
 import Graph from '../farm/Graph'
 import History from '../../views/History'
+import SideMeny from '../../components/customs/SideMenu'
+import SideMenu from '../../components/customs/SideMenu';
 
 export default HomeStack = createDrawerNavigator(
 {
@@ -26,5 +28,6 @@ export default HomeStack = createDrawerNavigator(
 //   drawerCloseRoute: 'DrawerClose',
 //   drawerToggleRoute: 'DrawerToggle'
 },{
-  initialRouteName: 'Home'
+  initialRouteName: 'Home',
+  contentComponent: SideMenu,
 })

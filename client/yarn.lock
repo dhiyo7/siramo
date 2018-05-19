@@ -5815,6 +5815,10 @@ react-native-elements@^0.19.1:
     opencollective "^1.0.3"
     prop-types "^15.5.8"
 
+react-native-fa-icons@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-fa-icons/-/react-native-fa-icons-3.0.1.tgz#76c0f1cb97b57290be2589d6b35a80dd82234fe7"
+
 react-native-fs@^2.5.1:
   version "2.9.12"
   resolved "https://registry.yarnpkg.com/react-native-fs/-/react-native-fs-2.9.12.tgz#88d6c1e8eb26acbebca955e1cbd9c47d2c9452ba"
@@ -5837,6 +5841,10 @@ react-native-image-picker@^0.26.10, react-native-image-picker@^0.26.7:
 react-native-image-resizer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-image-resizer/-/react-native-image-resizer-1.0.0.tgz#d47e14943c37938e287fbd639e4db7ceb7fd8917"
+
+react-native-landscape-view@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-landscape-view/-/react-native-landscape-view-0.0.1.tgz#d82fef60f7c704dfdc7c2b2a51c242932ea5ed89"
 
 react-native-maps@0.21.0:
   version "0.21.0"
@@ -5922,6 +5930,14 @@ react-native-tab-view@~0.0.77:
 react-native-vector-icons@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.5.0.tgz#6b95619e64f62f05f579f74a01fe5640df95158b"
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.5.10"
+    yargs "^8.0.2"
+
+react-native-vector-icons@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.6.0.tgz#e4014311ffa6de397d914ffc31b7097a874cc8d5"
   dependencies:
     lodash "^4.0.0"
     prop-types "^15.5.10"
