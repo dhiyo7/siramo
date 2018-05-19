@@ -4,6 +4,7 @@ import SignUp from '../users/SignUp'
 import HomeStack from './HomeStack'
 import Graph from '../farm/Graph'
 
+
 export default RootStack = createStackNavigator({
   Login: {
     screen: Login
