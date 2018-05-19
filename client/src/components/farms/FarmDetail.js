@@ -13,10 +13,6 @@ import TemperatureGauge from '../customs/TemperatureGauge'
 
 @inject('UserStore')
 @observer class FarmDetail extends Component {
-  static navigationOptions ={
-    header: null
-  }
-
   render() {
     const {
       name, temperature, water_ratio, ready_siram,
@@ -26,9 +22,10 @@ import TemperatureGauge from '../customs/TemperatureGauge'
     // console.log('Kok Ilang ?', UserStore.farmData)
     // ready_siram nanti dihapus ?
     return (
-      <View style={styles.container}>
-        <Text>Name: {name}</Text>
+      <View>
+        <Text style={styles.textTitle}>Name: {name}</Text>
         <View style={styles.DetailCard}>
+          <Text>Plants Info :</Text>
           <TemperatureGauge
             sensor={temperature}
             textTitle={'Temperature'}
@@ -53,8 +50,12 @@ import TemperatureGauge from '../customs/TemperatureGauge'
             maxValue={'%'}
             color='rgba(241, 6, 102, 0.83)'
           />
-          <Text>Last Watering: {dateFormat(last_siram)}</Text>
-          <Text>Last updated: {dateFormat(last_updated)}</Text>
+          <View style={styles.dateView}>
+            <Text style={styles.dateText}>Last Watering: {dateFormat(last_siram)}</Text>
+          </View>
+          <View style={styles.dateView}>
+            <Text style={styles.dateText}>Last updated: {dateFormat(last_updated)}</Text>
+          </View>
           <Text>Ready Siram: {ready_siram}</Text>
         </View>
         <TouchableOpacity
@@ -73,14 +74,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#F1F8E9',
     padding: 4
   },
   container: {
-    backgroundColor: '#F1F8E9',
     padding: 20,
-    width: '100%',
-    height: '100%'
   },
   input: {
     height:40,
@@ -99,6 +97,19 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     fontWeight: '700'
+  },
+  textTitle: {
+    fontSize: 20,
+    textAlign: 'center',
+    width: '100%'
+  },
+  dateView: {
+    width: '100%',
+    height: 20,
+    borderRadius: 10
+  },
+  dateText: {
+    textAlign: 'center'
   }
 })
 

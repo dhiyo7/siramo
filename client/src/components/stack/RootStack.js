@@ -17,7 +17,7 @@ export default RootStack = createStackNavigator({
     screen: SignUp
   },
   Home: {
-    screen: HomeStack
+    screen: HomeStack,
   }
 },{
   initialRouteName: 'Welcome',

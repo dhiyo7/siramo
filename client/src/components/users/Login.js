@@ -73,8 +73,8 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       <View style={styles.mainContainer}>
         <View style={styles.container}>
           <Image
-                          style={styles.imageContainer}
-                          source={background}
+            style={styles.imageContainer}
+            source={background}
           />
           <Loader loading={loading}/>
           <View style={styles.inputBox} >

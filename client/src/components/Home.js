@@ -33,9 +33,9 @@ class Home extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#F1F8E9',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    backgroundColor: '#F1F8E9'
   }
 })
 
