@@ -10,6 +10,8 @@ import { inject, observer } from 'mobx-react'
 import UserStore from '../../store/UserStore'
 import CircleProg from '../customs/CircleProg'
 import TemperatureGauge from '../customs/TemperatureGauge'
+import { Ionicons } from '@expo/vector-icons'
+import FarmPic from '../farms/FarmsPic'
 
 @inject('UserStore')
 @observer class FarmDetail extends Component {
@@ -18,14 +20,16 @@ import TemperatureGauge from '../customs/TemperatureGauge'
       name, temperature, water_ratio, ready_siram,
       water_level, humidity, last_siram, last_updated
     } = UserStore.farmData
-    const { dateFormat } = UserStore
+    const { dateFormat, timeFormat } = UserStore
     // console.log('Kok Ilang ?', UserStore.farmData)
     // ready_siram nanti dihapus ?
     return (
       <View>
-        <Text style={styles.textTitle}>Name: {name}</Text>
+        <FarmPic />
         <View style={styles.DetailCard}>
-          <Text>Plants Info :</Text>
+          <View style={styles.infoView}>
+            <Text style={styles.textTitle}>{name}</Text>
+          </View>
           <TemperatureGauge
             sensor={temperature}
             textTitle={'Temperature'}
@@ -36,7 +40,7 @@ import TemperatureGauge from '../customs/TemperatureGauge'
             sensor={water_ratio}
             textTitle={'Water Ratio'}
             maxValue={'%'}
-            color='rgb(41, 177, 237)' 
+            color='rgba(0, 167, 5, 1)' 
           />
           <CircleProg 
             sensor={water_level}
@@ -48,13 +52,23 @@ import TemperatureGauge from '../customs/TemperatureGauge'
             sensor={humidity}
             textTitle={'Humidity'}
             maxValue={'%'}
-            color='rgba(241, 6, 102, 0.83)'
+            color='rgba(242, 129, 35, 0.83)'
           />
           <View style={styles.dateView}>
-            <Text style={styles.dateText}>Last Watering: {dateFormat(last_siram)}</Text>
+            <Text style={styles.dateText}>
+              Last Watering: 
+              <Ionicons name='md-calendar' size={20} />{dateFormat(last_siram)}
+              <Ionicons name='md-clock' size={20} />{timeFormat(last_siram)}
+            </Text>
           </View>
           <View style={styles.dateView}>
-            <Text style={styles.dateText}>Last updated: {dateFormat(last_updated)}</Text>
+            <Text style={styles.dateText}>
+              Last updated:
+            </Text>
+            <Text>
+              <Ionicons name='md-calendar' size={20} />{dateFormat(last_updated)}
+              <Ionicons name='md-clock' size={20} />{timeFormat(last_updated)}
+            </Text>
           </View>
           <Text>Ready Siram: {ready_siram}</Text>
         </View>
@@ -105,11 +119,18 @@ const styles = StyleSheet.create({
   },
   dateView: {
     width: '100%',
-    height: 20,
+    height: 'auto',
     borderRadius: 10
   },
   dateText: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 20
+  },
+  infoView: {
+    width: '100%',
+  },
+  infoText: {
+    fontSize: 20 
   }
 })
 
