@@ -1,10 +1,12 @@
 import { createStackNavigator } from 'react-navigation'
+import React from 'react'
 import Login from '../users/Login'
 import SignUp from '../users/SignUp'
 import HomeStack from './HomeStack'
 import Graph from '../farm/Graph'
 import History from '../../views/History'
 import WelcomeScreen from '../../views/WelcomeScreen'
+import SiramoLogo from '../customs/SiramoLogo'
 
 export default RootStack = createStackNavigator({
   Welcome: {
@@ -22,9 +24,10 @@ export default RootStack = createStackNavigator({
 },{
   initialRouteName: 'Welcome',
   navigationOptions: {
-    headerTitle: 'Siramo',
+    headerTitle: <SiramoLogo />,
     headerStyle: {
-      backgroundColor: '#4CAF50'
+      backgroundColor: '#8D6E63',
     },
+    headerLeft: null
   }
 })
