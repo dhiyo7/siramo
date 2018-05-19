@@ -4,8 +4,9 @@ import { Alert } from 'react-native'
 import firebase from 'firebase'
 
 class UserStore {
+  // uid nanti di hapus
   @observable userData = {
-    uid: '',
+    uid: '17UFak7JqufG1RXUeVW30jwdfrQ2',
     email: '',
     loading: false
   }

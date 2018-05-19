@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import {
-  View, Text, StyleSheet, Image
+  View, 
+  Text, 
+  StyleSheet,
+  ScrollView
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -18,9 +21,11 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={styles.mainContainer}>
-        <FarmDetail />
-      </View>
+      <ScrollView>
+        <View style={styles.mainContainer}>
+          <FarmDetail />
+        </View>
+      </ScrollView>
     )
   }
 }
@@ -28,7 +33,7 @@ class Home extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#151e2d',
+    backgroundColor: '#F1F8E9',
     alignItems: 'center',
     justifyContent: 'flex-start',
   }

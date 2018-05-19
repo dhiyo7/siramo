@@ -7,25 +7,51 @@ import {
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 import UserStore from '../../store/UserStore'
+import CircleProg from '../customs/CircleProg'
+import TemperatureGauge from '../customs/TemperatureGauge'
 
 @inject('UserStore')
 @observer class FarmDetail extends Component {
+  static navigationOptions ={
+    header: null
+  }
+
   render() {
     const {
       name, temperature, water_ratio, ready_siram,
       water_level, humidity, last_siram, last_updated
     } = UserStore.farmData
     const { dateFormat } = UserStore
-    console.log('Kok Ilang ?', UserStore.farmData)
+    // console.log('Kok Ilang ?', UserStore.farmData)
     // ready_siram nanti dihapus ?
     return (
       <View style={styles.container}>
+        <Text>Name: {name}</Text>
         <View style={styles.DetailCard}>
-          <Text>Name: {name}</Text>
-          <Text>Temperature: {temperature}</Text>
-          <Text>Water Ratio: {water_ratio}</Text>
-          <Text>Water Level: {water_level}</Text>
-          <Text>Humidity: {humidity}</Text>
+          <TemperatureGauge
+            sensor={temperature}
+            textTitle={'Temperature'}
+            maxValue={'°C'}
+            color='rgba(241, 6, 102, 0.83)'
+          />
+          <CircleProg 
+            sensor={water_ratio}
+            textTitle={'Water Ratio'}
+            maxValue={'%'}
+            color='rgb(41, 177, 237)' 
+          />
+          <CircleProg 
+            sensor={water_level}
+            textTitle={'Water Level'}
+            maxValue={'%'}
+            color='rgb(41, 177, 237)' 
+          />
+          <CircleProg 
+            sensor={humidity}
+            textTitle={'Humidity'}
+            maxValue={'%'}
+            color='rgba(241, 6, 102, 0.83)'
+          />
           <Text>Last Watering: {dateFormat(last_siram)}</Text>
           <Text>Last updated: {dateFormat(last_updated)}</Text>
           <Text>Ready Siram: {ready_siram}</Text>
@@ -42,21 +68,18 @@ import UserStore from '../../store/UserStore'
 }
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: '#151e2d',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   DetailCard: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     backgroundColor: '#fff',
-    padding: 4,
-    marginBottom: 8
+    padding: 4
   },
   container: {
-    backgroundColor: '#151e2d',
+    backgroundColor: '#F1F8E9',
     padding: 20,
-    width: '100%'
+    width: '100%',
+    height: '100%'
   },
   input: {
     height:40,
@@ -66,9 +89,10 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   buttonContainer: {
-    backgroundColor: '#2980b6',
+    backgroundColor: '#33691E',
     paddingVertical: 15,
-    marginBottom: 4
+    marginBottom: 4,
+    borderRadius: 4
   },
   buttonText: {
     color: '#fff',
