@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { 
-  View, Text, TextInput,
+  View, Text, TextInput, BackHandler,
   StyleSheet, TouchableOpacity, Alert, Image, ImageBackground
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
@@ -20,11 +20,25 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       email: '',
       password: ''
     }
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
   static navigationOptions = {
     header: null
   }
+
+  componentWillMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+  }
+
+  componentWillUnmount() {
+      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+  }
+
+  handleBackButtonClick() {
+      return true;
+  }
+
   submitLogin = () => {
     let email = this.state.email
     let password = this.state.password
