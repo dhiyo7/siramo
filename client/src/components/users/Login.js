@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { 
   View, Text, TextInput,
-  StyleSheet, TouchableOpacity, Alert, Image
+  StyleSheet, TouchableOpacity, Alert, Image, ImageBackground
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 import Loader from '../customs/Loader'
@@ -10,7 +10,8 @@ import Loader from '../customs/Loader'
 import UserStore from '../../store/UserStore'
 
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
-
+const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
+const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
 @inject('UserStore')
 @observer class Login extends Component {
   constructor() {
@@ -56,40 +57,48 @@ const background = require('../../assets/logo/Drawing1-ModelEdit.png')
     // tiap ngetik ngerender terus
     return (
       <View style={styles.mainContainer}>
-        <Image
-           style={{width: '100%', height: '60%', marginTop: 24, marginLeft: 8, marginRight: 8}}
-           source={background}
-        ></Image>
         <View style={styles.container}>
+          <Image
+                          style={styles.imageContainer}
+                          source={background}
+          />
           <Loader loading={loading}/>
-          <TextInput
-            style={styles.input}
-            autoCapitalize='none'
-            onSubmitEditing={() => this.passwordInput.focus()}
-            onChangeText={(email) => this.setState({email})}
-            autoCorrect={false}
-            keyboardType='email-address'
-            returnKeyType='next'
-            placeholder='Enter your email address'
-            placeholderTextColor='rgba(225,225,225,0.7)'
-          />
-
-          <TextInput
-            style={styles.input}
-            returnKeyType='go'
-            ref={(input) => this.passwordInput = input}
-            onChangeText={(password) => this.setState({password})}
-            placeholder='Enter your password'
-            placeholderTextColor='rgba(225,225,225,0.7)'
-            secureTextEntry
-          />
-          
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={this.submitLogin}
-          >
-            <Text style={styles.buttonText}>LOGIN</Text>
-          </TouchableOpacity>
+          <View style={styles.inputBox} >
+            <Image
+              style={styles.iconBox}         
+              source={emailIcon} />
+              <TextInput
+                style={styles.input}
+                autoCapitalize='none'
+                onSubmitEditing={() => this.passwordInput.focus()}
+                onChangeText={(email) => this.setState({email})}
+                autoCorrect={false}
+                keyboardType='email-address'
+                returnKeyType='next'
+                placeholder='Enter your email address'
+                placeholderTextColor='#3E2723'
+              />
+          </View>
+          <View style={styles.inputBox}> 
+            <Image
+              style={styles.iconBox}         
+              source={passwordIcon} />
+            <TextInput
+              style={styles.input}
+              returnKeyType='go'
+              ref={(input) => this.passwordInput = input}
+              onChangeText={(password) => this.setState({password})}
+              placeholder='Enter your password'
+              placeholderTextColor='#3E2723'
+              secureTextEntry
+            />
+          </View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={this.submitLogin}
+            >
+              <Text style={styles.buttonText}>LOGIN</Text>
+            </TouchableOpacity>
 
           {/* <TouchableOpacity
             style={styles.buttonContainer}
@@ -98,13 +107,13 @@ const background = require('../../assets/logo/Drawing1-ModelEdit.png')
             <Text style={styles.buttonText}>Connect with Google</Text>
           </TouchableOpacity> */}
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('SignUp')}
-          >
-            <Text style={styles.buttonText}>SIGN UP</Text>
-            
-          </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('SignUp')}
+            >
+              <Text style={styles.buttonText}>SIGN UP</Text>
+              
+            </TouchableOpacity>
         </View>
       </View>
     )
@@ -122,27 +131,47 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F1F8E9',
     width: '100%',
-    marginBottom: 10,
-    marginTop: 10,
+    height: '100%',
     marginRight: 8,
     marginLeft: 8,
     alignItems: 'center',
+    paddingTop: 50,
+  },
+  imageContainer: {
+    width: 200,
+    height: 200,
+    marginBottom: 8
+  },
+  inputBox: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 4,
+    marginTop: 4,
+    width: 400,
+  },
+  iconBox: {
+    width: 25,
+    height: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   input: {
     height:40,
-    width: 320,
+    width: 280,
     backgroundColor: 'rgba(225,225,225,0.2)',
-    padding: 10,
-    marginRight: 8,
-    marginLeft: 8,
+    padding: 6,
+    marginRight: 4,
+    marginLeft: 4,
     marginTop: 2,
     marginBottom: 2,
-    color: '#fff',
-    borderRadius: 4
+    color: '#8D6E63',
+    borderRadius: 4,
+    fontSize: 16
   },
   buttonContainer: {
-    backgroundColor: '#20b2aa',
+    backgroundColor: '#33691E',
     paddingVertical: 15,
     marginBottom: 8,
     borderRadius: 4,

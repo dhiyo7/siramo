@@ -29,6 +29,7 @@
     "react-native-elements": "^0.19.1",
     "react-native-image-picker": "^0.26.10",
     "react-native-photo-upload": "^1.2.0",
+    "react-native-progress": "^3.4.0",
     "react-native-pure-chart": "^0.0.21",
     "react-navigation": "^2.0.1"
   }
