@@ -5,6 +5,7 @@ import {
   Modal,
   ActivityIndicator
 } from 'react-native'
+import * as Progress from 'react-native-progress'
 
 const Loader = props => {
   const {
@@ -21,9 +22,11 @@ const Loader = props => {
     >
       <View style={styles.modalBackGround}>
         <View style={styles.ActivityIndicatorWrapper}>
-          <ActivityIndicator
+          {/* <ActivityIndicator
+          
             animating={loading}
-          />
+          /> */}
+          <Progress.CircleSnail color={['#90CAF9', '#FFAB91', '#A5D6A7']} size={100} thickness={4} spinDuration={10000}/>
         </View>
       </View>
     </Modal>
@@ -39,9 +42,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000040'
   },
   ActivityIndicatorWrapper: {
-    backgroundColor: '#FFFFFF',
-    height: 100,
-    width: 100,
     borderRadius: 10,
     display: 'flex',
     alignItems: 'center',
