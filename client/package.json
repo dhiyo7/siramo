@@ -27,10 +27,13 @@
     "react": "^16.3.2",
     "react-native": "~0.55.2",
     "react-native-elements": "^0.19.1",
+    "react-native-fa-icons": "^3.0.1",
     "react-native-image-picker": "^0.26.10",
+    "react-native-landscape-view": "^0.0.1",
     "react-native-photo-upload": "^1.2.0",
     "react-native-progress": "^3.4.0",
     "react-native-pure-chart": "^0.0.21",
+    "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^2.0.1"
   }
 }
