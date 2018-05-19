@@ -4,8 +4,9 @@ import { Alert } from 'react-native'
 import firebase from 'firebase'
 
 class UserStore {
+  // uid nanti di hapus
   @observable userData = {
-    uid: '',
+    uid: '17UFak7JqufG1RXUeVW30jwdfrQ2',
     email: '',
     loading: false
   }
@@ -109,9 +110,9 @@ class UserStore {
   }
 
   triggerSiram = () => {
-    console.log('Kepanggil ?')
     let userId = this.userData.uid
     let ready_siram = this.farmData.ready_siram
+    let water_ratio = this.farmData.water_ratio
     if (ready_siram === 0) {
       ready_siram = 1
     } else {
@@ -123,6 +124,21 @@ class UserStore {
       last_siram: firebase.database.ServerValue.TIMESTAMP,
       last_updated: firebase.database.ServerValue.TIMESTAMP
     }
+
+    if (water_ratio > 70) {
+      Alert.alert(
+        '',
+        'Your plant is still have enough water',
+        [
+          {text: 'Siram anyway', onPress: () => this.updateSiram(userId, farmUpdate)}
+        ]
+      )
+    } else {
+      this.updateSiram(userId, farmUpdate)
+    }
+  }
+
+  updateSiram = (userId, farmUpdate) => {
     db.ref(`/farms/${userId}`).update(farmUpdate)
       .then(response => {
         console.log(response)
@@ -142,7 +158,20 @@ class UserStore {
     // (minute < 10)? minute = `0${minute}`: minute = `${minute}`
     // (hours < 10)? hours = `0${hours}`: hours = `${hours}`
 
-    return (date < 10)? `0${date} ${months[month]} ${year}`: `${date} ${months[month]} ${year}, ${hours}:${minute}`
+    return (date < 10)? `0${date} ${months[month]} ${year}`: `${date} ${months[month]} ${year}`
+  }
+
+  timeFormat = (times) => {
+    let minute = new Date(times).getMinutes()
+    let hours = new Date(times).getHours()
+    if (hours < 10) {
+      hours = `0${hours}`
+    }
+    if (minute < 10) {
+      minute = `0${minute}`
+    }
+
+    return `${hours}:${minute}`
   }
 }
 

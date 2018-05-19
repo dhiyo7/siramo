@@ -20,7 +20,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       email: '',
       password: ''
     }
-    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this)
   }
 
   static navigationOptions = {
@@ -28,15 +28,15 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
   }
 
   componentWillMount() {
-    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick)
   }
 
   componentWillUnmount() {
-      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick)
   }
 
   handleBackButtonClick() {
-      return true;
+      return true
   }
 
   submitLogin = () => {
@@ -73,8 +73,8 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       <View style={styles.mainContainer}>
         <View style={styles.container}>
           <Image
-                          style={styles.imageContainer}
-                          source={background}
+            style={styles.imageContainer}
+            source={background}
           />
           <Loader loading={loading}/>
           <View style={styles.inputBox} >

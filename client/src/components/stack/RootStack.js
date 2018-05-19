@@ -17,8 +17,14 @@ export default RootStack = createStackNavigator({
     screen: SignUp
   },
   Home: {
-    screen: HomeStack
+    screen: HomeStack,
   }
 },{
   initialRouteName: 'Welcome',
+  navigationOptions: {
+    headerTitle: 'Siramo',
+    headerStyle: {
+      backgroundColor: '#4CAF50'
+    },
+  }
 })

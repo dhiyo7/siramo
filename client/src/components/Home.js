@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import {
-  View, Text, StyleSheet, Image
+  View, 
+  Text, 
+  StyleSheet,
+  ScrollView,
+  BackHandler
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -8,19 +12,38 @@ import { Ionicons } from '@expo/vector-icons'
 import FarmDetail from './farms/FarmDetail'
 
 class Home extends Component {
+  constructor() {
+    super()
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this)
+  }
 
   static navigationOptions = {
+    headerTitle: 'Test',
     drawerLabel: 'Home',
     drawerIcon: () => (
       <Ionicons name="md-home" size={24} color="green" />
     )
   }
 
+  componentWillMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+  }
+
+  handleBackButtonClick() {
+      return true;
+  }
+
   render() {
     return (
-      <View style={styles.mainContainer}>
-        <FarmDetail />
-      </View>
+      <ScrollView>
+        <View style={styles.mainContainer}>
+          <FarmDetail />
+        </View>
+      </ScrollView>
     )
   }
 }
@@ -28,9 +51,9 @@ class Home extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#151e2d',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    backgroundColor: '#F1F8E9'
   }
 })
 
