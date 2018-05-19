@@ -21,8 +21,6 @@ import FarmPic from '../farms/FarmsPic'
       water_level, humidity, last_siram, last_updated
     } = UserStore.farmData
     const { dateFormat, timeFormat } = UserStore
-    // console.log('Kok Ilang ?', UserStore.farmData)
-    // ready_siram nanti dihapus ?
     return (
       <View>
         <FarmPic />

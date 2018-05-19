@@ -21,4 +21,10 @@ export default RootStack = createStackNavigator({
   }
 },{
   initialRouteName: 'Welcome',
+  navigationOptions: {
+    headerTitle: 'Siramo',
+    headerStyle: {
+      backgroundColor: '#4CAF50'
+    },
+  }
 })
