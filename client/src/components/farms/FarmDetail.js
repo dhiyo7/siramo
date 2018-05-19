@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Image
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 import UserStore from '../../store/UserStore'
