@@ -18,10 +18,9 @@ class Home extends Component {
   }
 
   static navigationOptions = {
-    headerTitle: 'Test',
     drawerLabel: 'Home',
     drawerIcon: () => (
-      <Ionicons name="md-home" size={24} color="green" />
+      <Ionicons name="md-home" size={24} color="#66BB6A" />
     )
   }
 
