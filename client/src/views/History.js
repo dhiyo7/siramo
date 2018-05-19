@@ -16,10 +16,10 @@ const initialLayout = {
   width: Dimensions.get('window').width,
 };
 
-const FirstRoute = () => <Graph sensorData={FarmStore.farmData.historyHumidity} color="yellow"/>
-const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperature} color="blue"/>
-const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} color="red"/>
-const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} color="green"/>
+const FirstRoute = () => <Graph sensorData={FarmStore.farmData.historyHumidity} humidityDetail={'humid'}/>
+const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperature} temperatureDetail={'panas'} color="blue"/>
+const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red"/>
+const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green"/>
 
 @inject('FarmStore')
 @observer class History extends Component {
