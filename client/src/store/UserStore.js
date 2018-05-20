@@ -125,12 +125,12 @@ class UserStore {
       last_updated: firebase.database.ServerValue.TIMESTAMP
     }
 
-    if (water_ratio > 70) {
+    if (water_ratio > 70 && ready_siram === 0) {
       Alert.alert(
         '',
         'Your plant is still have enough water',
         [
-          {text: 'Siram anyway', onPress: () => this.updateSiram(userId, farmUpdate)}
+          {text: 'Watering anyway', onPress: () => this.updateSiram(userId, farmUpdate)}
         ]
       )
     } else {

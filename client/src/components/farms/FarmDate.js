@@ -34,11 +34,12 @@ const styles = StyleSheet.create({
   MainCard: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',
     shadowColor: '#000',
-    backgroundColor: '#e5a052',
+    backgroundColor: '#128eb7',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.8,
     shadowRadius: 2,
@@ -48,13 +49,11 @@ const styles = StyleSheet.create({
     height: 35,
     padding: 4,
     margin: 8,
-    // borderWidth: 1,
-    // borderColor: 'black',
     alignItems: 'center'
   },
   cardText: {
     fontSize: 25,
-    color: 'black'
+    color: '#ffffff'
   }
 })
 
