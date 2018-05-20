@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image} from 'react-native'
+import { View, StyleSheet, Image, AsyncStorage} from 'react-native'
+import UserStore from '../store/UserStore'
+import { User } from '../store/firebase'
+import { observer } from 'mobx-react'
+
 
 const background = require('../assets/logo/Drawing1-Model3.png')
 
-class WelcomeScreen extends Component {
+@observer class WelcomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {  };
@@ -12,9 +16,17 @@ class WelcomeScreen extends Component {
   static navigationOptions = {
     header: null
   }
-  componentDidMount () {
-    setTimeout(() => {
-      this.props.navigation.push('Login')
+  componentDidMount = () => {
+    setTimeout( async () => {
+      let uid = await AsyncStorage.getItem('userId')
+      let email = await AsyncStorage.getItem('email')
+      await UserStore.assignUserData({
+        uid,
+        email
+      })
+      await UserStore.getFarmData()
+      !uid?
+      this.props.navigation.push('Login'):this.props.navigation.push('Home')
     }, 3000)
   }
   render() {

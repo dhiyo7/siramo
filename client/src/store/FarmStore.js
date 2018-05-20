@@ -13,6 +13,11 @@ class FarmStore {
     historyLoading: false
   }
 
+  @observable schedule = {
+    hours: '00',
+    minutes: '00'
+  }
+
   @observable navigation = {}
 
   getHistory = (key) => {
@@ -48,7 +53,6 @@ class FarmStore {
       maxWaterRatio: max,
       minWaterRatio: min
     }
-    console.log('Firebase Updated', updatedValue)
     db.ref(`/farms/${uid}`).update(updatedValue)
       .then(response => {
         console.log(response)
