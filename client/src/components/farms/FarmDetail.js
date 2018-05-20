@@ -12,6 +12,9 @@ import CircleProg from '../customs/CircleProg'
 import TemperatureGauge from '../customs/TemperatureGauge'
 import { Ionicons } from '@expo/vector-icons'
 import FarmPic from '../farms/FarmsPic'
+import FarmDate from '../farms/FarmDate'
+import BUttonOnOff from '../farms/ButtonOnOff'
+import ButtonOnOff from '../farms/ButtonOnOff';
 
 @inject('UserStore')
 @observer class FarmDetail extends Component {
@@ -21,6 +24,7 @@ import FarmPic from '../farms/FarmsPic'
       water_level, humidity, last_siram, last_updated
     } = UserStore.farmData
     const { dateFormat, timeFormat } = UserStore
+
     return (
       <View>
         <FarmPic />
@@ -53,29 +57,26 @@ import FarmPic from '../farms/FarmsPic'
             color='rgba(242, 129, 35, 0.83)'
           />
           <View style={styles.dateView}>
-            <Text style={styles.dateText}>
-              Last Watering: 
-              <Ionicons name='md-calendar' size={20} />{dateFormat(last_siram)}
-              <Ionicons name='md-clock' size={20} />{timeFormat(last_siram)}
-            </Text>
+            <FarmDate 
+              date={{
+                title: 'Last Watering:',
+                dates: dateFormat(last_siram),
+                times: timeFormat(last_siram)
+              }}
+            />
           </View>
           <View style={styles.dateView}>
-            <Text style={styles.dateText}>
-              Last updated:
-            </Text>
-            <Text>
-              <Ionicons name='md-calendar' size={20} />{dateFormat(last_updated)}
-              <Ionicons name='md-clock' size={20} />{timeFormat(last_updated)}
-            </Text>
+            <FarmDate 
+              date={{
+                title: 'Last updated:',
+                dates: dateFormat(last_updated),
+                times: timeFormat(last_updated)
+              }}
+            />
           </View>
-          <Text>Ready Siram: {ready_siram}</Text>
+          {/* <Text>Ready Siram: {ready_siram}</Text> */}
         </View>
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={UserStore.triggerSiram}
-        >
-          <Text style={styles.buttonText}>SIRAM</Text>
-        </TouchableOpacity>
+        <ButtonOnOff siram={{ready_siram, triggerSiram:UserStore.triggerSiram}}/>
       </View>
     )
   }
