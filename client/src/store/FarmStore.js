@@ -40,6 +40,22 @@ class FarmStore {
     })
   }
 
+  setSchedule = (cronFormat, max, min) => {
+    let updatedValue = {
+      name: cronFormat,
+      maxWaterRatio: max,
+      minWaterRatio: min
+    }
+    console.log('Firebase Updated', updatedValue)
+    db.ref(`/users`).update(updatedValue)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
 }
 
 export default new FarmStore()
