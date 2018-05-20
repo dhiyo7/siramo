@@ -4,7 +4,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import UserStore from '../../src/store/UserStore'
 import FarmStore from '../../src/store/FarmStore'
 import { User, db } from '../../src/store/firebase'
-import Login from '../../src/components/users/Login'
 import MockStorage from '../MockStorage';
 
 const storageCache = {};
@@ -143,6 +142,6 @@ describe('UserStore sign up firebase testing', () => {
   })
 
   afterAll(async() => {
-    console.log(await User.currentUser.delete())
+    await User.currentUser.delete()
   })
 })
