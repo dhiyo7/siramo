@@ -11,6 +11,7 @@ import {
   WebView
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
+import PureChart from 'react-native-pure-chart';
 
 class RecommendedCard extends Component {
   constructor(props) {
@@ -23,33 +24,27 @@ class RecommendedCard extends Component {
     };
   }
   render() {
-    return (
+    return ( 
       <View style={styles.mainContainer}>
           <View style={styles.iconContainer}>
-            <TouchableHighlight onPress={() => this.setState({modalInfo: true})}><Ionicons name="md-information-circle" size={48} color="green"/></TouchableHighlight>
-          </View>
-          <View style={styles.iconContainer}>
-           <Ionicons name="md-checkmark-circle" size={48} color="green" />
-          </View>
-          <View style={styles.iconContainer}>
-           <Ionicons name="md-warning" size={48} color="yellow" />
-          </View>
-          <View style={styles.iconContainer}>
-            <Ionicons name="md-close-circle" size={48} color="red" />
-          </View>
-          <Modal 
-            visible={this.state.modalInfo}
-            animationType={'slide'}
-            transparent={true}
-            onRequestClose={() => {console.log('close modal')}}
-          >
-            <View style={styles.modalBackGround}>
-              <View style={styles.ActivityIndicatorWrapper}>
-                <Text>A</Text>
-                <TouchableHighlight onPress={() => this.setState({modalInfo: false})}><Text>Button</Text></TouchableHighlight>
-              </View>
+            <View style={styles.container}>
+              <Ionicons name="md-checkmark-circle" size={24} color="#69F0AE" />
+              <Text style={styles.text}>
+              &nbsp;&nbsp; Nilai Normal yang dianjurkan = 40-60 %</Text>
             </View>
-          </Modal>
+          </View>
+          <View style={styles.iconContainer}>
+            <View style={styles.container}>
+              <Ionicons name="md-warning" size={24} color="#FDD835" />
+              <Text style={styles.text}>&nbsp;&nbsp; Nilai Diatas 60 % = Basah</Text>
+            </View>
+          </View>
+          <View style={styles.iconContainer}>
+            <View style={styles.container}>
+              <Ionicons name="md-close-circle" size={24} color="#FFAB91" />
+              <Text style={styles.warning}>&nbsp;&nbsp; Nilai Dibawah 40 % = Sangat Kering</Text>
+            </View>
+          </View>
       </View>
     );
   }
@@ -57,29 +52,16 @@ class RecommendedCard extends Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginBottom: 4,
-    marginTop: 4,
-    width: 400,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+    flexDirection: 'column',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   container:{
-    justifyContent: 'center',
-    alignItems: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   iconContainer:{
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 50,
-    margin: 10
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   descContainer: {
     width: 200,
