@@ -61,8 +61,8 @@ class SideMenu extends Component {
         </View>
         <View>
           <View style={styles.navSectionStyle}>
-            <Text style={styles.navItemStyle} onPress={this.navigateToScreen('History')}>
-              <Ionicons name="md-contacts" size={24} color="#ef5350" /> &nbsp;&nbsp; About
+            <Text style={styles.navItemStyle} onPress={this.navigateToScreen('FarmSchedule')}>
+              <Ionicons name="md-calendar" size={24} color="#ef5350" /> &nbsp;&nbsp; Scheduling
             </Text>
           </View>
         </View>

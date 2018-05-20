@@ -5,12 +5,7 @@ import Graph from '../farm/Graph'
 import History from '../../views/History'
 import SideMenu from '../../components/customs/SideMenu'
 import DetailParameter from '../../views/DetailParameter'
-import { HeaderBackButton } from 'react-navigation';
-
-const navigationOptionsDetail = ({ navigation }) => ({
-    headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)} />,
-})
-
+import FarmSchedule from '../../components/farms/FarmSchedule'
 
 export default HomeStack = createDrawerNavigator(
 {
@@ -21,9 +16,11 @@ export default HomeStack = createDrawerNavigator(
     screen: History
   },
   DetailParameter: {
-    screen: DetailParameter,
-    navigationOptionsDetail
-  }
+    screen: DetailParameter
+  },
+  FarmSchedule: {
+    screen: FarmSchedule
+  },
 },{
   initialRouteName: 'Home',
   contentComponent: SideMenu,

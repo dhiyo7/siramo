@@ -4,9 +4,8 @@ import { Alert } from 'react-native'
 import firebase from 'firebase'
 
 class UserStore {
-  // uid nanti di hapus
   @observable userData = {
-    uid: '17UFak7JqufG1RXUeVW30jwdfrQ2',
+    uid: '',
     email: '',
     loading: false
   }
@@ -57,15 +56,15 @@ class UserStore {
     this.userData.loading = true
     User.signInWithEmailAndPassword(data.email, data.password)
       .then(response => {
-        console.log(response.user.uid)
+        // console.log(response.user.uid)
         if (response.user) {
           this.userData.uid = response.user.uid
           this.userData.email = response.user.email
           this.isLogin = true
           this.userData.loading = false
           this.getFarmData()
-          console.log(this.userData)
-          console.log(this.isLogin)
+          // console.log(this.userData)
+          // console.log(this.isLogin)
           navigation.navigate('Home')
         }
       })
@@ -76,11 +75,11 @@ class UserStore {
   }
 
   firebaseSignUp = (data, navigation) => {
-    console.log("Masuk sini ?")
+    // console.log("Masuk sini ?")
     this.userData.loading = true
     User.createUserWithEmailAndPassword(data.email, data.password)
       .then(response => {1
-        console.log('Response Daftar', response.user.uid)
+        // console.log('Response Daftar', response.user.uid)
         if (response.user) {
           this.userData.uid = response.user.uid
           this.userData.email = response.user.email
@@ -101,7 +100,7 @@ class UserStore {
     User.signOut()
       .then(() => {
         this.assignUserData({uid:'',email:''})
-        console.log('Logout')
+        // console.log('Logout')
       })
       .catch(err => {
         console.log(err)

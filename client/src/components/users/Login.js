@@ -12,6 +12,7 @@ import UserStore from '../../store/UserStore'
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
+
 @inject('UserStore')
 @observer class Login extends Component {
   constructor() {

@@ -1,7 +1,8 @@
 import { observable, computed } from 'mobx'
 import { db, User } from './firebase'
 import { Alert } from 'react-native'
-
+import UserStore from './UserStore'
+import userStore from './UserStore';
 
 class FarmStore {
   @observable farmData = {
@@ -38,6 +39,23 @@ class FarmStore {
       })
       this.farmData.historyLoading = false
     })
+  }
+
+  setSchedule = (cronFormat, max, min) => {
+    let uid = userStore.userData.uid
+    let updatedValue = {
+      cronSchedule: cronFormat,
+      maxWaterRatio: max,
+      minWaterRatio: min
+    }
+    console.log('Firebase Updated', updatedValue)
+    db.ref(`/farms/${uid}`).update(updatedValue)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
 }
