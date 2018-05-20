@@ -7,10 +7,11 @@ import {
  View,
  StyleSheet,
  Platform,
- Alert
+ Alert,
 } from 'react-native';
 import {NavigationActions} from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons'
+import UserStore from '../../store/UserStore'
 
 class SideMenu extends Component {
   constructor(props) {
@@ -26,12 +27,17 @@ class SideMenu extends Component {
   }
 
   logout = () => {
+    
     Alert.alert(
       'WARNING !',
       'Are you sure want to logout?',
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'Logout', onPress: () => this.props.navigation.push('Login')},
+        {text: 'Logout', onPress: () => {
+            UserStore.firebaseSignOut()        
+            this.props.navigation.push('Login')
+          }
+        },
       ],
       { cancelable: false }
     )

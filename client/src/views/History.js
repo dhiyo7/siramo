@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { inject, observer } from 'mobx-react'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
-import Graph from '../components/farm/Graph'
+import Graph from '../components/farms/Graph'
 import FarmStore from '../store/FarmStore'
 import TabBarLogo from '../components/logo/TabBarLogo'
 import Loader from '../components/customs/Loader'

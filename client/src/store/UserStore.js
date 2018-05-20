@@ -2,6 +2,7 @@ import { observable, computed } from 'mobx'
 import { db, User } from './firebase'
 import { Alert } from 'react-native'
 import firebase from 'firebase'
+import { AsyncStorage } from 'react-native'
 
 class UserStore {
   @observable userData = {
@@ -18,6 +19,9 @@ class UserStore {
     humidity: 0,
     last_siram: 0,
     last_updated: 0,
+    cronSchedule: '',
+    minWaterRatio: 0,
+    maxWaterRatio: 0,
     ready_siram: 2,
     loading: false
   }
@@ -30,12 +34,14 @@ class UserStore {
     db.ref(`/farms/${userId}`).on('value', snap => {
       try {
         let farmDB = snap.val()
-        console.log('Farm Data ===>', farmDB.last_siram)
         this.farmData.name = farmDB.name
         this.farmData.temperature = farmDB.temperature
         this.farmData.water_ratio = farmDB.water_ratio
         this.farmData.water_level = farmDB.water_level
         this.farmData.humidity = farmDB.humidity
+        this.farmData.cronSchedule = farmDB.cronSchedule
+        this.farmData.minWaterRatio = farmDB.minWaterRatio
+        this.farmData.maxWaterRatio = farmDB.maxWaterRatio
         this.farmData.last_siram = farmDB.last_siram
         this.farmData.last_updated = farmDB.last_updated
         this.farmData.ready_siram = farmDB.ready_siram
@@ -48,8 +54,12 @@ class UserStore {
   }
 
   assignUserData = (data) => {
-    this.userData.uid = data.uid
-    this.userData.email = data.email
+    return new Promise((resolve, reject) => {
+      this.userData.uid = data.uid
+      this.userData.email = data.email
+      resolve(this.userData)
+      reject('error')
+    })
   }
 
   firebaseLogin = (data, navigation) => {
@@ -63,8 +73,8 @@ class UserStore {
           this.isLogin = true
           this.userData.loading = false
           this.getFarmData()
-          // console.log(this.userData)
-          // console.log(this.isLogin)
+          AsyncStorage.setItem('userId', response.user.uid)
+          AsyncStorage.setItem('email', response.user.email)
           navigation.navigate('Home')
         }
       })
@@ -75,19 +85,18 @@ class UserStore {
   }
 
   firebaseSignUp = (data, navigation) => {
-    // console.log("Masuk sini ?")
     this.userData.loading = true
     User.createUserWithEmailAndPassword(data.email, data.password)
       .then(response => {1
-        // console.log('Response Daftar', response.user.uid)
         if (response.user) {
           this.userData.uid = response.user.uid
           this.userData.email = response.user.email
           this.isLogin = true
           this.userData.loading = false
+          AsyncStorage.setItem('userId', response.user.uid)
+          AsyncStorage.setItem('email', response.user.email)
           navigation.navigate('Home')
         }
-        // nanti bikin db baru di firebase kalo mau ada name alamat dll
       })
       .catch(err => {
         Alert.alert(err.code, err.message)
@@ -95,17 +104,22 @@ class UserStore {
       })
   }
 
-  firebaseSignOut = (data, navigation) => {
-    // pasang alert di sini atau di component ny nanti
-    User.signOut()
+  firebaseSignOut = async () => {
+    try {
+      await AsyncStorage.removeItem('userId')
+      await AsyncStorage.removeItem('email')
+      User.signOut()
       .then(() => {
         this.assignUserData({uid:'',email:''})
-        // console.log('Logout')
       })
       .catch(err => {
         console.log(err)
         Alert.alert(err.code, err.message)
       })
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+   
   }
 
   triggerSiram = () => {
