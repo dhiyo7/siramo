@@ -6,9 +6,7 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
-import userStore from '../../store/UserStore';
 
-@inject('FarmStore')
 @observer class FarmSchedule extends Component {
   constructor() {
     super()
@@ -41,16 +39,18 @@ import userStore from '../../store/UserStore';
   }
   
   componentDidMount() {
-    let splitCron = userStore.farmData.cronSchedule.split(' ')
-    let minutes = splitCron[1].match(/[0-9]/g).join().toString()
-    let hours = splitCron[2].match(/[0-9]/g).join().toString()
-    // (date < 10)? `0${date} ${months[month]} ${year}`: `${date} ${months[month]} ${year}`
-    this.setState({
-      minWaterRatio: userStore.farmData.minWaterRatio,
-      maxWaterRatio: userStore.farmData.maxWaterRatio,
-      minutesPick: (minutes < 10)? `0${minutes}`:`${minutes}`,
-      hoursPick: (hours < 10)? `0${hours}`:`${hours}`
-    })  
+    if (FarmStore.FarmDetail.cronSchedule) {
+      let splitCron = FarmStore.FarmDetail.cronSchedule.split(' ')
+      let minutes = splitCron[1].match(/[0-9]/g).join().toString()
+      let hours = splitCron[2].match(/[0-9]/g).join().toString()
+      
+      this.setState({
+        minWaterRatio: FarmStore.FarmDetail.minWaterRatio,
+        maxWaterRatio: FarmStore.FarmDetail.maxWaterRatio,
+        minutesPick: (minutes < 10)? `0${minutes}`:`${minutes}`,
+        hoursPick: (hours < 10)? `0${hours}`:`${hours}`
+      })
+    }
   }
 
   startSchedule = () => {

@@ -7,9 +7,6 @@ import { Ionicons } from '@expo/vector-icons'
 class FarmDate extends Component {
   render() {
     const { title, dates, times } = this.props.date
-    // console.log(this.props.date.dates)
-    // console.log('Jam nya', times)
-    // console.log('Tanggal nya', dates)
     return (
       <View>
         <Text>{title}</Text>

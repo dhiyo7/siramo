@@ -3,6 +3,7 @@ import { db, User } from './firebase'
 import { Alert } from 'react-native'
 import firebase from 'firebase'
 import { AsyncStorage } from 'react-native'
+import FarmStore from '../store/FarmStore'
 
 class UserStore {
   @observable userData = {
@@ -11,47 +12,7 @@ class UserStore {
     loading: false
   }
 
-  @observable farmData = {
-    name: '',
-    temperature: 0,
-    water_ratio: 0,
-    water_level: 0,
-    humidity: 0,
-    last_siram: 0,
-    last_updated: 0,
-    cronSchedule: '',
-    minWaterRatio: 0,
-    maxWaterRatio: 0,
-    ready_siram: 2,
-    loading: false
-  }
-
   @observable isLogin = false
-
-  getFarmData = () => {
-    let userId = this.userData.uid
-    this.farmData.loading = true
-    db.ref(`/farms/${userId}`).on('value', snap => {
-      try {
-        let farmDB = snap.val()
-        this.farmData.name = farmDB.name
-        this.farmData.temperature = farmDB.temperature
-        this.farmData.water_ratio = farmDB.water_ratio
-        this.farmData.water_level = farmDB.water_level
-        this.farmData.humidity = farmDB.humidity
-        this.farmData.cronSchedule = farmDB.cronSchedule
-        this.farmData.minWaterRatio = farmDB.minWaterRatio
-        this.farmData.maxWaterRatio = farmDB.maxWaterRatio
-        this.farmData.last_siram = farmDB.last_siram
-        this.farmData.last_updated = farmDB.last_updated
-        this.farmData.ready_siram = farmDB.ready_siram
-        this.farmData.loading = false
-      } catch (error) {
-        console.log(error)
-      }
-      
-    })
-  }
 
   assignUserData = (data) => {
     return new Promise((resolve, reject) => {
@@ -72,7 +33,7 @@ class UserStore {
           this.userData.email = response.user.email
           this.isLogin = true
           this.userData.loading = false
-          this.getFarmData()
+          FarmStore.getFarmData()
           AsyncStorage.setItem('userId', response.user.uid)
           AsyncStorage.setItem('email', response.user.email)
           navigation.navigate('Home')
@@ -93,6 +54,7 @@ class UserStore {
           this.userData.email = response.user.email
           this.isLogin = true
           this.userData.loading = false
+          FarmStore.getFarmData()
           AsyncStorage.setItem('userId', response.user.uid)
           AsyncStorage.setItem('email', response.user.email)
           navigation.navigate('Home')
@@ -111,6 +73,7 @@ class UserStore {
       User.signOut()
       .then(() => {
         this.assignUserData({uid:'',email:''})
+        FarmStore.clearAll()
       })
       .catch(err => {
         console.log(err)
@@ -120,45 +83,6 @@ class UserStore {
       Alert.alert(error.message)
     }
    
-  }
-
-  triggerSiram = () => {
-    let userId = this.userData.uid
-    let ready_siram = this.farmData.ready_siram
-    let water_ratio = this.farmData.water_ratio
-    if (ready_siram === 0) {
-      ready_siram = 1
-    } else {
-      ready_siram = 0
-    }
-
-    let farmUpdate = {
-      ready_siram: ready_siram,
-      last_siram: firebase.database.ServerValue.TIMESTAMP,
-      last_updated: firebase.database.ServerValue.TIMESTAMP
-    }
-
-    if (water_ratio > 70 && ready_siram === 0) {
-      Alert.alert(
-        '',
-        'Your plant is still have enough water',
-        [
-          {text: 'Watering anyway', onPress: () => this.updateSiram(userId, farmUpdate)}
-        ]
-      )
-    } else {
-      this.updateSiram(userId, farmUpdate)
-    }
-  }
-
-  updateSiram = (userId, farmUpdate) => {
-    db.ref(`/farms/${userId}`).update(farmUpdate)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(err => {
-        console.log('Error', err)
-      })
   }
 
   dateFormat = (times) => {
