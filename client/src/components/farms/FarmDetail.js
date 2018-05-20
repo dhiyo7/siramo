@@ -8,21 +8,23 @@ import {
 } from 'react-native'
 import { inject, observer } from 'mobx-react'
 import UserStore from '../../store/UserStore'
+import FarmStore from '../../store/FarmStore'
+
 import CircleProg from '../customs/CircleProg'
 import TemperatureGauge from '../customs/TemperatureGauge'
 import { Ionicons } from '@expo/vector-icons'
 import FarmPic from '../farms/FarmsPic'
 import FarmDate from '../farms/FarmDate'
-import BUttonOnOff from '../farms/ButtonOnOff'
-import ButtonOnOff from '../farms/ButtonOnOff';
+import ButtonOnOff from '../farms/ButtonOnOff'
 
-@inject('UserStore')
+
 @observer class FarmDetail extends Component {
   render() {
     const {
       name, temperature, water_ratio, ready_siram,
-      water_level, humidity, last_siram, last_updated
-    } = UserStore.farmData
+      water_level, humidity, last_siram, last_updated,
+    } = FarmStore.FarmDetail
+    console.log(FarmStore.FarmDetail)
     const { dateFormat, timeFormat } = UserStore
 
     return (
@@ -76,7 +78,7 @@ import ButtonOnOff from '../farms/ButtonOnOff';
           </View>
           {/* <Text>Ready Siram: {ready_siram}</Text> */}
         </View>
-        <ButtonOnOff siram={{ready_siram, triggerSiram:UserStore.triggerSiram}}/>
+        <ButtonOnOff siram={{ready_siram, triggerSiram: FarmStore.triggerSiram}}/>
       </View>
     )
   }

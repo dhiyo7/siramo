@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Image, AsyncStorage} from 'react-native'
 import UserStore from '../store/UserStore'
+import FarmStore from '../store/FarmStore'
 import { User } from '../store/firebase'
 import { observer } from 'mobx-react'
-
 
 const background = require('../assets/logo/Drawing1-Model3.png')
 
@@ -24,7 +24,7 @@ const background = require('../assets/logo/Drawing1-Model3.png')
         uid,
         email
       })
-      await UserStore.getFarmData()
+      await FarmStore.getFarmData()
       !uid?
       this.props.navigation.push('Login'):this.props.navigation.push('Home')
     }, 3000)
@@ -32,10 +32,10 @@ const background = require('../assets/logo/Drawing1-Model3.png')
   render() {
     return (
       <View style={styles.mainContainer}>
-          <View      style={styles.container}>
+          <View style={styles.container}>
           <Image
-                style={styles.imageContainer}
-                source={background}
+            style={styles.imageContainer}
+            source={background}
           />
           </View>
       </View>
