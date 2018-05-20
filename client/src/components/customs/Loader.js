@@ -26,7 +26,7 @@ const Loader = props => {
           
             animating={loading}
           /> */}
-          <Progress.CircleSnail color={['#90CAF9', '#FFAB91', '#A5D6A7']} size={100} thickness={4} spinDuration={10000}/>
+          <Progress.CircleSnail color={['#90CAF9', '#FFAB91', '#A5D6A7']} size={100} thickness={8} spinDuration={10000}/>
         </View>
       </View>
     </Modal>

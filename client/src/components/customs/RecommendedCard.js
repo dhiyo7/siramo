@@ -30,19 +30,19 @@ class RecommendedCard extends Component {
             <View style={styles.container}>
               <Ionicons name="md-checkmark-circle" size={24} color="#69F0AE" />
               <Text style={styles.text}>
-              &nbsp;&nbsp; Nilai Normal yang dianjurkan = 40-60 %</Text>
+              &nbsp;&nbsp; {this.props.recommended}</Text>
             </View>
           </View>
           <View style={styles.iconContainer}>
             <View style={styles.container}>
               <Ionicons name="md-warning" size={24} color="#FDD835" />
-              <Text style={styles.text}>&nbsp;&nbsp; Nilai Diatas 60 % = Basah</Text>
+              <Text style={styles.text}>&nbsp;&nbsp; {this.props.warning}</Text>
             </View>
           </View>
           <View style={styles.iconContainer}>
             <View style={styles.container}>
               <Ionicons name="md-close-circle" size={24} color="#FFAB91" />
-              <Text style={styles.warning}>&nbsp;&nbsp; Nilai Dibawah 40 % = Sangat Kering</Text>
+              <Text style={styles.warning}>&nbsp;&nbsp; {this.props.danger}</Text>
             </View>
           </View>
       </View>
@@ -70,10 +70,12 @@ const styles = StyleSheet.create({
   },
   warning:{
     color:'red',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'sans-serif-condensed'
   },
   text:{
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'sans-serif-condensed'
   },
   modalBackGround: {
     alignItems: 'center',

@@ -7,8 +7,6 @@ import {
   BackHandler
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
-
-// Sementara
 import FarmDetail from './farms/FarmDetail'
 
 class Home extends Component {

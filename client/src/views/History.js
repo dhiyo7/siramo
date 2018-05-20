@@ -20,10 +20,10 @@ const initialLayout = {
   width: Dimensions.get('window').width,
 };
 
-const FirstRoute = () => <Graph sensorData={FarmStore.farmData.historyHumidity} humidityDetail={'humid'}/>
-const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperature} temperatureDetail={'panas'} color="blue"/>
-const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red"/>
-const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green"/>
+const FirstRoute = () => <Graph sensorData={FarmStore.farmData.historyHumidity} humidityDetail={'humid'} navigation={FarmStore.navigation}/>
+const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperature} temperatureDetail={'panas'} color="blue" navigation={FarmStore.navigation}/>
+const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red" navigation={FarmStore.navigation}/>
+const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green" navigation={FarmStore.navigation}/>
 
 @inject('FarmStore')
 @observer class History extends Component {
@@ -40,21 +40,15 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
       ],
     };
   }
-
-  static navigationOptions = {
-    drawerLabel: 'History',
-    drawerIcon: () => (
-      <Ionicons name="md-analytics" size={24} color="green" />
-    )
-  }
-
+  
   componentDidMount() {
     FarmStore.getHistory()
+    FarmStore.navigation = this.props.navigation
   }
 
   _handleIndexChange = index => this.setState({ index });
 
-_renderHeader = props => <TabBar  {...props} renderIcon={this._renderIcon} tabStyle={{backgroundColor: '#AED581'}}/>;
+_renderHeader = props => <TabBar  {...props}  renderIcon={this._renderIcon} tabStyle={{backgroundColor: '#AED581'}}/>;
 
   _renderScene = SceneMap({
     first: FirstRoute,

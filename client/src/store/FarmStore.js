@@ -12,6 +12,8 @@ class FarmStore {
     historyLoading: false
   }
 
+  @observable navigation = {}
+
   getHistory = (key) => {
     this.farmData.historyLoading = true
     db.ref('/history/17UFak7JqufG1RXUeVW30jwdfrQ2').on('value', (snapshot) => {
