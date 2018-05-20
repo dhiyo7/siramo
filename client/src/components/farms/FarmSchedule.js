@@ -121,7 +121,7 @@ import FarmStore from '../../store/FarmStore'
               style={styles.buttonContainer}
               onPress={this.startSchedule}
             >
-              <Text style={styles.buttonText}>Start Scheduling</Text>
+              <Text style={styles.buttonText}>Save Change</Text>
             </TouchableOpacity>
         </View>
       </View>
