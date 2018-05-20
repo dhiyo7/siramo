@@ -1,0 +1,989 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 10,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://jurnalaquascape.com/wp-content/uploads/2015/05/amazon-sword.jpg",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 75,
+          "height": 150,
+          "width": 150,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F1F8E9",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "padding": 4,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 20,
+            "textAlign": "center",
+            "width": "100%",
+          }
+        }
+      >
+        My Plant
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "margin": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              },
+              Object {
+                "height": 120,
+                "width": 120,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                6,
+                3,
+                89.82337649086284,
+                6,
+                114,
+                30.176623509137148,
+                114,
+                59.999999999999986,
+                3,
+                114.00000000000003,
+                89.82337649086283,
+                89.82337649086287,
+                114,
+                60.00000000000002,
+                114,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.9450980392156862,
+                0.023529411764705882,
+                0.4,
+                0.83,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={10}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                0.5,
+                4,
+                60,
+                60,
+                59.5,
+                -1.5707963267948966,
+                1.5707963267948966,
+                1,
+                4,
+                60,
+                60,
+                59.5,
+                1.5707963267948966,
+                -1.5707963267948966,
+                1,
+                1,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.9450980392156862,
+                0.023529411764705882,
+                0.4,
+                0.83,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={1}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 49,
+              "height": 98,
+              "justifyContent": "center",
+              "left": 11,
+              "position": "absolute",
+              "top": 11,
+              "width": 98,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(241, 6, 102, 0.83)",
+                  "fontSize": 21.77777777777778,
+                  "fontWeight": "300",
+                },
+                Object {
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Temperature
+20°C
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "margin": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              },
+              Object {
+                "height": 120,
+                "width": 120,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                6,
+                3,
+                71.4036797033666,
+                6,
+                82.5146329453613,
+                9.610167552246935,
+                91.74040362379355,
+                16.313082303752836,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0,
+                0.6549019607843137,
+                0.0196078431372549,
+                1,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={10}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                0.5,
+                4,
+                60,
+                60,
+                59.5,
+                -1.5707963267948966,
+                1.5707963267948966,
+                1,
+                4,
+                60,
+                60,
+                59.5,
+                1.5707963267948966,
+                -1.5707963267948966,
+                1,
+                1,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0,
+                0.6549019607843137,
+                0.0196078431372549,
+                1,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={1}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 49,
+              "height": 98,
+              "justifyContent": "center",
+              "left": 11,
+              "position": "absolute",
+              "top": 11,
+              "width": 98,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(0, 167, 5, 1)",
+                  "fontSize": 21.77777777777778,
+                  "fontWeight": "300",
+                },
+                Object {
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Water Ratio
+10%
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "margin": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              },
+              Object {
+                "height": 120,
+                "width": 120,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                6,
+                3,
+                77.28567065376835,
+                6,
+                93.52665540997732,
+                14.275195058139545,
+                103.68691769624715,
+                28.259596376206446,
+                3,
+                113.84717998251699,
+                42.24399769427335,
+                116.69861787112102,
+                60.24726798244885,
+                111.3570518799383,
+                76.68691769624715,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.1607843137254902,
+                0.6941176470588235,
+                0.9294117647058824,
+                1,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={10}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                0.5,
+                4,
+                60,
+                60,
+                59.5,
+                -1.5707963267948966,
+                1.5707963267948966,
+                1,
+                4,
+                60,
+                60,
+                59.5,
+                1.5707963267948966,
+                -1.5707963267948966,
+                1,
+                1,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.1607843137254902,
+                0.6941176470588235,
+                0.9294117647058824,
+                1,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={1}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 49,
+              "height": 98,
+              "justifyContent": "center",
+              "left": 11,
+              "position": "absolute",
+              "top": 11,
+              "width": 98,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgb(41, 177, 237)",
+                  "fontSize": 21.77777777777778,
+                  "fontWeight": "300",
+                },
+                Object {
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Water Level
+30%
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "margin": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              },
+              Object {
+                "height": 120,
+                "width": 120,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                6,
+                3,
+                77.28567065376835,
+                6,
+                93.52665540997732,
+                14.275195058139545,
+                103.68691769624715,
+                28.259596376206446,
+                3,
+                113.84717998251699,
+                42.24399769427335,
+                116.69861787112102,
+                60.24726798244885,
+                111.3570518799383,
+                76.68691769624715,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.9490196078431372,
+                0.5058823529411764,
+                0.13725490196078433,
+                0.83,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={10}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+          <ARTShape
+            d={
+              Array [
+                0,
+                60,
+                0.5,
+                4,
+                60,
+                60,
+                59.5,
+                -1.5707963267948966,
+                1.5707963267948966,
+                1,
+                4,
+                60,
+                60,
+                59.5,
+                1.5707963267948966,
+                -1.5707963267948966,
+                1,
+                1,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.9490196078431372,
+                0.5058823529411764,
+                0.13725490196078433,
+                0.83,
+              ]
+            }
+            strokeCap={0}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={1}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 49,
+              "height": 98,
+              "justifyContent": "center",
+              "left": 11,
+              "position": "absolute",
+              "top": 11,
+              "width": 98,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(242, 129, 35, 0.83)",
+                  "fontSize": 21.77777777777778,
+                  "fontWeight": "300",
+                },
+                Object {
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Humidity
+30%
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderRadius": 10,
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+    >
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Last Watering:
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#128eb7",
+              "borderColor": "#ddd",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "elevation": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "center",
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 2,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 35,
+                "margin": 8,
+                "padding": 4,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 25,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              />
+               
+              20 May 2018
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 35,
+                "margin": 8,
+                "padding": 4,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 25,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              />
+               
+              20:56
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderRadius": 10,
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+    >
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Last updated:
+        </Text>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#128eb7",
+              "borderColor": "#ddd",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "elevation": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "center",
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.8,
+              "shadowRadius": 2,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 35,
+                "margin": 8,
+                "padding": 4,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 25,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              />
+               
+              24 October 2008
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 35,
+                "margin": 8,
+                "padding": 4,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 25,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              />
+               
+              12:02
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#31ce12",
+        "borderRadius": 4,
+        "marginBottom": 4,
+        "marginTop": 8,
+        "opacity": 1,
+        "paddingVertical": 15,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 20,
+          "fontWeight": "700",
+          "textAlign": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      />
+       
+      Start Watering
+    </Text>
+  </View>
+</View>
+`;
