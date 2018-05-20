@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, Button, StyleSheet, TouchableHighlight } from 'react-native'
+import { View, ScrollView, Text, StyleSheet, TouchableHighlight, Image } from 'react-native'
 import PureChart from 'react-native-pure-chart';
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
 import UserStore from '../../store/UserStore'
 import RecommendedCard from '../../components/customs/RecommendedCard'
 import LandscapeView from 'react-native-landscape-view'
+import { Card, ListItem, Button, Divider } from 'react-native-elements'
 
 @inject('FarmStore')
 @observer class Graph extends Component {
@@ -22,13 +23,22 @@ import LandscapeView from 'react-native-landscape-view'
       return (
         <ScrollView style={styles.mainContainer}>
           <View style={styles.container}>
-            <Text style={styles.head}>Humidity (%)</Text>
-            <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
-            <Text style={styles.text}>
-              Nilai Normal yang dianjurkan = 40-60 %</Text>
-            <RecommendedCard />
-            <Text style={styles.text}>Nilai Diatas 60 % = Basah</Text>
-            <Text style={styles.warning}>Nilai Dibawah 40 % = Sangat Kering</Text>
+            <Card
+              title='HUMIDITY (%)'
+              containerStyle={{width: '100%'}}
+              image={require('../../assets/logo/humidity-hysitron-inc.jpeg')}>
+              <RecommendedCard />
+              <Text style={{marginBottom: 10}}>
+                Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+              </Text>
+              <Divider style={{ backgroundColor: '#00E676' }} />
+              <Text style={styles.head}>History</Text>
+              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              <Button
+                backgroundColor='#4CAF50'
+                buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
+                title='VIEW NOW' />
+            </Card>
           </View>
         </ScrollView>)
     } else if (this.props.waterRatioDetail !== undefined){
@@ -70,8 +80,7 @@ import LandscapeView from 'react-native-landscape-view'
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginRight:4,
-    marginLeft:4
+
   },
   container:{
     flex: 1,
