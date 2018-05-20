@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
   navItemStyle: {
     padding: 10,
     fontSize: 20,
+    fontFamily: 'sans-serif-condensed'
   },
   navSectionStyle: {
   },
