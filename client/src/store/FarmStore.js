@@ -31,54 +31,62 @@ class FarmStore {
     cronSchedule: '',
     minWaterRatio: 0,
     maxWaterRatio: 0,
-    ready_siram: 2,
+    ready_siram: 1,
     loading: false
   }
 
   @observable navigation = {}
 
   clearAll = () => {
-    this.farmData.historyHumidity= []
-    this.farmData.historyWaterRatio= []
-    this.farmData.historyTemperature= []
-    this.farmData.historyWaterLevel= []
-    this.farmData.historyLoading= false
-
-    this.FarmDetail.name= ''
-    this.FarmDetail.temperature= 0
-    this.FarmDetail.water_ratio= 0
-    this.FarmDetail.water_level= 0
-    this.FarmDetail.humidity= 0
-    this.FarmDetail.last_siram= 0
-    this.FarmDetail.last_updated= 0
-    this.FarmDetail.cronSchedule= ''
-    this.FarmDetail.minWaterRatio= 0
-    this.FarmDetail.maxWaterRatio= 0
-    this.FarmDetail.ready_siram= 2
-    this.FarmDetail.loading= false
+    return new Promise((resolve, reject) => {
+      this.farmData.historyHumidity= []
+      this.farmData.historyWaterRatio= []
+      this.farmData.historyTemperature= []
+      this.farmData.historyWaterLevel= []
+      this.farmData.historyLoading= false
+  
+      this.FarmDetail.name= ''
+      this.FarmDetail.temperature= 0
+      this.FarmDetail.water_ratio= 0
+      this.FarmDetail.water_level= 0
+      this.FarmDetail.humidity= 0
+      this.FarmDetail.last_siram= 0
+      this.FarmDetail.last_updated= 0
+      this.FarmDetail.cronSchedule= ''
+      this.FarmDetail.minWaterRatio= 0
+      this.FarmDetail.maxWaterRatio= 0
+      this.FarmDetail.ready_siram= 2
+      this.FarmDetail.loading= false
+      resolve()
+      reject()
+    })
   }
 
   getFarmData = () => {
-    let userId = userStore.userData.uid
-    this.FarmDetail.loading = true
-    db.ref(`/farms/${userId}`).on('value', snap => {
-      try {
-        let farmDB = snap.val()
-        this.FarmDetail.name = farmDB.name
-        this.FarmDetail.temperature = farmDB.temperature
-        this.FarmDetail.water_ratio = farmDB.water_ratio
-        this.FarmDetail.water_level = farmDB.water_level
-        this.FarmDetail.humidity = farmDB.humidity
-        this.FarmDetail.cronSchedule = farmDB.cronSchedule
-        this.FarmDetail.minWaterRatio = farmDB.minWaterRatio
-        this.FarmDetail.maxWaterRatio = farmDB.maxWaterRatio
-        this.FarmDetail.last_siram = farmDB.last_siram
-        this.FarmDetail.last_updated = farmDB.last_updated
-        this.FarmDetail.ready_siram = farmDB.ready_siram
-        this.FarmDetail.loading = false
-      } catch (error) {
-        console.log(error)
-      }
+    return new Promise((resolve, reject) => {
+      let userId = userStore.userData.uid
+      this.FarmDetail.loading = true
+      db.ref(`/farms/${userId}`).on('value', snap => {
+        try {
+          let farmDB = snap.val()
+          this.FarmDetail.name = farmDB.name
+          this.FarmDetail.temperature = farmDB.temperature
+          this.FarmDetail.water_ratio = farmDB.water_ratio
+          this.FarmDetail.water_level = farmDB.water_level
+          this.FarmDetail.humidity = farmDB.humidity
+          this.FarmDetail.cronSchedule = farmDB.cronSchedule
+          this.FarmDetail.minWaterRatio = farmDB.minWaterRatio
+          this.FarmDetail.maxWaterRatio = farmDB.maxWaterRatio
+          this.FarmDetail.last_siram = farmDB.last_siram
+          this.FarmDetail.last_updated = farmDB.last_updated
+          this.FarmDetail.ready_siram = farmDB.ready_siram
+          this.FarmDetail.loading = false
+          resolve()
+        } catch (error) {
+          console.log(error)
+          reject(error)
+        }
+      })
     })
   }
 
