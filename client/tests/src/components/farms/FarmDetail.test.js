@@ -82,7 +82,6 @@ describe('<FarmDetail /> child props is working', () => {
     let lastUpdateDate = userStore.dateFormat(FarmStore.FarmDetail.last_updated)
     let lastUpdateTime = userStore.timeFormat(FarmStore.FarmDetail.last_updated)
 
-    console.log(wrapper.find('ButtonOnOff').get(0))
     expect(wrapper.find('TemperatureGauge').get(0).props.sensor).toEqual(FarmStore.FarmDetail.temperature)
     expect(wrapper.find('Text').at(0).props().children).toEqual(FarmStore.FarmDetail.name)
     expect(wrapper.find('CircleProg').get(0).props.sensor).toEqual(FarmStore.FarmDetail.water_ratio)
