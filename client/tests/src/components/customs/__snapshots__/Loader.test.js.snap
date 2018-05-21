@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> snapshot Testing snapshot works! 1`] = `
+<Modal
+  animationType="none"
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00000040",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderRadius": 10,
+          "display": "flex",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <View
+        collapsable={undefined}
+        spinDuration={10000}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "overflow": "hidden",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+          }
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              undefined,
+              Object {
+                "height": 100,
+                "width": 100,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                46.206330167420525,
+                12.189841719435023,
+                3,
+                47.46693141297555,
+                12.063359706831747,
+                48.73306937845552,
+                12,
+                49.99999999999999,
+                12,
+              ]
+            }
+            fill={null}
+            opacity={1}
+            stroke={
+              Array [
+                0.5647058823529412,
+                0.792156862745098,
+                0.9764705882352941,
+                1,
+              ]
+            }
+            strokeCap={1}
+            strokeDash={null}
+            strokeJoin={1}
+            strokeWidth={8}
+            transform={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
