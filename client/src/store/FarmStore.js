@@ -128,14 +128,13 @@ class FarmStore {
         minWaterRatio: min
       }
       db.ref(`/farms/${uid}`).update(updatedValue)
-        .then(response => {
-          console.log(response)
-          resolve()
-        })
-        .catch(err => {
-          console.log(err)
-          reject(err)
-        })
+      db.ref(`/farms/${uid}`).once('value', snapshot => {
+        this.FarmDetail.minWaterRatio = snapshot.val().minWaterRatio
+        this.FarmDetail.maxWaterRatio = snapshot.val().maxWaterRatio
+        this.FarmDetail.cronSchedule = snapshot.val().cronSchedule
+        resolve()
+        reject()
+      })
     })
   }
 
@@ -161,7 +160,10 @@ class FarmStore {
           '',
           'Your plant is still have enough water',
           [
-            {text: 'Watering anyway', onPress: async () => await this.updateSiram(userId, farmUpdate)}
+            {text: 'Watering anyway', onPress: async () => {
+              await this.updateSiram(userId, farmUpdate)
+              resolve()
+            }}
           ]
         )
         resolve()
@@ -175,8 +177,11 @@ class FarmStore {
   updateSiram = (userId, farmUpdate) => {
     return new Promise((resolve, reject) => {
       db.ref(`/farms/${userId}`).update(farmUpdate)
-      resolve()
-      reject()
+      db.ref(`/farms/${userId}`).once('value', (snapshot) => {
+        this.FarmDetail.ready_siram = snapshot.val().ready_siram
+        resolve()
+        reject()
+      })
     })
   }
 

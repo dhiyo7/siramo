@@ -42,6 +42,20 @@ describe('FarmStore testing get Farm data', () => {
     expect(FarmStore.FarmDetail.minWaterRatio).not.toEqual(0)
     expect(FarmStore.FarmDetail.maxWaterRatio).not.toEqual(0)
   })
+
+  afterAll(async() => {
+    await FarmStore.clearAll()
+    expect(FarmStore.FarmDetail.name).toEqual('')
+    expect(FarmStore.FarmDetail.cronSchedule).toEqual('')
+    expect(FarmStore.FarmDetail.temperature).toEqual(0)
+    expect(FarmStore.FarmDetail.water_ratio).toEqual(0)
+    expect(FarmStore.FarmDetail.water_level).toEqual(0)
+    expect(FarmStore.FarmDetail.humidity).toEqual(0)
+    expect(FarmStore.FarmDetail.last_siram).toEqual(0)
+    expect(FarmStore.FarmDetail.last_updated).toEqual(0)
+    expect(FarmStore.FarmDetail.minWaterRatio).toEqual(0)
+    expect(FarmStore.FarmDetail.maxWaterRatio).toEqual(0)
+  })
 })
 
 describe('FarmStore testing get history data', () => {
@@ -58,6 +72,14 @@ describe('FarmStore testing get history data', () => {
     expect(FarmStore.farmData.historyTemperature.length).not.toEqual(0)
     expect(FarmStore.farmData.historyWaterLevel.length).not.toEqual(0)
     expect(FarmStore.farmData.historyWaterRatio.length).not.toEqual(0)
+  })
+
+  afterAll(async() => {
+    await FarmStore.clearAll()
+    expect(FarmStore.farmData.historyHumidity.length).toEqual(0)
+    expect(FarmStore.farmData.historyTemperature.length).toEqual(0)
+    expect(FarmStore.farmData.historyWaterLevel.length).toEqual(0)
+    expect(FarmStore.farmData.historyWaterRatio.length).toEqual(0)
   })
 })
 
@@ -84,15 +106,15 @@ describe('FarmStore testing trigger siram and update siram', () => {
     FarmStore.FarmDetail.water_ratio = 40
     FarmStore.FarmDetail.ready_siram = 0
     expect(FarmStore.FarmDetail.ready_siram).toEqual(0)
-    FarmStore.FarmDetail.ready_siram = 1
     await FarmStore.triggerSiram()
     expect(FarmStore.FarmDetail.ready_siram).toEqual(1)
   })
 
   test('FarmStore updateSiram works', async() => {
-    FarmStore.FarmDetail.ready_siram = 0
+    farmUpdate.ready_siram = 0
+    await FarmStore.updateSiram(UserStore.userData.uid, farmUpdate)
     expect(FarmStore.FarmDetail.ready_siram).toEqual(0)
-    FarmStore.FarmDetail.ready_siram = 1
+    farmUpdate.ready_siram = 1
     await FarmStore.updateSiram(UserStore.userData.uid, farmUpdate)
     expect(FarmStore.FarmDetail.ready_siram).toEqual(1)
   })
