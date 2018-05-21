@@ -15,8 +15,8 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe('UserStore testing assign user data', () => {
   let testData = {
-    uid: '17UFak7JqufG1RXUeVW30jwdfrQ2',
-    email: 'dummy@gmail.com'
+    uid: 'Hmyc0z9azhQbKE4mcv0NNZwDfPB3',
+    email: 'demo@gmail.com'
   }
   test('UserStore.userData become testData', async () => {
     await UserStore.assignUserData(testData)
@@ -27,10 +27,10 @@ describe('UserStore testing assign user data', () => {
 
 describe('UserStore login firebase testing', () => {
   let testData = {
-    email: 'dummy@gmail.com',
-    password: 'dummy12'
+    email: 'demo@gmail.com',
+    password: 'demo123'
   }
-  let userId = '17UFak7JqufG1RXUeVW30jwdfrQ2'
+  let userId = 'Hmyc0z9azhQbKE4mcv0NNZwDfPB3'
   let testDetailData = {
     name: '',
     temperature: 0,
@@ -71,8 +71,8 @@ describe('UserStore login firebase testing', () => {
 
 describe('UserStore sign out firebase testing', () => {
   let testData = {
-    email: 'dummy@gmail.com',
-    userId: '17UFak7JqufG1RXUeVW30jwdfrQ2'
+    email: 'demo@gmail.com',
+    userId: 'Hmyc0z9azhQbKE4mcv0NNZwDfPB3'
   }
   beforeEach(async() => {
     AsyncStorage.setItem('userId', testData.userId)
@@ -121,12 +121,11 @@ describe('UserStore time and date format testing', () => {
   })
 })
 
-describe('UserStore sign up firebase testing', () => {
+describe.skip('UserStore sign up firebase testing', () => {
   let newTestData = {
-    email: 'test2@gmail.com',
+    email: 'test3@gmail.com',
     password: 'test1234'
   }
-
 
   test('firebase signup method works',  async() => {
     const navigation = { navigate: jest.fn() }
@@ -142,6 +141,6 @@ describe('UserStore sign up firebase testing', () => {
   })
 
   afterAll(async() => {
-    await User.currentUser.delete()
+    // await User.currentUser.delete()
   })
 })
