@@ -35,6 +35,7 @@ describe('<FarmSchedule />', () => {
 
 describe('<FarmSchedule /> state', () => {
   it('should have state value', () => {
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
     expect(wrapper.state('minutes').length).toBe(60)
     expect(typeof wrapper.state('minutes')[0]).toBe('string')
     expect(wrapper.state('hours').length).toBe(24)
@@ -50,9 +51,10 @@ describe('<FarmSchedule /> state', () => {
 
 describe('<FarmSchedule /> child is rendered', () => {
   it('should render <FarmSchedule /> child Element', () => {
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
     expect(wrapper.find(<View />)).toBeDefined()
     expect(wrapper.find(<Text />)).toBeDefined()
-    expect(wrapper.find('Text').length).toBe(6)
+    expect(wrapper.find('Text').length).toBe(7)
     expect(wrapper.find(<Picker />)).toBeDefined()
     expect(wrapper.find('Picker').length).toBe(4)
     expect(wrapper.find(<Picker.Item />)).toBeDefined()
@@ -63,20 +65,23 @@ describe('<FarmSchedule /> child is rendered', () => {
 
 describe('<FarmSchedule /> <Text /> testing', () => {
   it('should have expected childern', () => {
-    expect(wrapper.find('Text').get(0).props.children).toEqual('Watering Schedule')
-    expect(wrapper.find('Text').get(1).props.children[0]).toEqual(<Ionicons name='md-clock' size={20} />)
-    expect(wrapper.find('Text').get(1).props.children[1]).toEqual('  Hours')
-    expect(wrapper.find('Text').get(2).props.children).toEqual('Minutes')
-    expect(wrapper.find('Text').get(3).props.children[0]).toEqual(<Ionicons name='md-rainy' size={20} />)
-    expect(wrapper.find('Text').get(3).props.children[1]).toEqual(' Maximum Water Ratio')
-    expect(wrapper.find('Text').get(4).props.children[0]).toEqual(<Ionicons name='md-cloud-outline' size={20} />)
-    expect(wrapper.find('Text').get(4).props.children[1]).toEqual(' Minimum Water Ratio')
-    expect(wrapper.find('Text').get(5).props.children).toEqual('Save Change')
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
+    expect(wrapper.find('Text').get(0).props.children).toEqual(' Automatic Mode ')
+    expect(wrapper.find('Text').get(1).props.children).toEqual('Watering Schedule')
+    expect(wrapper.find('Text').get(2).props.children[0]).toEqual(<Ionicons name='md-clock' size={20} />)
+    expect(wrapper.find('Text').get(2).props.children[1]).toEqual('  Hours')
+    expect(wrapper.find('Text').get(3).props.children).toEqual('Minutes')
+    expect(wrapper.find('Text').get(4).props.children[0]).toEqual(<Ionicons name='md-rainy' size={20} />)
+    expect(wrapper.find('Text').get(4).props.children[1]).toEqual(' Maximum Water Ratio')
+    expect(wrapper.find('Text').get(5).props.children[0]).toEqual(<Ionicons name='md-cloud-outline' size={20} />)
+    expect(wrapper.find('Text').get(5).props.children[1]).toEqual(' Minimum Water Ratio')
+    expect(wrapper.find('Text').get(6).props.children).toEqual('Save Change')
   })
 })
 
 describe('<FarmSchedule /> <Picker /> testing', () => {
   it('should have Picker.Item according to state', () => {
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
     expect(wrapper.find('Picker').get(0).props.children.length).toEqual(24)
     expect(wrapper.find('Picker').get(1).props.children.length).toEqual(60)
     expect(wrapper.find('Picker').get(2).props.children.length).toEqual(100)
@@ -86,6 +91,7 @@ describe('<FarmSchedule /> <Picker /> testing', () => {
 
 describe('<FarmSchedule /> state Test on Change', () => {
   it('State value should have changed, when pickers changed', () => {
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
     wrapper.find('Picker').at(0).simulate('ValueChange', '04')
     expect(wrapper.state('hoursPick')).toEqual('04')
     wrapper.find('Picker').at(1).simulate('ValueChange', '23')
@@ -98,8 +104,8 @@ describe('<FarmSchedule /> state Test on Change', () => {
 })
 
 describe('<FarmSchedule /> componentDidMount Test', () => {
-
   it('state value should change according to FarmStore.FarmDetail data', () => {
+    wrapper.find('Switch').at(0).simulate('ValueChange', true)
     FarmStore.FarmDetail.cronSchedule = "* 2 12 * * *"
     FarmStore.FarmDetail.minWaterRatio = 30
     FarmStore.FarmDetail.maxWaterRatio = 80
@@ -115,19 +121,19 @@ describe('<FarmSchedule /> componentDidMount Test', () => {
 })
 
 describe('<FarmSchedule /> Button Save Change', () => {
-
   it('should trigger startSchedule in FarmStore', async() => {
     FarmStore.clearAll()
     userStore.userData.uid = '17UFak7JqufG1RXUeVW30jwdfrQ2'
     let tree = shallow(<FarmSchedule />)
     // let startSchedule = jest.fn()
+    tree.find('Switch').at(0).simulate('ValueChange', true)
     tree.find('Picker').at(0).simulate('ValueChange', '08')
     tree.find('Picker').at(1).simulate('ValueChange', '22')
     tree.find('Picker').at(2).simulate('ValueChange', 82)
     tree.find('Picker').at(3).simulate('ValueChange', 31)
     tree.find('TouchableOpacity').get(0).props.onPress()
     await FarmStore.getFarmData()
-    expect(FarmStore.FarmDetail.cronSchedule).toEqual('* 22 */8 * * *')
+    expect(FarmStore.FarmDetail.cronSchedule).toEqual('3 22 */8 * * *')
     expect(FarmStore.FarmDetail.minWaterRatio).toEqual(31)
     expect(FarmStore.FarmDetail.maxWaterRatio).toEqual(82)
   })
