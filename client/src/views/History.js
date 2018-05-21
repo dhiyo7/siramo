@@ -4,7 +4,8 @@ import {
   Text,
   View,
   FlatList,
-  Dimensions
+  Dimensions,
+  AsyncStorage
 } from 'react-native';
 import { inject, observer } from 'mobx-react'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
@@ -41,8 +42,8 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
     };
   }
   
-  componentDidMount() {
-    FarmStore.getHistory()
+  componentDidMount = async () => {
+    FarmStore.getHistory(await AsyncStorage.getItem('userId'))
     FarmStore.navigation = this.props.navigation
   }
 
