@@ -33,6 +33,7 @@
     "react-native-fa-icons": "^3.0.1",
     "react-native-image-picker": "^0.26.10",
     "react-native-landscape-view": "^0.0.1",
+    "react-native-material-switch": "^0.0.4",
     "react-native-photo-upload": "^1.2.0",
     "react-native-progress": "^3.4.0",
     "react-native-pure-chart": "^0.0.21",

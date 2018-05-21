@@ -57,23 +57,21 @@ import ButtonOnOff from '../farms/ButtonOnOff'
             maxValue={'%'}
             color='rgba(242, 129, 35, 0.83)'
           />
-          <View style={styles.dateView}>
-            <FarmDate 
-              date={{
-                title: 'Last Watering:',
-                dates: dateFormat(last_siram),
-                times: timeFormat(last_siram)
-              }}
-            />
-          </View>
-          <View style={styles.dateView}>
-            <FarmDate 
-              date={{
-                title: 'Last updated:',
-                dates: dateFormat(last_updated),
-                times: timeFormat(last_updated)
-              }}
-            />
+          <View style={styles.dateContainer}>
+              <FarmDate 
+                date={{
+                  title: 'Last Watering:',
+                  dates: dateFormat(last_siram),
+                  times: timeFormat(last_siram)
+                }}
+              />
+              <FarmDate 
+                date={{
+                  title: 'Last updated:',
+                  dates: dateFormat(last_updated),
+                  times: timeFormat(last_updated)
+                }}
+              />
           </View>
           {/* <Text>Ready Siram: {ready_siram}</Text> */}
         </View>
@@ -131,6 +129,15 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 20 
+  },
+  dateContainer: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    width: '100%',
+    height: 'auto',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
 

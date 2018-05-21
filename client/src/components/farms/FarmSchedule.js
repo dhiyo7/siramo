@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import {
   View, Text, TouchableOpacity, 
-  TextInput, StyleSheet, Picker
+  TextInput, StyleSheet, Picker, Switch
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
+import { ListItem } from 'react-native-elements' 
 
 @observer class FarmSchedule extends Component {
   constructor() {
     super()
     this.state = {
+      automaticMode: false,
       minutes: [
         '00','01','02','03','04','05','06','07','08', '09',
         '10','11','12','13','14','15','16','17','18', '19',
@@ -54,14 +56,14 @@ import FarmStore from '../../store/FarmStore'
   }
 
   startSchedule = () => {
-    let cronFormat = "* 59 */23 * * *" // setiap jam 00:00 tengah malam
+    let cronFormat = "3 59 */23 * * *" // setiap jam 00:00 tengah malam
     let { 
       hoursPick, minutesPick, maxWaterRatio, minWaterRatio
     } = this.state
     if (hoursPick === '00' && minutesPick !== '00') {
-      cronFormat = `* */${parseInt(minutesPick)} * * * *`
+      cronFormat = `3 */${parseInt(minutesPick)} * * * *`
     } else if (hoursPick !== '00') {
-      cronFormat = `* ${parseInt(minutesPick)} */${parseInt(hoursPick)} * * *`
+      cronFormat = `3 ${parseInt(minutesPick)} */${parseInt(hoursPick)} * * *`
     }
     // console.log('Jam', this.state.hoursPick)
     // console.log('Menit', this.state.minutesPick)
@@ -72,6 +74,24 @@ import FarmStore from '../../store/FarmStore'
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
   
+  componentDidMount() {
+    this.setState({
+      automaticMode: FarmStore.FarmDetail.automaticMode
+    })
+  }
+  changeMode () {
+    if(this.state.automaticMode) {
+      this.setState({
+        automaticMode: false
+      })
+      FarmStore.changeMode(false)
+    } else {
+      this.setState({
+        automaticMode: true
+      })
+      FarmStore.changeMode(true)
+    }
+  }
   render() {
     const { 
       hours, minutes, hoursPick, minutesPick,
@@ -85,60 +105,79 @@ import FarmStore from '../../store/FarmStore'
     ))
     const wtrRatio = waterRatio.map((wr, index) => (
       <Picker.Item label={`${wr}`} value={wr} key={index}/>
-    )) 
+    ))
+
+    const automaticModeOn = 
+    <View style={styles.container}>
+      <Text style={styles.txtTitle}>Watering Schedule</Text>
+        <View style={styles.inputBox}>
+        <Text><Ionicons name='md-clock' size={20} />  Hours</Text>
+        <Picker
+          style={styles.timeInput}
+          selectedValue={hoursPick}
+          onValueChange={(itemValue, itemIndex) => this.setState({hoursPick: itemValue})}
+        >
+          {hoursFormat}
+        </Picker>
+        <Text>Minutes</Text>
+        <Picker
+          style={styles.timeInput}
+          selectedValue={minutesPick}
+          onValueChange={(itemValue, itemIndex) => this.setState({minutesPick: itemValue})}
+        >
+          {minutesFormat}
+        </Picker>
+      </View>
+
+      <View style={styles.inputBox}>
+        <Text><Ionicons name='md-rainy' size={20} /> Maximum Water Ratio</Text>
+        <Picker
+          style={styles.timeInput}
+          selectedValue={maxWaterRatio}
+          onValueChange={(value, index) => this.setState({maxWaterRatio: value})}
+        >
+          {wtrRatio}
+        </Picker>
+      </View>
+
+      <View style={styles.inputBox}>
+        <Text><Ionicons name='md-cloud-outline' size={20} /> Minimum Water Ratio</Text>
+        <Picker
+          style={styles.timeInput}
+          selectedValue={minWaterRatio}
+          onValueChange={(value, index) => this.setState({minWaterRatio: value})}
+        >
+          {wtrRatio}
+        </Picker>
+      </View>
+
+      <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={this.startSchedule}
+        >
+          <Text style={styles.buttonText}>Save Change</Text>
+        </TouchableOpacity>
+    </View>
 
     return (
       <View style={styles.mainContainer}>
-        <View style={styles.container}>
-          <Text style={styles.txtTitle}>Watering Schedule</Text>
-          <View style={styles.inputBox}>
-            <Text><Ionicons name='md-clock' size={20} />  Hours</Text>
-            <Picker
-              style={styles.timeInput}
-              selectedValue={hoursPick}
-              onValueChange={(itemValue, itemIndex) => this.setState({hoursPick: itemValue})}
-            >
-              {hoursFormat}
-            </Picker>
-            <Text>Minutes</Text>
-            <Picker
-              style={styles.timeInput}
-              selectedValue={minutesPick}
-              onValueChange={(itemValue, itemIndex) => this.setState({minutesPick: itemValue})}
-            >
-              {minutesFormat}
-            </Picker>
+        <View style={styles.switchContainer}>
+          <View style={{width: 300}}>
+            <Text style={{fontSize: 20}}> Automatic Mode </Text>
           </View>
-
-          <View style={styles.inputBox}>
-            <Text><Ionicons name='md-rainy' size={20} /> Maximum Water Ratio</Text>
-            <Picker
-              style={styles.timeInput}
-              selectedValue={maxWaterRatio}
-              onValueChange={(value, index) => this.setState({maxWaterRatio: value})}
-            >
-              {wtrRatio}
-            </Picker>
+          <View>
+            <Switch 
+                  onValueChange = {() => this.changeMode()}
+                  value = {this.state.automaticMode}
+                />
           </View>
-
-          <View style={styles.inputBox}>
-            <Text><Ionicons name='md-cloud-outline' size={20} /> Minimum Water Ratio</Text>
-            <Picker
-              style={styles.timeInput}
-              selectedValue={minWaterRatio}
-              onValueChange={(value, index) => this.setState({minWaterRatio: value})}
-            >
-              {wtrRatio}
-            </Picker>
-          </View>
-
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={this.startSchedule}
-          >
-              <Text style={styles.buttonText}>Save Change</Text>
-          </TouchableOpacity>
         </View>
+      <View>
+          {
+            this.state.automaticMode?
+            automaticModeOn: <Text style={styles.container}> </Text>
+          }
+      </View>
       </View>
     )
   }
@@ -147,19 +186,16 @@ import FarmStore from '../../store/FarmStore'
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: '#F1F8E9',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingLeft: 12,
-    paddingRight: 12
+    paddingTop: 12,
+    height: '100%'
   },
   container: {
     backgroundColor: '#F1F8E9',
     width: '100%',
-    height: '100%',
     marginRight: 8,
     marginLeft: 8,
-    alignItems: 'center',
-    paddingTop: 50,
+    marginTop: 10,
+    alignItems: 'center'
   },
   txtTitle: {
     fontSize: 30,
@@ -204,7 +240,23 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     fontWeight: '700'
-  }
+  },
+  switchContainer: {
+    width: '100%',
+    backgroundColor: '#C8E6C9',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    display: 'flex',
+    borderRadius: 2,
+    borderBottomWidth: 1,
+    borderBottomColor: '#00C853',
+    borderTopWidth: 1,
+    borderTopColor: '#00C853', 
+    borderRightWidth: 1,
+    borderRightColor: '#00C853',
+    borderLeftWidth: 1,
+    borderLeftColor: '#00C853',
+  },
 })
 
 export default FarmSchedule

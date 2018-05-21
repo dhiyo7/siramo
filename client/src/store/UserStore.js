@@ -15,12 +15,8 @@ class UserStore {
   @observable isLogin = false
 
   assignUserData = (data) => {
-    return new Promise((resolve, reject) => {
       this.userData.uid = data.uid
       this.userData.email = data.email
-      resolve(this.userData)
-      reject('error')
-    })
   }
 
   firebaseLogin = (data, navigation) => {

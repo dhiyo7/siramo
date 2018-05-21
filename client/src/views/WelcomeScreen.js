@@ -25,7 +25,7 @@ const background = require('../assets/logo/Drawing1-Model3.png')
         email
       })
       await FarmStore.getFarmData()
-      !uid?
+      uid == null?
       this.props.navigation.push('Login'):this.props.navigation.push('Home')
     }, 3000)
   }

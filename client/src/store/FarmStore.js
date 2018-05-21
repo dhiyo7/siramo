@@ -32,7 +32,8 @@ class FarmStore {
     minWaterRatio: 0,
     maxWaterRatio: 0,
     ready_siram: 1,
-    loading: false
+    loading: false,
+    automaticMode: false
   }
 
   @observable navigation = {}
@@ -57,37 +58,33 @@ class FarmStore {
       this.FarmDetail.maxWaterRatio= 0
       this.FarmDetail.ready_siram= 2
       this.FarmDetail.loading= false
+      this.FarmDetail.automaticMode = false
       resolve()
       reject()
     })
   }
 
   getFarmData = () => {
-    return new Promise((resolve, reject) => {
       let userId = userStore.userData.uid
       this.FarmDetail.loading = true
       db.ref(`/farms/${userId}`).on('value', snap => {
-        try {
           let farmDB = snap.val()
-          this.FarmDetail.name = farmDB.name
-          this.FarmDetail.temperature = farmDB.temperature
-          this.FarmDetail.water_ratio = farmDB.water_ratio
-          this.FarmDetail.water_level = farmDB.water_level
-          this.FarmDetail.humidity = farmDB.humidity
-          this.FarmDetail.cronSchedule = farmDB.cronSchedule
-          this.FarmDetail.minWaterRatio = farmDB.minWaterRatio
-          this.FarmDetail.maxWaterRatio = farmDB.maxWaterRatio
-          this.FarmDetail.last_siram = farmDB.last_siram
-          this.FarmDetail.last_updated = farmDB.last_updated
-          this.FarmDetail.ready_siram = farmDB.ready_siram
-          this.FarmDetail.loading = false
-          resolve()
-        } catch (error) {
-          console.log(error)
-          reject(error)
-        }
+          if(farmDB != null) {
+            this.FarmDetail.name = farmDB.name
+            this.FarmDetail.automaticMode = farmDB.automaticMode
+            this.FarmDetail.temperature = farmDB.temperature
+            this.FarmDetail.water_ratio = farmDB.water_ratio
+            this.FarmDetail.water_level = farmDB.water_level
+            this.FarmDetail.humidity = farmDB.humidity
+            this.FarmDetail.cronSchedule = farmDB.cronSchedule
+            this.FarmDetail.minWaterRatio = farmDB.minWaterRatio
+            this.FarmDetail.maxWaterRatio = farmDB.maxWaterRatio
+            this.FarmDetail.last_siram = farmDB.last_siram
+            this.FarmDetail.last_updated = farmDB.last_updated
+            this.FarmDetail.ready_siram = farmDB.ready_siram
+            this.FarmDetail.loading = false
+          }   
       })
-    })
   }
 
   getHistory = (key) => {
@@ -144,10 +141,10 @@ class FarmStore {
       let userId = userStore.userData.uid
       let ready_siram = this.FarmDetail.ready_siram
       let water_ratio = this.FarmDetail.water_ratio
-      if (ready_siram === 0) {
-        ready_siram = 1
-      } else {
+      if (ready_siram === 1) {
         ready_siram = 0
+      } else {
+        ready_siram = 1
       }
   
       let farmUpdate = {
@@ -156,7 +153,7 @@ class FarmStore {
         last_updated: firebase.database.ServerValue.TIMESTAMP
       }
   
-      if (water_ratio > 70 && ready_siram === 0) {
+      if (water_ratio > this.FarmDetail.maxWaterRatio && ready_siram === 1) {
         Alert.alert(
           '',
           'Your plant is still have enough water',
@@ -183,6 +180,14 @@ class FarmStore {
         resolve()
         reject()
       })
+    })
+  }
+
+  changeMode = (cond) => {
+    let userId = userStore.userData.uid
+
+    db.ref(`/farms/${userId}`).update({
+      automaticMode: cond
     })
   }
 

@@ -1,12 +1,11 @@
 const CronJob = require('cron').CronJob
 const { db } = require('./controllers/firebase')
 const firebase = require('firebase')
-console.log('====================')
 
 let History = new CronJob({
   cronTime: '* */15 * * * *',
   onTick: function() {
-    db.ref(`/farms/17UFak7JqufG1RXUeVW30jwdfrQ2`).on('value', snap => {
+    db.ref(`/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3`).on('value', snap => {
       let farms = snap.val()
       console.log('get Firebase', snap.val())
       let historyData = {
@@ -17,7 +16,7 @@ let History = new CronJob({
         water_ratio: farms.water_ratio,
         last_siram: farms.last_siram
       }
-      db.ref('/history/17UFak7JqufG1RXUeVW30jwdfrQ2').push(historyData)
+      db.ref('/history/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').push(historyData)
         .then(response => {
           console.log('Update Response', response)
         })

@@ -1,52 +1,30 @@
-const CronJob = require('cron').CronJob
-const axios = require('axios')
-const { db } = require('./controllers/firebase')
+const {db} = require('./controllers/firebase')
+const cron = require('node-cron')
 
-// jalanin saat register data farm
-function ScheduleWatering(req, res) {
-  let go = req.body.start
-  let farmId = req.body.farmId
-  // 1 Jam : 00 59 * * * *
-  let userId = req.body.uid
-  
-  console.log('Kondisinya=====', go)
-  let watering = new CronJob({
-    cronTime: '*/10 * * * * *',
-    onTick: function() {
-      console.log('=======================', go)
-      if (userId) {
-        let getFarms = db.ref(`/farms/${userId}`).on('value', snap => {
-          let farms = snap.val()
-          console.log('get Firebase', snap.val())
-          if (farms.scheduled) {
-            console.log('Farm Scheduled', farms.scheduled)
-            this.start()
-          } else {
-            this.stop()
-            process.exit()
-            console.log('Stop it')
-          }
-        })
-      }
-    },
-    start: false,
-    timeZone: 'Asia/Jakarta'
+db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').once('value', snapshot => {
+  let schedule = snapshot.val().cronSchedule
+  let task = cron.schedule(schedule, function() {
+    if(snapshot.val().automaticMode) {
+      db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').update({
+        ready_siram: 1
+      })
+    }   
+  }, false);  
+
+  db.ref(`/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3`).on('value', snap => {
+    if( schedule !== snap.val().cronSchedule) {
+      task.destroy()
+      schedule = snap.val().cronSchedule
+      task = cron.schedule(schedule, function() {
+        if(snap.val().automaticMode){
+          db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').update({
+            ready_siram: 1
+          })
+        }
+      }, false);
+      task.start()
+    }
   })
   
-  if (go == 'true') {
-    watering.start()
-  } else {
-    console.log('Matikan Schedule')
-    watering.stop()
-  }
-  
-  res.status(200).json({ message: 'Water Scheduling Start' })
-}
-
-// ScheduleWatering()
-
-module.exports = ScheduleWatering
-
-
-
-
+  task.start();
+})
