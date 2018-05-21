@@ -91,84 +91,98 @@ class FarmStore {
   }
 
   getHistory = (key) => {
-    this.farmData.historyLoading = true
-    db.ref('/history/17UFak7JqufG1RXUeVW30jwdfrQ2').on('value', (snapshot) => {
-
-      snapshot.forEach(snap => {
-        this.farmData.historyHumidity.push({
-          x: snap.val().last_updated,
-          y: parseFloat(snap.val().humidity)
+    return new Promise((resolve, reject) => {
+      this.farmData.historyLoading = true
+      db.ref('/history/' + key).on('value', (snapshot) => {
+        snapshot.forEach(snap => {
+          this.farmData.historyHumidity.push({
+            x: snap.val().last_updated,
+            y: parseFloat(snap.val().humidity)
+          })
+          this.farmData.historyWaterRatio.push({
+            x: snap.val().last_updated,
+            y: Math.round(parseFloat(snap.val().water_ratio))
+          })
+          this.farmData.historyTemperature.push({
+            x: snap.val().last_updated,
+            y: parseFloat(snap.val().temperature)
+          })
+          this.farmData.historyWaterLevel.push({
+            x: snap.val().last_updated,
+            y: parseFloat(snap.val().water_level)
+          })
         })
-        this.farmData.historyWaterRatio.push({
-          x: snap.val().last_updated,
-          y: Math.round(parseFloat(snap.val().water_ratio))
-        })
-        this.farmData.historyTemperature.push({
-          x: snap.val().last_updated,
-          y: parseFloat(snap.val().temperature)
-        })
-        this.farmData.historyWaterLevel.push({
-          x: snap.val().last_updated,
-          y: parseFloat(snap.val().water_level)
-        })
+        this.farmData.historyLoading = false
+        resolve()
+        reject()
       })
-      this.farmData.historyLoading = false
     })
   }
 
   setSchedule = (cronFormat, max, min) => {
-    let uid = userStore.userData.uid
-    let updatedValue = {
-      cronSchedule: cronFormat,
-      maxWaterRatio: max,
-      minWaterRatio: min
-    }
-    db.ref(`/farms/${uid}`).update(updatedValue)
-      .then(response => {
-        console.log(response)
+    return new Promise((resolve, reject) =>{
+      let uid = userStore.userData.uid
+      let updatedValue = {
+        cronSchedule: cronFormat,
+        maxWaterRatio: max,
+        minWaterRatio: min
+      }
+      db.ref(`/farms/${uid}`).update(updatedValue)
+      db.ref(`/farms/${uid}`).once('value', snapshot => {
+        this.FarmDetail.minWaterRatio = snapshot.val().minWaterRatio
+        this.FarmDetail.maxWaterRatio = snapshot.val().maxWaterRatio
+        this.FarmDetail.cronSchedule = snapshot.val().cronSchedule
+        resolve()
+        reject()
       })
-      .catch(err => {
-        console.log(err)
-      })
+    })
   }
 
   triggerSiram = () => {
-    let userId = userStore.userData.uid
-    let ready_siram = this.FarmDetail.ready_siram
-    let water_ratio = this.FarmDetail.water_ratio
-    if (ready_siram === 0) {
-      ready_siram = 1
-    } else {
-      ready_siram = 0
-    }
-
-    let farmUpdate = {
-      ready_siram: ready_siram,
-      last_siram: firebase.database.ServerValue.TIMESTAMP,
-      last_updated: firebase.database.ServerValue.TIMESTAMP
-    }
-
-    if (water_ratio > 70 && ready_siram === 0) {
-      Alert.alert(
-        '',
-        'Your plant is still have enough water',
-        [
-          {text: 'Watering anyway', onPress: () => this.updateSiram(userId, farmUpdate)}
-        ]
-      )
-    } else {
-      this.updateSiram(userId, farmUpdate)
-    }
+    return new Promise(async(resolve, reject) => {
+      let userId = userStore.userData.uid
+      let ready_siram = this.FarmDetail.ready_siram
+      let water_ratio = this.FarmDetail.water_ratio
+      if (ready_siram === 0) {
+        ready_siram = 1
+      } else {
+        ready_siram = 0
+      }
+  
+      let farmUpdate = {
+        ready_siram: ready_siram,
+        last_siram: firebase.database.ServerValue.TIMESTAMP,
+        last_updated: firebase.database.ServerValue.TIMESTAMP
+      }
+  
+      if (water_ratio > 70 && ready_siram === 0) {
+        Alert.alert(
+          '',
+          'Your plant is still have enough water',
+          [
+            {text: 'Watering anyway', onPress: async () => {
+              await this.updateSiram(userId, farmUpdate)
+              resolve()
+            }}
+          ]
+        )
+        resolve()
+      } else {
+        await this.updateSiram(userId, farmUpdate)
+        resolve()
+      }
+    })
   }
 
   updateSiram = (userId, farmUpdate) => {
-    db.ref(`/farms/${userId}`).update(farmUpdate)
-      .then(response => {
-        console.log(response)
+    return new Promise((resolve, reject) => {
+      db.ref(`/farms/${userId}`).update(farmUpdate)
+      db.ref(`/farms/${userId}`).once('value', (snapshot) => {
+        this.FarmDetail.ready_siram = snapshot.val().ready_siram
+        resolve()
+        reject()
       })
-      .catch(err => {
-        console.log('Error', err)
-      })
+    })
   }
 
 }
