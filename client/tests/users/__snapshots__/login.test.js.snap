@@ -16,7 +16,7 @@ ShallowWrapper {
       }
     }
   >
-    <inject-Login-with-UserStore />
+    <Login />
   </Provider>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

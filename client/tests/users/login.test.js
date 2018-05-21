@@ -23,7 +23,7 @@ it('renders correctly', () => {
 
 it('use all Element of react native that is imported', () => {
   const wrapper = shallow(
-    <Provider UserStore={UserStore}><Login/></Provider>
+    <Login UserStore={UserStore}/>
   )
   expect(wrapper.containsMatchingElement([
     <View/>,
