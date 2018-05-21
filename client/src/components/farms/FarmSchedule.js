@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import {
   View, Text, TouchableOpacity, 
-  TextInput, StyleSheet, Picker, Switch
+  TextInput, StyleSheet, Picker, Switch, ImageBackground
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
 import { ListItem } from 'react-native-elements' 
+
+const imageBackground = require('../../assets/logo/3132.jpg')
+
 
 @observer class FarmSchedule extends Component {
   constructor() {
@@ -158,37 +161,40 @@ import { ListItem } from 'react-native-elements'
     </View>
 
     return (
-      <View style={styles.mainContainer}>
-        <View style={styles.switchContainer}>
-          <View style={{width: 300}}>
-            <Text style={{fontSize: 20}}> Automatic Mode </Text>
+      <ImageBackground 
+      source={imageBackground}
+      style={{width: '100%', height: '100%'}}
+      >
+        <View style={styles.mainContainer}>
+          <View style={styles.switchContainer}>
+            <View style={{width: 300}}>
+              <Text style={{fontSize: 20}}> Automatic Mode </Text>
+            </View>
+            <View>
+              <Switch 
+                    onValueChange = {() => this.changeMode()}
+                    value = {this.state.automaticMode}
+                  />
+            </View>
           </View>
-          <View>
-            <Switch 
-                  onValueChange = {() => this.changeMode()}
-                  value = {this.state.automaticMode}
-                />
-          </View>
+        <View>
+            {
+              this.state.automaticMode?
+              automaticModeOn: <Text style={styles.container}> </Text>
+            }
         </View>
-      <View>
-          {
-            this.state.automaticMode?
-            automaticModeOn: <Text style={styles.container}> </Text>
-          }
-      </View>
-      </View>
+        </View>
+      </ImageBackground>
     )
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#F1F8E9',
     paddingTop: 12,
-    height: '100%'
+    height: '100%',
   },
   container: {
-    backgroundColor: '#F1F8E9',
     width: '100%',
     marginRight: 8,
     marginLeft: 8,
@@ -226,13 +232,13 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   buttonContainer: {
-    backgroundColor: '#33691E',
+    backgroundColor: '#66BB6A',
     paddingVertical: 15,
     marginBottom: 8,
     borderRadius: 4,
     width: 320,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   buttonText: {
     color: '#fff',
@@ -241,19 +247,23 @@ const styles = StyleSheet.create({
   },
   switchContainer: {
     width: '100%',
-    backgroundColor: '#C8E6C9',
+    // backgroundColor: '#EEEEEE',
+    height: 50,
     flexWrap: 'wrap',
     flexDirection: 'row',
     display: 'flex',
     borderRadius: 2,
+    marginTop: 30,
     borderBottomWidth: 1,
-    borderBottomColor: '#00C853',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomColor: '#424242',
     borderTopWidth: 1,
-    borderTopColor: '#00C853', 
+    borderTopColor: '#424242', 
     borderRightWidth: 1,
-    borderRightColor: '#00C853',
+    borderRightColor: '#424242',
     borderLeftWidth: 1,
-    borderLeftColor: '#00C853',
+    borderLeftColor: '#424242',
   },
 })
 

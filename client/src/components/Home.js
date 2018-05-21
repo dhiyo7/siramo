@@ -4,10 +4,13 @@ import {
   Text, 
   StyleSheet,
   ScrollView,
-  BackHandler
+  BackHandler,
+  ImageBackground
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import FarmDetail from './farms/FarmDetail'
+
+const imageBackground = require('../assets/logo/3132.jpg')
 
 class Home extends Component {
   constructor() {
@@ -36,11 +39,16 @@ class Home extends Component {
 
   render() {
     return (
-      <ScrollView>
-        <View style={styles.mainContainer}>
-          <FarmDetail />
-        </View>
-      </ScrollView>
+      <ImageBackground 
+        source={imageBackground}
+        style={{width: '100%', height: '100%'}}
+      >
+        <ScrollView>
+          <View style={styles.mainContainer}>
+            <FarmDetail />
+          </View>
+        </ScrollView>
+      </ImageBackground>
     )
   }
 }
@@ -50,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: '#F1F8E9'
+    // backgroundColor: '#F1F8E9'
   }
 })
 

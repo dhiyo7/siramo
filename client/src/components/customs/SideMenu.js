@@ -87,13 +87,13 @@ class SideMenu extends Component {
           </View>
         </View>
       </ScrollView>
-      <View style={styles.footerContainer}>
+      {/* <View style={styles.footerContainer}>
         <Text style={{
           fontSize: 24,
           fontWeight: 'bold',
           color: '#FAFAFA'
         }}>&#169; Siramo</Text>
-      </View>
+      </View> */}
     </View>
     );
   }

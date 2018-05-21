@@ -28,11 +28,11 @@ class FarmDate extends Component {
 const styles = StyleSheet.create({
   MainCard: {
     borderWidth: 1,
-    borderRadius: 20,
-    borderColor: '#304FFE',
-    borderWidth: 2,
+    borderRadius: 2,
+    borderColor: '#424242',
+    borderWidth: 1,
     shadowColor: '#000',
-    backgroundColor: '#EFEBE9',
+    // backgroundColor: '#EFEBE9',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.8,
     shadowRadius: 2,

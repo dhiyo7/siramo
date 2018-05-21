@@ -10,6 +10,8 @@ import Loader from '../customs/Loader'
 import UserStore from '../../store/UserStore'
 
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
+const imageBackground = require('../../assets/logo/3132.jpg')
+
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
 
@@ -71,80 +73,85 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
     const { loading } = UserStore.userData
     // tiap ngetik ngerender terus
     return (
-      <View style={styles.mainContainer}>
-        <View style={styles.container}>
-          <Image
-            style={styles.imageContainer}
-            source={background}
-          />
-          <Loader loading={loading}/>
-          <View style={styles.inputBox} >
+      <ImageBackground 
+      source={imageBackground}
+      style={{width: '100%', height: '100%'}}
+      >
+        <View style={styles.mainContainer}>
+          <View style={styles.container}>
             <Image
-              style={styles.iconBox}         
-              source={emailIcon} />
+              style={styles.imageContainer}
+              source={background}
+            />
+            <Loader loading={loading}/>
+            <View style={styles.inputBox} >
+              <Image
+                style={styles.iconBox}         
+                source={emailIcon} />
+                <TextInput
+                  style={styles.input}
+                  autoCapitalize='none'
+                  onSubmitEditing={() => this.passwordInput.focus()}
+                  onChangeText={(email) => this.setState({email})}
+                  autoCorrect={false}
+                  keyboardType='email-address'
+                  returnKeyType='next'
+                  placeholder='Enter your email address'
+                  placeholderTextColor='#3E2723'
+                />
+            </View>
+            <View style={styles.inputBox}> 
+              <Image
+                style={styles.iconBox}         
+                source={passwordIcon} />
               <TextInput
                 style={styles.input}
-                autoCapitalize='none'
-                onSubmitEditing={() => this.passwordInput.focus()}
-                onChangeText={(email) => this.setState({email})}
-                autoCorrect={false}
-                keyboardType='email-address'
-                returnKeyType='next'
-                placeholder='Enter your email address'
+                returnKeyType='go'
+                ref={(input) => this.passwordInput = input}
+                onChangeText={(password) => this.setState({password})}
+                placeholder='Enter your password'
                 placeholderTextColor='#3E2723'
+                secureTextEntry
               />
-          </View>
-          <View style={styles.inputBox}> 
-            <Image
-              style={styles.iconBox}         
-              source={passwordIcon} />
-            <TextInput
-              style={styles.input}
-              returnKeyType='go'
-              ref={(input) => this.passwordInput = input}
-              onChangeText={(password) => this.setState({password})}
-              placeholder='Enter your password'
-              placeholderTextColor='#3E2723'
-              secureTextEntry
-            />
-          </View>
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={this.submitLogin}
-            >
-              <Text style={styles.buttonText}>LOGIN</Text>
-            </TouchableOpacity>
+            </View>
+              <TouchableOpacity
+                style={styles.buttonContainer}
+                onPress={this.submitLogin}
+              >
+                <Text style={styles.buttonText}>LOGIN</Text>
+              </TouchableOpacity>
 
-          {/* <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={this.googleLogin}
-          >
-            <Text style={styles.buttonText}>Connect with Google</Text>
-          </TouchableOpacity> */}
-
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('SignUp')}
+              onPress={this.googleLogin}
             >
-              <Text style={styles.buttonText}>SIGN UP</Text>
-              
-            </TouchableOpacity>
+              <Text style={styles.buttonText}>Connect with Google</Text>
+            </TouchableOpacity> */}
+
+              <TouchableOpacity
+                style={styles.buttonContainer}
+                onPress={() => this.props.navigation.navigate('SignUp')}
+              >
+                <Text style={styles.buttonText}>SIGN UP</Text>
+                
+              </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </ImageBackground>
     )
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#F1F8E9',
+    // backgroundColor: '#F1F8E9',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 12,
     paddingRight: 12
   },
   container: {
-    backgroundColor: '#F1F8E9',
+    // backgroundColor: '#F1F8E9',
     width: '100%',
     height: '100%',
     marginRight: 8,
@@ -181,12 +188,12 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginTop: 2,
     marginBottom: 2,
-    color: '#8D6E63',
-    borderRadius: 4,
+    color: '#212121',
+    borderRadius: 8,
     fontSize: 16
   },
   buttonContainer: {
-    backgroundColor: '#33691E',
+    backgroundColor: '#66BB6A',
     paddingVertical: 15,
     marginBottom: 8,
     borderRadius: 4,

@@ -27,7 +27,7 @@ import ButtonOnOff from '../farms/ButtonOnOff'
     const { dateFormat, timeFormat } = UserStore
 
     return (
-      <View>
+      <View style={styles.mainContainer}>
         <FarmPic />
         <View style={styles.DetailCard}>
           <View style={styles.infoView}>
@@ -67,7 +67,7 @@ import ButtonOnOff from '../farms/ButtonOnOff'
               />
               <FarmDate 
                 date={{
-                  title: 'Last updated:',
+                  title: 'Last Updated:',
                   dates: dateFormat(last_updated),
                   times: timeFormat(last_updated)
                 }}
@@ -79,36 +79,29 @@ import ButtonOnOff from '../farms/ButtonOnOff'
       </View>
     )
   }
-}
+} 
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    alignItems: 'center',
+    width: '100%'
+  },
   DetailCard: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#F1F8E9',
+    // backgroundColor: '#F1F8E9',
     padding: 4
   },
-  container: {
-    padding: 20,
-  },
+  // container: {
+  //   padding: 20,
+  // },
   input: {
     height:40,
     backgroundColor: 'rgba(225,225,225,0.2)',
     marginBottom: 10,
     padding: 10,
     color: '#fff'
-  },
-  buttonContainer: {
-    backgroundColor: '#33691E',
-    paddingVertical: 15,
-    marginBottom: 4,
-    borderRadius: 4
-  },
-  buttonText: {
-    color: '#fff',
-    textAlign: 'center',
-    fontWeight: '700'
   },
   textTitle: {
     fontSize: 20,
