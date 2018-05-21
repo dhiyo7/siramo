@@ -1,4 +1,4 @@
-import 'jsdom-global/register'
+// import 'jsdom-global/register'
 import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -46,7 +46,7 @@ describe('check history components', () => {
 
   it('component did mount get history data', async () => {
     AsyncStorage.setItem('userId', '17UFak7JqufG1RXUeVW30jwdfrQ2')
-    const mountWrapper = mount(<History />)
+    const mountWrapper = shallow(<History />)
     let historyData = await mountWrapper.instance().componentDidMount()
   })
 })
