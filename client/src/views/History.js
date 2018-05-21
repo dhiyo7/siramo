@@ -11,7 +11,6 @@ import { inject, observer } from 'mobx-react'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 import Graph from '../components/farms/Graph'
 import FarmStore from '../store/FarmStore'
-import TabBarLogo from '../components/logo/TabBarLogo'
 import Loader from '../components/customs/Loader'
 import LandscapeView from 'react-native-landscape-view'
 import { Ionicons } from '@expo/vector-icons'

@@ -3,9 +3,6 @@ import {
   WebView
 } from 'react-native';
 
-
-
-
 class DetailParameter extends Component {
   
   render() {
