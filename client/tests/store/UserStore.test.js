@@ -48,7 +48,7 @@ describe('UserStore login firebase testing', () => {
 
 
   test('firebase login method works',  async() => {
-    const navigation = { navigate: jest.fn() }
+    const navigation = { navigate: jest.fn() } 
     expect(UserStore.isLogin).toEqual(false)
     expect(FarmStore.FarmDetail.name).toBe('')
     expect(FarmStore.FarmDetail.temperature).toEqual(0)

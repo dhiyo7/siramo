@@ -13,7 +13,7 @@ class UserStore {
   }
 
   @observable isLogin = false
-
+ 
   assignUserData = (data) => {
       this.userData.uid = data.uid
       this.userData.email = data.email
