@@ -14,6 +14,7 @@ import FarmStore from '../store/FarmStore'
 import Loader from '../components/customs/Loader'
 import LandscapeView from 'react-native-landscape-view'
 import { Ionicons } from '@expo/vector-icons'
+import { resolve } from 'path';
 
 const initialLayout = {
   height: 0,
@@ -25,7 +26,6 @@ const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperatu
 const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red" navigation={FarmStore.navigation}/>
 const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green" navigation={FarmStore.navigation}/>
 
-@inject('FarmStore')
 @observer class History extends Component {
 
   constructor(props) {
@@ -42,8 +42,13 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
   }
   
   componentDidMount = async () => {
-    FarmStore.getHistory(await AsyncStorage.getItem('userId'))
-    FarmStore.navigation = this.props.navigation
+    return new Promise(async(resolve, reject) => {
+      let userId = await AsyncStorage.getItem('userId')
+      await FarmStore.getHistory(userId)
+      FarmStore.navigation = this.props.navigation
+      resolve(FarmStore.farmData)
+      reject()
+    })
   }
 
   _handleIndexChange = index => this.setState({ index });

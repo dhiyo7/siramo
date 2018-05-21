@@ -8,7 +8,7 @@ class DetailParameter extends Component {
   render() {
     return (
       <WebView
-        source={{uri: this.props.navigation.getParam('url')}}
+        // source={{uri: this.props.navigation.getParam('url')}}
       />
     );
   }

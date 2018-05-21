@@ -43,7 +43,6 @@ describe('<Graph /> has props history data', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('Button').get(0).props.title).toEqual('VIEW MORE')
     wrapper.find('Button').get(0).props.onPress()
-    console.log(wrapper.find('Button').get(0).props)
   })
 
   it('Graph has props data from history water ratio', async() => {
