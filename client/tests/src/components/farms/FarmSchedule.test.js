@@ -10,6 +10,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 import FarmStore from '../../../../src/store/FarmStore'
 import FarmSchedule from '../../../../src/components/farms/FarmSchedule'
+import userStore from '../../../../src/store/UserStore';
 
 Enzyme.configure({ adapter: new Adapter()})
 
@@ -97,17 +98,14 @@ describe('<FarmSchedule /> state Test on Change', () => {
 })
 
 describe('<FarmSchedule /> componentDidMount Test', () => {
-  let tree
-  beforeEach(() => {
+
+  it('state value should change according to FarmStore.FarmDetail data', () => {
     FarmStore.FarmDetail.cronSchedule = "* 2 12 * * *"
     FarmStore.FarmDetail.minWaterRatio = 30
     FarmStore.FarmDetail.maxWaterRatio = 80
-    tree = shallow(<FarmSchedule />)
-  })
-  
-  it('state value should change according to FarmStore.FarmDetail data', () => {
+    let tree = shallow(<FarmSchedule />)
     // let cronSchedule = "12"
-    console.log('------------------------------')
+    // console.log('------------------------------')
     // console.log(cronSchedule.match(/[0-9]/g).join(''))
     expect(tree.state('hoursPick')).toEqual('12') // "* 2 22 * * *" => 2,2 ?
     expect(tree.state('minutesPick')).toEqual('02')
@@ -117,8 +115,20 @@ describe('<FarmSchedule /> componentDidMount Test', () => {
 })
 
 describe('<FarmSchedule /> Button Save Change', () => {
-  it('should trigger startSchedule in FarmStore', () => {
-    console.log(wrapper.find('TouchableOpacity').get(0))
-    console.log(wrapper.find(TouchableOpacity).get(0).props.triggerSiram)
+
+  it('should trigger startSchedule in FarmStore', async() => {
+    FarmStore.clearAll()
+    userStore.userData.uid = '17UFak7JqufG1RXUeVW30jwdfrQ2'
+    let tree = shallow(<FarmSchedule />)
+    // let startSchedule = jest.fn()
+    tree.find('Picker').at(0).simulate('ValueChange', '08')
+    tree.find('Picker').at(1).simulate('ValueChange', '22')
+    tree.find('Picker').at(2).simulate('ValueChange', 82)
+    tree.find('Picker').at(3).simulate('ValueChange', 31)
+    tree.find('TouchableOpacity').get(0).props.onPress()
+    await FarmStore.getFarmData()
+    expect(FarmStore.FarmDetail.cronSchedule).toEqual('* 22 */8 * * *')
+    expect(FarmStore.FarmDetail.minWaterRatio).toEqual(31)
+    expect(FarmStore.FarmDetail.maxWaterRatio).toEqual(82)
   })
 })

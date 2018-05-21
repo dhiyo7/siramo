@@ -63,10 +63,11 @@ import FarmStore from '../../store/FarmStore'
     } else if (hoursPick !== '00') {
       cronFormat = `* ${parseInt(minutesPick)} */${parseInt(hoursPick)} * * *`
     }
-    console.log('Jam', this.state.hoursPick)
-    console.log('Menit', this.state.minutesPick)
-    console.log('Max', this.state.maxWaterRatio)
-    console.log('min', this.state.minWaterRatio)
+    // console.log('Jam', this.state.hoursPick)
+    // console.log('Menit', this.state.minutesPick)
+    // console.log('Max', this.state.maxWaterRatio)
+    // console.log('min', this.state.minWaterRatio)
+    console.log(cronFormat, maxWaterRatio, minWaterRatio)
 
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
