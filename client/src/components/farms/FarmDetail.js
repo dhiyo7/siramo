@@ -24,7 +24,6 @@ import ButtonOnOff from '../farms/ButtonOnOff'
       name, temperature, water_ratio, ready_siram,
       water_level, humidity, last_siram, last_updated,
     } = FarmStore.FarmDetail
-    console.log(FarmStore.FarmDetail)
     const { dateFormat, timeFormat } = UserStore
 
     return (

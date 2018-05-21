@@ -64,10 +64,11 @@ import FarmStore from '../../store/FarmStore'
     } else if (hoursPick !== '00') {
       cronFormat = `3 ${parseInt(minutesPick)} */${parseInt(hoursPick)} * * *`
     }
-    console.log('Jam', this.state.hoursPick)
-    console.log('Menit', this.state.minutesPick)
-    console.log('Max', this.state.maxWaterRatio)
-    console.log('min', this.state.minWaterRatio)
+    // console.log('Jam', this.state.hoursPick)
+    // console.log('Menit', this.state.minutesPick)
+    // console.log('Max', this.state.maxWaterRatio)
+    // console.log('min', this.state.minWaterRatio)
+    console.log(cronFormat, maxWaterRatio, minWaterRatio)
 
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
@@ -164,6 +165,13 @@ import FarmStore from '../../store/FarmStore'
                   value = {this.state.automaticMode}
                 />
           </View>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={this.startSchedule}
+          >
+              <Text style={styles.buttonText}>Save Change</Text>
+          </TouchableOpacity>
         </View>
       <View>
           {
@@ -220,7 +228,6 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginTop: 2,
     marginBottom: 2,
-    color: '#8D6E63',
     borderRadius: 4,
   },
   buttonContainer: {
