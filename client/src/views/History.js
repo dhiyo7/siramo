@@ -55,7 +55,7 @@ _renderHeader = props => <TabBar  {...props}  renderIcon={this._renderIcon} tabS
     first: FirstRoute,
     second: SecondRoute,
     third: ThirdRoute,
-    fourth: FourthRoute
+    fourth: FourthRoute 
   })
 
   _renderIcon = ({ route }: any) => {

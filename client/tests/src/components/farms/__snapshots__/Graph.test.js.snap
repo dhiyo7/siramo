@@ -1,0 +1,5394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Graph /> has props history data Graph has props data from history humidity 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Graph
+    humidityDetail="humid"
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+      }
+    }
+    sensorData={
+      Array [
+        Object {
+          "x": 1526909448410,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 12,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 12,
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="HUMIDITY (%)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 40 % = Sangat Kering"
+            recommended="Nilai Normal yang dianjurkan = 40-60 %"
+            warning="Nilai Diatas 60 % = Basah"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>
+      </Component>,
+      "style": Object {
+        "backgroundColor": "#C5E1A5",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="HUMIDITY (%)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 40 % = Sangat Kering"
+            recommended="Nilai Normal yang dianjurkan = 40-60 %"
+            warning="Nilai Diatas 60 % = Basah"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>,
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RecommendedCard
+              danger="Nilai Dibawah 40 % = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 40-60 %"
+              warning="Nilai Diatas 60 % = Basah"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>,
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />,
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />,
+          ],
+          "containerStyle": Object {
+            "width": "100%",
+          },
+          "image": 1,
+          "title": "HUMIDITY (%)",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "danger": "Nilai Dibawah 40 % = Sangat Kering",
+              "recommended": "Nilai Normal yang dianjurkan = 40-60 %",
+              "warning": "Nilai Diatas 60 % = Basah",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "marginBottom": 10,
+              },
+            },
+            "ref": null,
+            "rendered": "Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "History",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "#297AB1",
+              "data": Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 12,
+                },
+              ],
+              "height": 100,
+              "numberOfYAxisGuideLine": 5,
+              "style": undefined,
+              "type": "line",
+              "width": "100%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": "#4CAF50",
+              "buttonStyle": Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              },
+              "onPress": [Function],
+              "title": "VIEW MORE",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="HUMIDITY (%)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 40 % = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 40-60 %"
+              warning="Nilai Diatas 60 % = Basah"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>
+        </Component>,
+        "style": Object {
+          "backgroundColor": "#C5E1A5",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="HUMIDITY (%)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 40 % = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 40-60 %"
+              warning="Nilai Diatas 60 % = Basah"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>,
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RecommendedCard
+                danger="Nilai Dibawah 40 % = Sangat Kering"
+                recommended="Nilai Normal yang dianjurkan = 40-60 %"
+                warning="Nilai Diatas 60 % = Basah"
+              />,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontFamily": "sans-serif-condensed",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                History
+              </Text>,
+              <PureChart
+                backgroundColor="#FFFFFF"
+                color="#297AB1"
+                data={
+                  Array [
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 12,
+                    },
+                  ]
+                }
+                height={100}
+                numberOfYAxisGuideLine={5}
+                style={undefined}
+                type="line"
+                width="100%"
+              />,
+              <Button
+                backgroundColor="#4CAF50"
+                buttonStyle={
+                  Object {
+                    "borderRadius": 0,
+                    "marginBottom": 8,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+                onPress={[Function]}
+                title="VIEW MORE"
+              />,
+            ],
+            "containerStyle": Object {
+              "width": "100%",
+            },
+            "image": 1,
+            "title": "HUMIDITY (%)",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "danger": "Nilai Dibawah 40 % = Sangat Kering",
+                "recommended": "Nilai Normal yang dianjurkan = 40-60 %",
+                "warning": "Nilai Diatas 60 % = Basah",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "marginBottom": 10,
+                },
+              },
+              "ref": null,
+              "rendered": "Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "History",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "#297AB1",
+                "data": Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 12,
+                  },
+                ],
+                "height": 100,
+                "numberOfYAxisGuideLine": 5,
+                "style": undefined,
+                "type": "line",
+                "width": "100%",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": "#4CAF50",
+                "buttonStyle": Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                },
+                "onPress": [Function],
+                "title": "VIEW MORE",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<Graph /> has props history data Graph has props data from history temperature 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Graph
+    navigation={
+      Object {
+        "navigate": [MockFunction] {
+          "calls": Array [
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Humidity",
+              },
+            ],
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Moisture",
+              },
+            ],
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Water_level_(device)",
+              },
+            ],
+          ],
+        },
+      }
+    }
+    sensorData={
+      Array [
+        Object {
+          "x": 1526909448410,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 29,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 29,
+        },
+      ]
+    }
+    temperatureDetail="panas"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="TEMPERATURE (°C)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 22°C = Dingin"
+            recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+            warning="Nilai Diatas 31°C = Panas"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>
+      </Component>,
+      "style": Object {
+        "backgroundColor": "#C5E1A5",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="TEMPERATURE (°C)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 22°C = Dingin"
+            recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+            warning="Nilai Diatas 31°C = Panas"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>,
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RecommendedCard
+              danger="Nilai Dibawah 22°C = Dingin"
+              recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+              warning="Nilai Diatas 31°C = Panas"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>,
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />,
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />,
+          ],
+          "containerStyle": Object {
+            "width": "100%",
+          },
+          "image": 1,
+          "title": "TEMPERATURE (°C)",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "danger": "Nilai Dibawah 22°C = Dingin",
+              "recommended": "Nilai Normal yang dianjurkan = 24-30 °C",
+              "warning": "Nilai Diatas 31°C = Panas",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "marginBottom": 10,
+              },
+            },
+            "ref": null,
+            "rendered": "Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "History",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "#297AB1",
+              "data": Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 29,
+                },
+              ],
+              "height": 100,
+              "numberOfYAxisGuideLine": 5,
+              "style": undefined,
+              "type": "line",
+              "width": "100%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": "#4CAF50",
+              "buttonStyle": Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              },
+              "onPress": [Function],
+              "title": "VIEW MORE",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="TEMPERATURE (°C)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 22°C = Dingin"
+              recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+              warning="Nilai Diatas 31°C = Panas"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>
+        </Component>,
+        "style": Object {
+          "backgroundColor": "#C5E1A5",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="TEMPERATURE (°C)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 22°C = Dingin"
+              recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+              warning="Nilai Diatas 31°C = Panas"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>,
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RecommendedCard
+                danger="Nilai Dibawah 22°C = Dingin"
+                recommended="Nilai Normal yang dianjurkan = 24-30 °C"
+                warning="Nilai Diatas 31°C = Panas"
+              />,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontFamily": "sans-serif-condensed",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                History
+              </Text>,
+              <PureChart
+                backgroundColor="#FFFFFF"
+                color="#297AB1"
+                data={
+                  Array [
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 29,
+                    },
+                  ]
+                }
+                height={100}
+                numberOfYAxisGuideLine={5}
+                style={undefined}
+                type="line"
+                width="100%"
+              />,
+              <Button
+                backgroundColor="#4CAF50"
+                buttonStyle={
+                  Object {
+                    "borderRadius": 0,
+                    "marginBottom": 8,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+                onPress={[Function]}
+                title="VIEW MORE"
+              />,
+            ],
+            "containerStyle": Object {
+              "width": "100%",
+            },
+            "image": 1,
+            "title": "TEMPERATURE (°C)",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "danger": "Nilai Dibawah 22°C = Dingin",
+                "recommended": "Nilai Normal yang dianjurkan = 24-30 °C",
+                "warning": "Nilai Diatas 31°C = Panas",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "marginBottom": 10,
+                },
+              },
+              "ref": null,
+              "rendered": "Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "History",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "#297AB1",
+                "data": Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 29,
+                  },
+                ],
+                "height": 100,
+                "numberOfYAxisGuideLine": 5,
+                "style": undefined,
+                "type": "line",
+                "width": "100%",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": "#4CAF50",
+                "buttonStyle": Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                },
+                "onPress": [Function],
+                "title": "VIEW MORE",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<Graph /> has props history data Graph has props data from history water level 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Graph
+    navigation={
+      Object {
+        "navigate": [MockFunction] {
+          "calls": Array [
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Humidity",
+              },
+            ],
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Moisture",
+              },
+            ],
+          ],
+        },
+      }
+    }
+    sensorData={
+      Array [
+        Object {
+          "x": 1526909448410,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 40,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 40,
+        },
+      ]
+    }
+    waterLevelDetail="level"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="WATER LEVEL (Cm)"
+        >
+          <RecommendedCard
+            danger="Nilai dibawah 10 cm tidak dapat menyiram"
+            recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+            warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>
+      </Component>,
+      "style": Object {
+        "backgroundColor": "#C5E1A5",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="WATER LEVEL (Cm)"
+        >
+          <RecommendedCard
+            danger="Nilai dibawah 10 cm tidak dapat menyiram"
+            recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+            warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>,
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RecommendedCard
+              danger="Nilai dibawah 10 cm tidak dapat menyiram"
+              recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+              warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>,
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />,
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />,
+          ],
+          "containerStyle": Object {
+            "width": "100%",
+          },
+          "image": 1,
+          "title": "WATER LEVEL (Cm)",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "danger": "Nilai dibawah 10 cm tidak dapat menyiram",
+              "recommended": "Nilai Normal yang dianjurkan = 20-30 cm",
+              "warning": "Nilai Dibawah 20 cm reservoir harus sudah diisi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "marginBottom": 10,
+              },
+            },
+            "ref": null,
+            "rendered": "A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "History",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "#297AB1",
+              "data": Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 40,
+                },
+              ],
+              "height": 100,
+              "numberOfYAxisGuideLine": 5,
+              "style": undefined,
+              "type": "line",
+              "width": "100%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": "#4CAF50",
+              "buttonStyle": Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              },
+              "onPress": [Function],
+              "title": "VIEW MORE",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="WATER LEVEL (Cm)"
+          >
+            <RecommendedCard
+              danger="Nilai dibawah 10 cm tidak dapat menyiram"
+              recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+              warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>
+        </Component>,
+        "style": Object {
+          "backgroundColor": "#C5E1A5",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="WATER LEVEL (Cm)"
+          >
+            <RecommendedCard
+              danger="Nilai dibawah 10 cm tidak dapat menyiram"
+              recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+              warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>,
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RecommendedCard
+                danger="Nilai dibawah 10 cm tidak dapat menyiram"
+                recommended="Nilai Normal yang dianjurkan = 20-30 cm"
+                warning="Nilai Dibawah 20 cm reservoir harus sudah diisi"
+              />,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontFamily": "sans-serif-condensed",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                History
+              </Text>,
+              <PureChart
+                backgroundColor="#FFFFFF"
+                color="#297AB1"
+                data={
+                  Array [
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 40,
+                    },
+                  ]
+                }
+                height={100}
+                numberOfYAxisGuideLine={5}
+                style={undefined}
+                type="line"
+                width="100%"
+              />,
+              <Button
+                backgroundColor="#4CAF50"
+                buttonStyle={
+                  Object {
+                    "borderRadius": 0,
+                    "marginBottom": 8,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+                onPress={[Function]}
+                title="VIEW MORE"
+              />,
+            ],
+            "containerStyle": Object {
+              "width": "100%",
+            },
+            "image": 1,
+            "title": "WATER LEVEL (Cm)",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "danger": "Nilai dibawah 10 cm tidak dapat menyiram",
+                "recommended": "Nilai Normal yang dianjurkan = 20-30 cm",
+                "warning": "Nilai Dibawah 20 cm reservoir harus sudah diisi",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "marginBottom": 10,
+                },
+              },
+              "ref": null,
+              "rendered": "A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "History",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "#297AB1",
+                "data": Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 40,
+                  },
+                ],
+                "height": 100,
+                "numberOfYAxisGuideLine": 5,
+                "style": undefined,
+                "type": "line",
+                "width": "100%",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": "#4CAF50",
+                "buttonStyle": Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                },
+                "onPress": [Function],
+                "title": "VIEW MORE",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<Graph /> has props history data Graph has props data from history water ratio 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Graph
+    navigation={
+      Object {
+        "navigate": [MockFunction] {
+          "calls": Array [
+            Array [
+              "DetailParameter",
+              Object {
+                "url": "https://en.wikipedia.org/wiki/Humidity",
+              },
+            ],
+          ],
+        },
+      }
+    }
+    sensorData={
+      Array [
+        Object {
+          "x": 1526909448410,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909448410,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909448863,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909449854,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909450863,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909452991,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909452994,
+          "y": 56,
+        },
+        Object {
+          "x": 1526909453864,
+          "y": 56,
+        },
+      ]
+    }
+    waterRatioDetail="water ratio"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="WATER RATIO (%)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 35% = Sangat Kering"
+            recommended="Nilai Normal yang dianjurkan = 50% -80%"
+            warning="Nilai Diatas 80 % = Sangat Basah"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>
+      </Component>,
+      "style": Object {
+        "backgroundColor": "#C5E1A5",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Card
+          containerStyle={
+            Object {
+              "width": "100%",
+            }
+          }
+          image={1}
+          title="WATER RATIO (%)"
+        >
+          <RecommendedCard
+            danger="Nilai Dibawah 35% = Sangat Kering"
+            recommended="Nilai Normal yang dianjurkan = 50% -80%"
+            warning="Nilai Diatas 80 % = Sangat Basah"
+          />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
+          >
+            Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            History
+          </Text>
+          <PureChart
+            backgroundColor="#FFFFFF"
+            color="#297AB1"
+            data={
+              Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+              ]
+            }
+            height={100}
+            numberOfYAxisGuideLine={5}
+            style={undefined}
+            type="line"
+            width="100%"
+          />
+          <Button
+            backgroundColor="#4CAF50"
+            buttonStyle={
+              Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              }
+            }
+            onPress={[Function]}
+            title="VIEW MORE"
+          />
+        </Card>,
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RecommendedCard
+              danger="Nilai Dibawah 35% = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 50% -80%"
+              warning="Nilai Diatas 80 % = Sangat Basah"
+            />,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>,
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />,
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />,
+          ],
+          "containerStyle": Object {
+            "width": "100%",
+          },
+          "image": 1,
+          "title": "WATER RATIO (%)",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "danger": "Nilai Dibawah 35% = Sangat Kering",
+              "recommended": "Nilai Normal yang dianjurkan = 50% -80%",
+              "warning": "Nilai Diatas 80 % = Sangat Basah",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "marginBottom": 10,
+              },
+            },
+            "ref": null,
+            "rendered": "Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "History",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "fontFamily": "sans-serif-condensed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "#297AB1",
+              "data": Array [
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+                Object {
+                  "x": "21 May 2018",
+                  "y": 56,
+                },
+              ],
+              "height": 100,
+              "numberOfYAxisGuideLine": 5,
+              "style": undefined,
+              "type": "line",
+              "width": "100%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "backgroundColor": "#4CAF50",
+              "buttonStyle": Object {
+                "borderRadius": 0,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "marginTop": 8,
+              },
+              "onPress": [Function],
+              "title": "VIEW MORE",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="WATER RATIO (%)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 35% = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 50% -80%"
+              warning="Nilai Diatas 80 % = Sangat Basah"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>
+        </Component>,
+        "style": Object {
+          "backgroundColor": "#C5E1A5",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Card
+            containerStyle={
+              Object {
+                "width": "100%",
+              }
+            }
+            image={1}
+            title="WATER RATIO (%)"
+          >
+            <RecommendedCard
+              danger="Nilai Dibawah 35% = Sangat Kering"
+              recommended="Nilai Normal yang dianjurkan = 50% -80%"
+              warning="Nilai Diatas 80 % = Sangat Basah"
+            />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              History
+            </Text>
+            <PureChart
+              backgroundColor="#FFFFFF"
+              color="#297AB1"
+              data={
+                Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                ]
+              }
+              height={100}
+              numberOfYAxisGuideLine={5}
+              style={undefined}
+              type="line"
+              width="100%"
+            />
+            <Button
+              backgroundColor="#4CAF50"
+              buttonStyle={
+                Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                }
+              }
+              onPress={[Function]}
+              title="VIEW MORE"
+            />
+          </Card>,
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RecommendedCard
+                danger="Nilai Dibawah 35% = Sangat Kering"
+                recommended="Nilai Normal yang dianjurkan = 50% -80%"
+                warning="Nilai Diatas 80 % = Sangat Basah"
+              />,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontFamily": "sans-serif-condensed",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                History
+              </Text>,
+              <PureChart
+                backgroundColor="#FFFFFF"
+                color="#297AB1"
+                data={
+                  Array [
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                    Object {
+                      "x": "21 May 2018",
+                      "y": 56,
+                    },
+                  ]
+                }
+                height={100}
+                numberOfYAxisGuideLine={5}
+                style={undefined}
+                type="line"
+                width="100%"
+              />,
+              <Button
+                backgroundColor="#4CAF50"
+                buttonStyle={
+                  Object {
+                    "borderRadius": 0,
+                    "marginBottom": 8,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+                onPress={[Function]}
+                title="VIEW MORE"
+              />,
+            ],
+            "containerStyle": Object {
+              "width": "100%",
+            },
+            "image": 1,
+            "title": "WATER RATIO (%)",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "danger": "Nilai Dibawah 35% = Sangat Kering",
+                "recommended": "Nilai Normal yang dianjurkan = 50% -80%",
+                "warning": "Nilai Diatas 80 % = Sangat Basah",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "marginBottom": 10,
+                },
+              },
+              "ref": null,
+              "rendered": "Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products.",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "History",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "fontFamily": "sans-serif-condensed",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "#297AB1",
+                "data": Array [
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                  Object {
+                    "x": "21 May 2018",
+                    "y": 56,
+                  },
+                ],
+                "height": 100,
+                "numberOfYAxisGuideLine": 5,
+                "style": undefined,
+                "type": "line",
+                "width": "100%",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "backgroundColor": "#4CAF50",
+                "buttonStyle": Object {
+                  "borderRadius": 0,
+                  "marginBottom": 8,
+                  "marginRight": 0,
+                  "marginTop": 8,
+                },
+                "onPress": [Function],
+                "title": "VIEW MORE",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

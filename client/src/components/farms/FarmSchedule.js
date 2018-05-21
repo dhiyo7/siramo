@@ -69,11 +69,6 @@ import { ListItem } from 'react-native-elements'
     } else if (hoursPick !== '00') {
       cronFormat = `3 ${parseInt(minutesPick)} */${parseInt(hoursPick)} * * *`
     }
-    // console.log('Jam', this.state.hoursPick)
-    // console.log('Menit', this.state.minutesPick)
-    // console.log('Max', this.state.maxWaterRatio)
-    // console.log('min', this.state.minWaterRatio)
-    console.log(cronFormat, maxWaterRatio, minWaterRatio)
 
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }

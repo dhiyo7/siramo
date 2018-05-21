@@ -35,7 +35,7 @@ describe('<FarmSchedule />', () => {
 
 describe('<FarmSchedule /> state', () => {
   it('should have state value', () => {
-    wrapper.find('Switch').at(0).simulate('ValueChange', true)
+    wrapper.find('Switch').at(0).simulate('ValueChange', true) 
     expect(wrapper.state('minutes').length).toBe(60)
     expect(typeof wrapper.state('minutes')[0]).toBe('string')
     expect(wrapper.state('hours').length).toBe(24)
@@ -111,8 +111,7 @@ describe('<FarmSchedule /> componentDidMount Test', () => {
     FarmStore.FarmDetail.maxWaterRatio = 80
     let tree = shallow(<FarmSchedule />)
     // let cronSchedule = "12"
-    // console.log('------------------------------')
-    // console.log(cronSchedule.match(/[0-9]/g).join(''))
+
     expect(tree.state('hoursPick')).toEqual('12') // "* 2 22 * * *" => 2,2 ?
     expect(tree.state('minutesPick')).toEqual('02')
     expect(tree.state('maxWaterRatio')).toEqual(80)

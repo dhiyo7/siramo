@@ -14,7 +14,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
     let sensorArr = []
     this.props.sensorData.forEach(element => {
       sensorArr.push({
-        x: UserStore.dateFormat(element.x),
+        x: UserStore.dateFormat(element.x), 
         y: element.y
       })
     })
@@ -93,7 +93,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
           </View>
         </ScrollView>
       )
-    } else {
+    } else if(this.props.waterLevelDetail !== undefined){
       return (
       <ScrollView style={styles.mainContainer}>
           <View style={styles.container}>
