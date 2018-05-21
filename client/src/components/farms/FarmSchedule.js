@@ -41,8 +41,8 @@ import FarmStore from '../../store/FarmStore'
   componentDidMount() {
     if (FarmStore.FarmDetail.cronSchedule) {
       let splitCron = FarmStore.FarmDetail.cronSchedule.split(' ')
-      let minutes = splitCron[1].match(/[0-9]/g).join().toString()
-      let hours = splitCron[2].match(/[0-9]/g).join().toString()
+      let minutes = splitCron[1].match(/[0-9]/g).join('').toString()
+      let hours = splitCron[2].match(/[0-9]/g).join('').toString()
       
       this.setState({
         minWaterRatio: FarmStore.FarmDetail.minWaterRatio,
@@ -132,9 +132,9 @@ import FarmStore from '../../store/FarmStore'
           </View>
 
           <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={this.startSchedule}
-            >
+            style={styles.buttonContainer}
+            onPress={this.startSchedule}
+          >
               <Text style={styles.buttonText}>Save Change</Text>
           </TouchableOpacity>
         </View>

@@ -8,6 +8,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import renderer from 'react-test-renderer'
 import { Ionicons } from '@expo/vector-icons'
 
+import FarmStore from '../../../../src/store/FarmStore'
 import FarmSchedule from '../../../../src/components/farms/FarmSchedule'
 
 Enzyme.configure({ adapter: new Adapter()})
@@ -75,16 +76,49 @@ describe('<FarmSchedule /> <Text /> testing', () => {
 
 describe('<FarmSchedule /> <Picker /> testing', () => {
   it('should have Picker.Item according to state', () => {
-    console.log('==============================')
-    console.log(wrapper.find('Picker').get(0).props.children.length)
     expect(wrapper.find('Picker').get(0).props.children.length).toEqual(24)
     expect(wrapper.find('Picker').get(1).props.children.length).toEqual(60)
     expect(wrapper.find('Picker').get(2).props.children.length).toEqual(100)
+    expect(wrapper.find('Picker').get(3).props.children.length).toEqual(100)
   })
 })
 
 describe('<FarmSchedule /> state Test on Change', () => {
   it('State value should have changed, when pickers changed', () => {
-    console.log(wrapper.state('hoursPick'))
+    wrapper.find('Picker').at(0).simulate('ValueChange', '04')
+    expect(wrapper.state('hoursPick')).toEqual('04')
+    wrapper.find('Picker').at(1).simulate('ValueChange', '23')
+    expect(wrapper.state('minutesPick')).toEqual('23')
+    wrapper.find('Picker').at(2).simulate('ValueChange', 90)
+    expect(wrapper.state('maxWaterRatio')).toEqual(90)
+    wrapper.find('Picker').at(3).simulate('ValueChange', 30)
+    expect(wrapper.state('minWaterRatio')).toEqual(30)
+  })
+})
+
+describe('<FarmSchedule /> componentDidMount Test', () => {
+  let tree
+  beforeEach(() => {
+    FarmStore.FarmDetail.cronSchedule = "* 2 12 * * *"
+    FarmStore.FarmDetail.minWaterRatio = 30
+    FarmStore.FarmDetail.maxWaterRatio = 80
+    tree = shallow(<FarmSchedule />)
+  })
+  
+  it('state value should change according to FarmStore.FarmDetail data', () => {
+    // let cronSchedule = "12"
+    console.log('------------------------------')
+    // console.log(cronSchedule.match(/[0-9]/g).join(''))
+    expect(tree.state('hoursPick')).toEqual('12') // "* 2 22 * * *" => 2,2 ?
+    expect(tree.state('minutesPick')).toEqual('02')
+    expect(tree.state('maxWaterRatio')).toEqual(80)
+    expect(tree.state('minWaterRatio')).toEqual(30)
+  })
+})
+
+describe('<FarmSchedule /> Button Save Change', () => {
+  it('should trigger startSchedule in FarmStore', () => {
+    console.log(wrapper.find('TouchableOpacity').get(0))
+    console.log(wrapper.find(TouchableOpacity).get(0).props.triggerSiram)
   })
 })
