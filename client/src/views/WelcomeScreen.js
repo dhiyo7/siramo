@@ -8,11 +8,7 @@ import { observer } from 'mobx-react'
 const background = require('../assets/logo/Drawing1-Model3.png')
 
 @observer class WelcomeScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  };
-  }
-
+  
   static navigationOptions = {
     header: null
   }
@@ -39,7 +35,7 @@ const background = require('../assets/logo/Drawing1-Model3.png')
           />
           </View>
       </View>
-    );
+    ); 
   }
 }
 

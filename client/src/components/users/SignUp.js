@@ -17,7 +17,6 @@ const background = require('../../assets/logo/Drawing1-ModelEdit.png')
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
 
-@inject('UserStore')
 @observer class SignUp extends Component {
   constructor() {
     super()
@@ -27,7 +26,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       conPassword: ''
     }
   }
-
+ 
   static navigationOptions = {
     header: null
   }
@@ -45,7 +44,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
   //       Alert.alert(err.code, err.message)
   //     })
   // }
-  submitSignUp = () => {
+  submitSignUp = async() => {
     let email = this.state.email
     let password = this.state.password
     let conPassword = this.state.conPassword
@@ -60,7 +59,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       Alert.alert('Sorry!','Password does not match')
     } else {
       let navigation = this.props.navigation
-      UserStore.firebaseSignUp({email, password}, navigation)
+      await UserStore.firebaseSignUp({email, password}, navigation)
     }
   }
 
@@ -81,7 +80,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
           <TextInput
             style={styles.input}
             autoCapitalize='none'
-            onSubmitEditing={() => this.passwordInput.focus()}
+            // onSubmitEditing={() => this.passwordInput.focus()}
             onChangeText={(email) => this.setState({email})}
             autoCorrect={false}
             keyboardType='email-address'
@@ -99,7 +98,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
             returnKeyType='go'
             ref={(input) => this.passwordInput = input}
             onChangeText={(password) => this.setState({password})}
-            onSubmitEditing={() => this.conPassInput.focus()}
+            // onSubmitEditing={() => this.conPassInput.focus()}
             placeholder='Enter your new password'
             placeholderTextColor='#3E2723'
             secureTextEntry
