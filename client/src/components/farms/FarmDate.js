@@ -8,49 +8,50 @@ class FarmDate extends Component {
   render() {
     const { title, dates, times } = this.props.date
     return (
-      <View>
-        <Text>{title}</Text>
         <View style={styles.MainCard}>
+          <Text style={{textAlign: 'center', fontSize: 16}}>{title}</Text>
           <View style={styles.cards}>
             <Text style={styles.cardText}>
-              <Ionicons name='md-calendar' size={25} /> {dates}
+              <Ionicons name='md-calendar' size={14} /> {dates}
             </Text>
           </View>
           <View style={styles.cards}>
             <Text style={styles.cardText}>
-              <Ionicons name='md-clock' size={25} /> {times}
+              <Ionicons name='md-clock' size={14} /> {times}
             </Text>
           </View>
         </View>
-      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   MainCard: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
     borderWidth: 1,
-    borderRadius: 2,
-    borderColor: '#ddd',
+    borderRadius: 20,
+    borderColor: '#304FFE',
+    borderWidth: 2,
     shadowColor: '#000',
-    backgroundColor: '#128eb7',
+    backgroundColor: '#EFEBE9',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.8,
     shadowRadius: 2,
+    width: 150,
+    height: 120,
     elevation: 1,
+    marginRight: 4,
+    marginLeft: 4,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   cards: {
-    height: 35,
     padding: 4,
     margin: 8,
     alignItems: 'center'
   },
   cardText: {
-    fontSize: 25,
-    color: '#ffffff'
+    fontSize: 14,
+    color: 'black'
   }
 })
 
