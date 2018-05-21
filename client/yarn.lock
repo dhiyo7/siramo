@@ -6088,6 +6088,10 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
+react-native-material-switch@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-material-switch/-/react-native-material-switch-0.0.4.tgz#ef96290a835cd999cd51107e744bad0f1445c358"
+
 react-native-photo-upload@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-photo-upload/-/react-native-photo-upload-1.2.0.tgz#035a49af45ebed6765b3e914b662f5aedc25bccd"

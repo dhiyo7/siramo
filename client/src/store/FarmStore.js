@@ -186,6 +186,14 @@ class FarmStore {
     })
   }
 
+  changeMode = (cond) => {
+    let userId = userStore.userData.uid
+
+    db.ref(`/farms/${userId}`).update({
+      automaticMode: cond
+    })
+  }
+
 }
 
 export default new FarmStore()
