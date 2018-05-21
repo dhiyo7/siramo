@@ -136,4 +136,4 @@ describe('<FarmSchedule /> Button Save Change', () => {
     expect(FarmStore.FarmDetail.minWaterRatio).toEqual(31)
     expect(FarmStore.FarmDetail.maxWaterRatio).toEqual(82)
   })
-})
+}) 
