@@ -10,11 +10,11 @@ import { Ionicons } from '@expo/vector-icons'
 class ButtonOnOff extends Component {
   render() {
     const {ready_siram, triggerSiram} = this.props.siram
-    let txtButton = 'Start Watering'
-    let buttonStyles = styles.buttonContainerStart
+    let txtButton = 'Stop Watering'
+    let buttonStyles = styles.buttonContainerStop
     if (ready_siram === 0) {
-      txtButton = 'Stop Watering'
-      buttonStyles = styles.buttonContainerStop
+      txtButton = 'Start Watering'
+      buttonStyles = styles.buttonContainerStart
     }
     return (
       <TouchableOpacity

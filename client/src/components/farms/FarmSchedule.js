@@ -6,6 +6,7 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
+import { ListItem } from 'react-native-elements' 
 
 @observer class FarmSchedule extends Component {
   constructor() {
@@ -73,6 +74,11 @@ import FarmStore from '../../store/FarmStore'
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
   
+  componentDidMount() {
+    this.setState({
+      automaticMode: FarmStore.FarmDetail.automaticMode
+    })
+  }
   changeMode () {
     if(this.state.automaticMode) {
       this.setState({
@@ -156,7 +162,7 @@ import FarmStore from '../../store/FarmStore'
     return (
       <View style={styles.mainContainer}>
         <View style={styles.switchContainer}>
-          <View style={{width: 280}}>
+          <View style={{width: 300}}>
             <Text style={{fontSize: 20}}> Automatic Mode </Text>
           </View>
           <View>
@@ -165,13 +171,6 @@ import FarmStore from '../../store/FarmStore'
                   value = {this.state.automaticMode}
                 />
           </View>
-
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={this.startSchedule}
-          >
-              <Text style={styles.buttonText}>Save Change</Text>
-          </TouchableOpacity>
         </View>
       <View>
           {
@@ -187,8 +186,6 @@ import FarmStore from '../../store/FarmStore'
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: '#F1F8E9',
-    paddingLeft: 12,
-    paddingRight: 12,
     paddingTop: 12,
     height: '100%'
   },
@@ -246,19 +243,19 @@ const styles = StyleSheet.create({
   },
   switchContainer: {
     width: '100%',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#C8E6C9',
     flexWrap: 'wrap',
     flexDirection: 'row',
     display: 'flex',
-    borderRadius: 6,
+    borderRadius: 2,
     borderBottomWidth: 1,
-    borderBottomColor: '#795548',
+    borderBottomColor: '#00C853',
     borderTopWidth: 1,
-    borderTopColor: '#795548', 
+    borderTopColor: '#00C853', 
     borderRightWidth: 1,
-    borderRightColor: '#795548',
+    borderRightColor: '#00C853',
     borderLeftWidth: 1,
-    borderLeftColor: '#795548',
+    borderLeftColor: '#00C853',
   },
 })
 
