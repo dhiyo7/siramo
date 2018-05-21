@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 import { 
   View,
-  StyleSheet, Image
+  StyleSheet, Image, ImageBackground
 } from 'react-native'
 
 const background = require('../../assets/logo/SiramoEdit.png')
+const backgroundImage = require('../../assets/logo/3147.jpg')
 
 class SiramoLogo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  };
-  }
+
   render() {
     return (
-      <View style={styles.mainContainer}>
-          <Image
-          style={styles.imageContainer}
-              source={background}
-          />
-      </View>
+      <ImageBackground 
+      source={backgroundImage}
+      style={{width: '100%', height: '100%'}}
+    >
+        <View style={styles.mainContainer}>
+        
+              <Image
+              style={styles.imageContainer}
+                  source={background}
+              />
+        </View>
+      </ImageBackground>
     );
   }
 }

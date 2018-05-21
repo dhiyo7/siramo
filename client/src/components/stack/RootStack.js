@@ -25,7 +25,7 @@ export default RootStack = createStackNavigator({
   navigationOptions: {
     headerTitle: <SiramoLogo />,
     headerStyle: {
-      backgroundColor: '#8D6E63',
+      // backgroundColor: '#EFEBE9',
     },
     headerLeft: null
   }

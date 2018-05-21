@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-  View, Image,
+  View, Image, ImageBackground,
   Text,
   StyleSheet,
   TextInput,
@@ -16,6 +16,7 @@ import Loader from '../customs/Loader';
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
+const imageBackground = require('../../assets/logo/3132.jpg')
 
 @inject('UserStore')
 @observer class SignUp extends Component {
@@ -67,6 +68,10 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
   render() {
     const { loading } = UserStore.userData
     return (
+      <ImageBackground 
+      source={imageBackground}
+      style={{width: '100%', height: '100%'}}
+      >
       <View style={styles.mainContainer}>
         <View style={styles.container}>
         <Image
@@ -134,20 +139,21 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
           </TouchableOpacity>
         </View>
       </View>
+      </ImageBackground>
     )
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#F1F8E9',
+    // backgroundColor: '#F1F8E9',
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 12,
     paddingRight: 12
   },
   container: {
-    backgroundColor: '#F1F8E9',
+    // backgroundColor: '#F1F8E9',
     width: '100%',
     height: '100%',
     marginRight: 8,
@@ -184,13 +190,13 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginTop: 2,
     marginBottom: 2,
-    color: '#8D6E63',
+    color: 'black',
     borderRadius: 4,
     fontSize: 16
 
   },
   buttonContainer: {
-    backgroundColor: '#33691E',
+    backgroundColor: '#66BB6A',
     paddingVertical: 15,
     marginBottom: 8,
     borderRadius: 4,

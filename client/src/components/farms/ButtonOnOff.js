@@ -33,16 +33,15 @@ const styles = StyleSheet.create({
   buttonContainerStart: {
     backgroundColor: '#31ce12',
     paddingVertical: 15,
-    marginTop: 8,
-    marginBottom: 4,
-    borderRadius: 4
+    marginTop: 32,
+    width: '100%',
+
   },
   buttonContainerStop: {
     backgroundColor: '#f44242',
     paddingVertical: 15,
-    marginTop: 8,
-    marginBottom: 4,
-    borderRadius: 4
+    marginTop: 32,
+    width: '100%',
   },
   buttonText: {
     color: '#fff',

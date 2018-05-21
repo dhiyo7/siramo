@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, AsyncStorage} from 'react-native'
+import { View, StyleSheet, Image, AsyncStorage, ImageBackground} from 'react-native'
 import UserStore from '../store/UserStore'
 import FarmStore from '../store/FarmStore'
 import { User } from '../store/firebase'
 import { observer } from 'mobx-react'
 
 const background = require('../assets/logo/Drawing1-Model3.png')
+const imageBackground = require('../assets/logo/3132.jpg')
+
 
 @observer class WelcomeScreen extends Component {
   constructor(props) {
@@ -31,21 +33,26 @@ const background = require('../assets/logo/Drawing1-Model3.png')
   }
   render() {
     return (
-      <View style={styles.mainContainer}>
-          <View style={styles.container}>
-          <Image
-            style={styles.imageContainer}
-            source={background}
-          />
-          </View>
-      </View>
+      <ImageBackground 
+      source={imageBackground}
+      style={{width: '100%', height: '100%'}}
+    >
+        <View style={styles.mainContainer}>
+            <View style={styles.container}>
+            <Image
+              style={styles.imageContainer}
+              source={background}
+            />
+            </View>
+        </View>
+      </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#A1887F',
+    // backgroundColor: '#A1887F',
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',

@@ -124,7 +124,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#C5E1A5'
+    backgroundColor: 'white'
   },
   container:{
     flex: 1,
