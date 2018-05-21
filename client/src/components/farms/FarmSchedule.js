@@ -53,6 +53,10 @@ import { ListItem } from 'react-native-elements'
         hoursPick: (hours < 10)? `0${hours}`:`${hours}`
       })
     }
+    
+    this.setState({
+      automaticMode: FarmStore.FarmDetail.automaticMode
+    })
   }
 
   startSchedule = () => {
@@ -74,11 +78,6 @@ import { ListItem } from 'react-native-elements'
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
   
-  componentDidMount() {
-    this.setState({
-      automaticMode: FarmStore.FarmDetail.automaticMode
-    })
-  }
   changeMode () {
     if(this.state.automaticMode) {
       this.setState({
