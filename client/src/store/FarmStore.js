@@ -130,7 +130,6 @@ class FarmStore {
       }
       db.ref(`/farms/${uid}`).update(updatedValue)
       db.ref(`/farms/${uid}`).once('value', snapshot => {
-        console.log('FarmStore ======', updatedValue)
         this.FarmDetail.minWaterRatio = snapshot.val().minWaterRatio
         this.FarmDetail.maxWaterRatio = snapshot.val().maxWaterRatio
         this.FarmDetail.cronSchedule = snapshot.val().cronSchedule
