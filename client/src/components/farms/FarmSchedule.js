@@ -136,7 +136,7 @@ import FarmStore from '../../store/FarmStore'
               onPress={this.startSchedule}
             >
               <Text style={styles.buttonText}>Save Change</Text>
-            </TouchableOpacity>
+          </TouchableOpacity>
         </View>
       </View>
     )
@@ -188,7 +188,6 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginTop: 2,
     marginBottom: 2,
-    color: '#8D6E63',
     borderRadius: 4,
   },
   buttonContainer: {
