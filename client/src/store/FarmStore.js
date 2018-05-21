@@ -65,6 +65,7 @@ class FarmStore {
   }
 
   getFarmData = () => {
+    return new Promise((resolve, reject) => {
       let userId = userStore.userData.uid
       this.FarmDetail.loading = true
       db.ref(`/farms/${userId}`).on('value', snap => {
@@ -83,10 +84,13 @@ class FarmStore {
             this.FarmDetail.last_updated = farmDB.last_updated
             this.FarmDetail.ready_siram = farmDB.ready_siram
             this.FarmDetail.loading = false
+            resolve()
+            reject()
           }   
       })
+    })   
   }
-
+ 
   getHistory = (key) => {
     return new Promise((resolve, reject) => {
       this.farmData.historyLoading = true

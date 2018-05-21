@@ -5,7 +5,7 @@ import UserStore from '../../src/store/UserStore'
 import FarmStore from '../../src/store/FarmStore'
 import { User, db, Fire } from '../../src/store/firebase'
 import MockStorage from '../MockStorage';
-
+ 
 const storageCache = {};
 const AsyncStorage = new MockStorage(storageCache)
 

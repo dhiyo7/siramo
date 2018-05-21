@@ -733,48 +733,70 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 10,
+          "flexDirection": "row",
+          "flexWrap": "wrap",
           "height": "auto",
+          "justifyContent": "center",
           "width": "100%",
         }
       }
     >
-      <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#EFEBE9",
+            "borderColor": "#304FFE",
+            "borderRadius": 20,
+            "borderWidth": 2,
+            "elevation": 1,
+            "height": 120,
+            "justifyContent": "center",
+            "marginLeft": 4,
+            "marginRight": 4,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 2,
+            "width": 150,
+          }
+        }
+      >
         <Text
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
         >
           Last Watering:
         </Text>
         <View
           style={
             Object {
-              "backgroundColor": "#128eb7",
-              "borderColor": "#ddd",
-              "borderRadius": 2,
-              "borderWidth": 1,
-              "elevation": 1,
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "center",
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.8,
-              "shadowRadius": 2,
+              "alignItems": "center",
+              "margin": 8,
+              "padding": 4,
             }
           }
         >
-          <View
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Object {
-                "alignItems": "center",
-                "height": 35,
-                "margin": 8,
-                "padding": 4,
+                "color": "black",
+                "fontSize": 14,
               }
             }
           >
@@ -782,29 +804,28 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "fontSize": 25,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              />
-               
-              20 May 2018
-            </Text>
-          </View>
-          <View
+            />
+             
+            20 May 2018
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "margin": 8,
+              "padding": 4,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Object {
-                "alignItems": "center",
-                "height": 35,
-                "margin": 8,
-                "padding": 4,
+                "color": "black",
+                "fontSize": 14,
               }
             }
           >
@@ -812,70 +833,66 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "fontSize": 25,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              />
-               
-              20:56
-            </Text>
-          </View>
+            />
+             
+            20:56
+          </Text>
         </View>
       </View>
-    </View>
-    <View
-      style={
-        Object {
-          "borderRadius": 10,
-          "height": "auto",
-          "width": "100%",
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#EFEBE9",
+            "borderColor": "#304FFE",
+            "borderRadius": 20,
+            "borderWidth": 2,
+            "elevation": 1,
+            "height": 120,
+            "justifyContent": "center",
+            "marginLeft": 4,
+            "marginRight": 4,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 2,
+            "width": 150,
+          }
         }
-      }
-    >
-      <View>
+      >
         <Text
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
         >
           Last updated:
         </Text>
         <View
           style={
             Object {
-              "backgroundColor": "#128eb7",
-              "borderColor": "#ddd",
-              "borderRadius": 2,
-              "borderWidth": 1,
-              "elevation": 1,
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "center",
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.8,
-              "shadowRadius": 2,
+              "alignItems": "center",
+              "margin": 8,
+              "padding": 4,
             }
           }
         >
-          <View
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Object {
-                "alignItems": "center",
-                "height": 35,
-                "margin": 8,
-                "padding": 4,
+                "color": "black",
+                "fontSize": 14,
               }
             }
           >
@@ -883,29 +900,28 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "fontSize": 25,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              />
-               
-              24 October 2008
-            </Text>
-          </View>
-          <View
+            />
+             
+            24 October 2008
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "margin": 8,
+              "padding": 4,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Object {
-                "alignItems": "center",
-                "height": 35,
-                "margin": 8,
-                "padding": 4,
+                "color": "black",
+                "fontSize": 14,
               }
             }
           >
@@ -913,22 +929,10 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "fontSize": 25,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-              />
-               
-              12:02
-            </Text>
-          </View>
+            />
+             
+            12:02
+          </Text>
         </View>
       </View>
     </View>
@@ -952,7 +956,7 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#31ce12",
+        "backgroundColor": "#f44242",
         "borderRadius": 4,
         "marginBottom": 4,
         "marginTop": 8,
@@ -982,7 +986,7 @@ exports[`<FarmDetail /> snapshot Testing snapshot works! 1`] = `
         ellipsizeMode="tail"
       />
        
-      Start Watering
+      Stop Watering
     </Text>
   </View>
 </View>
