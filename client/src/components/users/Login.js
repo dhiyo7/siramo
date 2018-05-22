@@ -10,7 +10,7 @@ import Loader from '../customs/Loader'
 import UserStore from '../../store/UserStore'
 
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
-const imageBackground = require('../../assets/logo/3132.jpg')
+const imageBackground = require('../../assets/logo/3147-compressor.jpg')
 
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
@@ -73,10 +73,10 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
     const { loading } = UserStore.userData
     // tiap ngetik ngerender terus
     return (
-      <ImageBackground 
-      source={imageBackground}
-      style={{width: '100%', height: '100%'}}
-      >
+      // <ImageBackground 
+      // source={imageBackground}
+      // style={{width: '100%', height: '100%'}}
+      // >
         <View style={styles.mainContainer}>
           <View style={styles.container}>
             <Image
@@ -121,13 +121,6 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
                 <Text style={styles.buttonText}>LOGIN</Text>
               </TouchableOpacity>
 
-            {/* <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={this.googleLogin}
-            >
-              <Text style={styles.buttonText}>Connect with Google</Text>
-            </TouchableOpacity> */}
-
               <TouchableOpacity
                 style={styles.buttonContainer}
                 onPress={() => this.props.navigation.navigate('SignUp')}
@@ -137,7 +130,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
               </TouchableOpacity>
           </View>
         </View>
-      </ImageBackground>
+      // </ImageBackground>
     )
   }
 }

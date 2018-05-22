@@ -84,24 +84,15 @@ import ButtonOnOff from '../farms/ButtonOnOff'
 const styles = StyleSheet.create({
   mainContainer: {
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
+    backgroundColor: 'white'
   },
   DetailCard: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    // backgroundColor: '#F1F8E9',
+    backgroundColor: '#fff',
     padding: 4
-  },
-  // container: {
-  //   padding: 20,
-  // },
-  input: {
-    height:40,
-    backgroundColor: 'rgba(225,225,225,0.2)',
-    marginBottom: 10,
-    padding: 10,
-    color: '#fff'
   },
   textTitle: {
     fontSize: 20,

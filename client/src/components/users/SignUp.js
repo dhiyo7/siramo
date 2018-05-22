@@ -16,7 +16,7 @@ import Loader from '../customs/Loader';
 const background = require('../../assets/logo/Drawing1-ModelEdit.png')
 const emailIcon = require('../../assets/logo/584856b4e0bb315b0f7675ac.png')
 const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
-const imageBackground = require('../../assets/logo/3132.jpg')
+const imageBackground = require('../../assets/logo/3147-compressor.jpg')
 
 @inject('UserStore')
 @observer class SignUp extends Component {
@@ -68,10 +68,10 @@ const imageBackground = require('../../assets/logo/3132.jpg')
   render() {
     const { loading } = UserStore.userData
     return (
-      <ImageBackground 
-      source={imageBackground}
-      style={{width: '100%', height: '100%'}}
-      >
+      // <ImageBackground 
+      // source={imageBackground}
+      // style={{width: '100%', height: '100%'}}
+      // >
       <View style={styles.mainContainer}>
         <View style={styles.container}>
         <Image
@@ -139,7 +139,7 @@ const imageBackground = require('../../assets/logo/3132.jpg')
           </TouchableOpacity>
         </View>
       </View>
-      </ImageBackground>
+      // </ImageBackground>
     )
   }
 }

@@ -11,7 +11,6 @@ import { inject, observer } from 'mobx-react'
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 import Graph from '../components/farms/Graph'
 import FarmStore from '../store/FarmStore'
-import TabBarLogo from '../components/logo/TabBarLogo'
 import Loader from '../components/customs/Loader'
 import LandscapeView from 'react-native-landscape-view'
 import { Ionicons } from '@expo/vector-icons'
@@ -26,8 +25,7 @@ const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperatu
 const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red" navigation={FarmStore.navigation}/>
 const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green" navigation={FarmStore.navigation}/>
 
-@inject('FarmStore')
-@observer class History extends Component {
+class History extends Component {
 
   constructor(props) {
     super(props);

@@ -10,7 +10,7 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import FarmDetail from './farms/FarmDetail'
 
-const imageBackground = require('../assets/logo/3132.jpg')
+const imageBackground = require('../assets/logo/3147-compressor.jpg')
 
 class Home extends Component {
   constructor() {
@@ -39,16 +39,16 @@ class Home extends Component {
 
   render() {
     return (
-      <ImageBackground 
-        source={imageBackground}
-        style={{width: '100%', height: '100%'}}
-      >
+      // <ImageBackground 
+      //   source={imageBackground}
+      //   style={{width: '100%', height: '100%'}}
+      // >
         <ScrollView>
           <View style={styles.mainContainer}>
             <FarmDetail />
           </View>
         </ScrollView>
-      </ImageBackground>
+      // </ImageBackground>
     )
   }
 }
