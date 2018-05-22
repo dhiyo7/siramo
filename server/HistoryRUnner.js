@@ -3,11 +3,10 @@ const { db } = require('./controllers/firebase')
 const firebase = require('firebase')
 
 let History = new CronJob({
-  cronTime: '* */15 * * * *',
+  cronTime: '0 0 23 * * *',
   onTick: function() {
     db.ref(`/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3`).on('value', snap => {
       let farms = snap.val()
-      console.log('get Firebase', snap.val())
       let historyData = {
         last_updated: firebase.database.ServerValue.TIMESTAMP,
         humidity: farms.humidity,
