@@ -17,7 +17,6 @@ import FarmPic from '../farms/FarmsPic'
 import FarmDate from '../farms/FarmDate'
 import ButtonOnOff from '../farms/ButtonOnOff'
 
-
 @observer class FarmDetail extends Component {
   render() {
     const {
@@ -46,7 +45,7 @@ import ButtonOnOff from '../farms/ButtonOnOff'
             color='rgba(0, 167, 5, 1)' 
           />
           <CircleProg 
-            sensor={(water_level/35)*100}
+            sensor={(water_level/50)*100}
             textTitle={'Water Level'}
             maxValue={'%'}
             color='rgb(41, 177, 237)' 

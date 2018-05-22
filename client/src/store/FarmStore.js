@@ -31,7 +31,7 @@ class FarmStore {
     cronSchedule: '',
     minWaterRatio: 0,
     maxWaterRatio: 0,
-    ready_siram: 1,
+    ready_siram: 0,
     loading: false,
     automaticMode: false
   }

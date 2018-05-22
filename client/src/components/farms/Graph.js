@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, StyleSheet, TouchableHighlight, Image } from 'react-native'
+import { View, ScrollView, Text, StyleSheet, TouchableHighlight, Image, ActivityIndicator } from 'react-native'
 import PureChart from 'react-native-pure-chart';
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
@@ -12,12 +12,16 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
 
   render() {
     let sensorArr = []
+    let historyLoading = FarmStore.farmData.historyLoading
+    let sensorData = this.props.sensorData
+
     this.props.sensorData.forEach(element => {
       sensorArr.push({
         x: UserStore.dateFormat(element.x),
         y: element.y
       })
     })
+
     if (this.props.humidityDetail !== undefined) {
       return (
         <ScrollView style={styles.mainContainer}>
@@ -26,12 +30,12 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
               title='HUMIDITY (%)'
               containerStyle={{width: '100%'}}
               image={require('../../assets/logo/humidity-hysitron-inc.jpeg')}>
-              <RecommendedCard recommended="Recommended Value = 40-60 %" warning="Nilai Diatas 60 % = Basah" danger="Nilai Dibawah 40 % = Sangat Kering"/>
+              <RecommendedCard recommended="Recommended Value = 40-60 %" warning="Value above 60 % = Moist" danger="Value below 40 % = Dry"/>
               <Text style={{marginBottom: 10}}>
                 Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -51,12 +55,12 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
               title='WATER RATIO (%)'
               containerStyle={{width: '100%'}}
               image={require('../../assets/logo/images.jpeg')}>
-              <RecommendedCard recommended="Recommended Value = 50% -80%" warning="Nilai Diatas 80 % = Sangat Basah" danger="Nilai Dibawah 35% = Sangat Kering"/>
+              <RecommendedCard recommended="Recommended Value = 50% -80%" warning="Value above 80 % = Extremely wet" danger="Value below 35% = Extremely Dry"/>
               <Text style={{marginBottom: 10}}>
                 Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products. 
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -76,12 +80,12 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
               title='TEMPERATURE (°C)'
               containerStyle={{width: '100%'}}
               image={require('../../assets/logo/5a35e2dfc1d9dc42f97f20b1de231e96.jpg')}>
-              <RecommendedCard recommended="Recommended Value = 24-30 °C" warning="Nilai Diatas 31°C = Panas" danger="Nilai Dibawah 22°C = Dingin"/>
+              <RecommendedCard recommended="Recommended Value = 24-30 °C" warning="Value above 31°C = Hot" danger="Value below 22°C = Cold"/>
               <Text style={{marginBottom: 10}}>
                 Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).  
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -101,12 +105,12 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
               title='WATER LEVEL (Cm)'
               containerStyle={{width: '100%'}}
               image={require('../../assets/logo/2010_7-8_36-home.jpg')}>
-              <RecommendedCard recommended="Recommended Value = 20-30 cm" warning="Nilai Dibawah 20 cm reservoir harus sudah diisi" danger="Nilai dibawah 10 cm tidak dapat menyiram"/>
+              <RecommendedCard recommended="Recommended Value = 20-30 cm" warning="Water level below 20 cm reservoir must be filled" danger="Water level below 10 cm cannot start watering"/>
               <Text style={{marginBottom: 10}}>
                 A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
