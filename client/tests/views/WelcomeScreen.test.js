@@ -3,16 +3,16 @@ import React from 'react'
 import Enzyme, { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import renderer from 'react-test-renderer'
-import MockStorage from '../MockStorage';
-import 'jsdom-global/register'
+import MockStorage from '../MockStorage'
+// import 'jsdom-global/register'
 
-const storageCache = {};
-const AsyncStorage = new MockStorage(storageCache);
+const storageCache = {}
+const AsyncStorage = new MockStorage(storageCache)
 import { View, Image } from 'react-native'
 import History from '../../src/views/History'
 import FarmStore from '../../src/store/FarmStore'
-import WelcomeScreen from '../../src/views/WelcomeScreen';
-import userStore from '../../src/store/UserStore';
+import WelcomeScreen from '../../src/views/WelcomeScreen'
+import userStore from '../../src/store/UserStore'
 
 Enzyme.configure({ adapter: new Adapter()})
 
@@ -45,11 +45,36 @@ describe('AsnycStorage test in <WelcomeScreen />', () => {
     asnycStore.setItem('userId', null)
     asnycStore.setItem('email', null)
     asnycStore.getAllKeys()
-    console.log('uid ===>', userStore.userData.uid)
-    console.log('email ===>', userStore.userData.email)
-    await wrapper.instance().componentDidMount()
-    console.log('uid ===>', userStore.userData.uid)
-    console.log('email ===>', userStore.userData.email)
+    // console.log('uid ===>', userStore.userData)
+    // console.log('email ===>', userStore.userData.email)
+    // console.log('Farm Data', FarmStore.FarmDetail.name)
+    wrapper.instance().componentDidMount()
+    expect(userStore.userData.uid).toBe('')
+    expect(userStore.userData.email).toBe('')
+    // console.log('Farm Data', FarmStore.FarmDetail.name)
     asnycStore.clear()
   })
+
+  it('should get userId and email', async () => {
+    asnycStore.setItem('userId', 'Hmyc0z9azhQbKE4mcv0NNZwDfPB3')
+    asnycStore.setItem('email', 'demo@gmail.com')
+    let uid = await asnycStore.getItem('userId')
+    let email = await asnycStore.getItem('email')
+    await setTimeout(() => {
+      wrapper.instance().componentDidMount()
+    }, 3000)
+    userStore.assignUserData({uid, email})
+    expect(userStore.userData.uid).toEqual(uid)
+    expect(userStore.userData.email).toEqual(email)
+  })
 })
+
+// describe('<WelcomeScreen /> componentDidMount Test', () => {
+//   it('should call all method inside componentDidMount', () => {
+//     let UserStore = {
+//       assignUserData : jest.spyOn(WelcomeScreen.prototype, 'UserStore.assignUserData')
+//     }
+//     let wrap = mount(<WelcomeScreen />)
+//     expect(UserStore.assignUserData).toHaveBeenCalledTimes(1) 
+//   })
+// })

@@ -44,6 +44,6 @@ describe('<Home /> componentWillUnmount and mount test', () => {
     wrapper.instance().componentWillMount()
     wrapper.instance().componentWillUnmount()
     expect(handleBackButtonClick).toBeTruthy()
-    console.log(wrapper.dive().get(0).props.children[1])
+    // console.log(wrapper.dive().get(0).props.children[1])
   })
 })

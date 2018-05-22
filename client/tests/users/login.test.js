@@ -96,7 +96,7 @@ describe('<Login /> button onPress testing', () => {
   it('onPress submitLogin is called', () => {
     let handleSubmit = jest.spyOn(instance, 'submitLogin')
   
-    console.log('Before ===>', userStore.userData.email)
+    // console.log('Before ===>', userStore.userData.email)
     wrapper.find('TextInput').get(0).props.onChangeText(expectedValue.email)
     wrapper.find('TextInput').get(1).props.onChangeText(expectedValue.password)
     wrapper.instance().submitLogin()
@@ -104,7 +104,7 @@ describe('<Login /> button onPress testing', () => {
     // console.log(wrapper.state())
     wrapper.find('TouchableOpacity').get(0).props.onPress()
     //ga ke panggil
-    console.log(userStore.userData.email)
+    // console.log(userStore.userData.email)
   })
 
   it('should show alert when email is empty', () => {
