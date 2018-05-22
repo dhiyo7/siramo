@@ -59,7 +59,7 @@ it('use all Element of react native that is imported', () => {
       expect(wrapper.state().email).toEqual('')
       expect(wrapper.state().password).toEqual('')
       expect(wrapper.state().conPassword).toEqual('')
-      console.log(wrapper.find('TextInput').get(0))
+      // console.log(wrapper.find('TextInput').get(0))
       wrapper.find('TextInput').get(0).props.onChangeText('rama@gmail.com')
       wrapper.find('TextInput').get(1).props.onChangeText('rama12345')
       wrapper.find('TextInput').get(2).props.onChangeText('rama12345')

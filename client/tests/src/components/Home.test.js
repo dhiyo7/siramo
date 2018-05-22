@@ -37,4 +37,13 @@ describe('<Home /> child is rendered', () => {
   })
 })
 
-// componentWillMount sama componentwillUnmount belum di test
+
+describe('<Home /> componentWillUnmount and mount test', () => {
+  it('componentWillUnmount and mount should be called', () => {
+    let handleBackButtonClick = wrapper.instance().handleBackButtonClick()
+    wrapper.instance().componentWillMount()
+    wrapper.instance().componentWillUnmount()
+    expect(handleBackButtonClick).toBeTruthy()
+    // console.log(wrapper.dive().get(0).props.children[1])
+  })
+})

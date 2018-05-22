@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`<Login /> snapshot renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -12,7 +12,13 @@ ShallowWrapper {
         "firebaseLogin": [Function],
         "firebaseSignOut": [Function],
         "firebaseSignUp": [Function],
+        "isLogin": false,
         "timeFormat": [Function],
+        "userData": Object {
+          "email": "",
+          "loading": false,
+          "uid": "",
+        },
       }
     }
   >

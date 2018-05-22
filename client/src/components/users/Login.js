@@ -53,20 +53,7 @@ const passwordIcon = require('../../assets/logo/lock_512pxGREY.png')
       UserStore.firebaseLogin({email, password}, navigation)
     }
   }
-
-  // tambahan kalo bisa, belum bisa sampe sekarang
-  googleLogin = () => {
-    console.log('login Google')
-    let provider = new Fire.auth.GoogleAuthProvider()
-    User.signInWithPopup(provider)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-  
+ 
   render() {
     const { loading } = UserStore.userData
     // tiap ngetik ngerender terus

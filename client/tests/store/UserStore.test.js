@@ -123,7 +123,7 @@ describe('UserStore time and date format testing', () => {
 
 describe.skip('UserStore sign up firebase testing', () => {
   let newTestData = {
-    email: 'test3@gmail.com',
+    email: 'test5@gmail.com',
     password: 'test1234'
   }
 

@@ -20,7 +20,8 @@ Enzyme.configure({ adapter: new Adapter()})
 let wrapper
 
 beforeEach(() => {
-  wrapper = shallow(<SideMenu />)
+  const navigation = { navigate: jest.fn(), dispatch: jest.fn()}
+  wrapper = shallow(<SideMenu navigation={navigation} />)
 })
 
 describe('<SideMenu /> snapshot Testing', () => {
@@ -50,7 +51,7 @@ describe('<SideMenu /> child component Test', () => {
     // expect(wrapper.find('Text').get(2).props.children[1]).toBe('    History')
     expect(wrapper.find('Text').get(3).props.children[0]).toEqual(<Ionicons name="md-log-out" size={24} color="#ef5350" />)
     wrapper.find('Text').get(3).props.onPress()
-    console.log(wrapper.get(0))
+    // console.log(wrapper.get(0))
     // expect(wrapper.find('Text').get(3).props.children[1]).toBe('    Logout')
     expect(wrapper.find('Text').get(4).props.style).toEqual({ fontSize: 24, fontWeight: 'bold', color: '#FAFAFA' })
     expect(wrapper.find('Text').get(4).props.children).toEqual('© Siramo')
