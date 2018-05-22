@@ -32,7 +32,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider UserStore={UserStore} FarmStore={FarmStore}>
-        <RootStack />
+        <RootStack/>
       </Provider>
     )
   }

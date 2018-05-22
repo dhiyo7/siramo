@@ -8,7 +8,7 @@ import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
 import { ListItem } from 'react-native-elements' 
 
-const imageBackground = require('../../assets/logo/3132.jpg')
+const imageBackground = require('../../assets/logo/3147-compressor.jpg')
 
 
 @observer class FarmSchedule extends Component {
@@ -75,7 +75,7 @@ const imageBackground = require('../../assets/logo/3132.jpg')
     // console.log('Menit', this.state.minutesPick)
     // console.log('Max', this.state.maxWaterRatio)
     // console.log('min', this.state.minWaterRatio)
-    console.log(cronFormat, maxWaterRatio, minWaterRatio)
+    // console.log(cronFormat, maxWaterRatio, minWaterRatio)
 
     FarmStore.setSchedule(cronFormat, maxWaterRatio, minWaterRatio)
   }
@@ -161,13 +161,13 @@ const imageBackground = require('../../assets/logo/3132.jpg')
     </View>
 
     return (
-      <ImageBackground 
-      source={imageBackground}
-      style={{width: '100%', height: '100%'}}
-      >
+      // <ImageBackground 
+      // source={imageBackground}
+      // style={{width: '100%', height: '100%'}}
+      // >
         <View style={styles.mainContainer}>
           <View style={styles.switchContainer}>
-            <View style={{width: 300}}>
+            <View style={{width: 280}}>
               <Text style={{fontSize: 20}}> Automatic Mode </Text>
             </View>
             <View>
@@ -184,22 +184,24 @@ const imageBackground = require('../../assets/logo/3132.jpg')
             }
         </View>
         </View>
-      </ImageBackground>
+      // </ImageBackground>
     )
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    paddingTop: 12,
+    padding: 12,
     height: '100%',
+    backgroundColor: 'white'
   },
   container: {
     width: '100%',
     marginRight: 8,
     marginLeft: 8,
     marginTop: 10,
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white'
   },
   txtTitle: {
     fontSize: 30,
@@ -213,6 +215,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     marginTop: 4,
     width: 400,
+    backgroundColor: '#fff'
   },
   iconBox: {
     width: 25,
@@ -223,7 +226,7 @@ const styles = StyleSheet.create({
   timeInput: {
     height: 40,
     width: 40,
-    backgroundColor: 'rgba(225,225,225,0.2)',
+    backgroundColor: '#D6D4D0',
     padding: 6,
     marginRight: 4,
     marginLeft: 4,
@@ -247,7 +250,7 @@ const styles = StyleSheet.create({
   },
   switchContainer: {
     width: '100%',
-    // backgroundColor: '#EEEEEE',
+    backgroundColor: '#fff',
     height: 50,
     flexWrap: 'wrap',
     flexDirection: 'row',

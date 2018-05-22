@@ -5,11 +5,11 @@ import FarmStore from '../store/FarmStore'
 import { User } from '../store/firebase'
 import { observer } from 'mobx-react'
 
-const background = require('../assets/logo/Drawing1-Model3.png')
-const imageBackground = require('../assets/logo/3132.jpg')
+const background = require('../assets/logo/Drawing1-ModelEdit.png')
+const imageBackground = require('../assets/logo/3147-compressor.jpg')
 
 
-@observer class WelcomeScreen extends Component {
+class WelcomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {  };
@@ -18,7 +18,7 @@ const imageBackground = require('../assets/logo/3132.jpg')
   static navigationOptions = {
     header: null
   }
-  componentDidMount = () => {
+  componentDidMount = async() => {
     setTimeout( async () => {
       let uid = await AsyncStorage.getItem('userId')
       let email = await AsyncStorage.getItem('email')
@@ -29,14 +29,14 @@ const imageBackground = require('../assets/logo/3132.jpg')
       await FarmStore.getFarmData()
       uid == null?
       this.props.navigation.push('Login'):this.props.navigation.push('Home')
-    }, 3000)
+    }, 2000)
   }
   render() {
     return (
-      <ImageBackground 
-      source={imageBackground}
-      style={{width: '100%', height: '100%'}}
-    >
+    //   <ImageBackground 
+    //   source={imageBackground}
+    //   style={{width: '100%', height: '100%'}}
+    // >
         <View style={styles.mainContainer}>
             <View style={styles.container}>
             <Image
@@ -45,7 +45,7 @@ const imageBackground = require('../assets/logo/3132.jpg')
             />
             </View>
         </View>
-      </ImageBackground>
+      // </ImageBackground>
     );
   }
 }
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: 310,
-    height: 230,
+    height: 260,
   },
 })
 

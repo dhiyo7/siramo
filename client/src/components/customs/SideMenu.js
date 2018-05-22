@@ -16,7 +16,7 @@ import UserStore from '../../store/UserStore'
 class SideMenu extends Component {
   constructor(props) {
     super(props);
-    this.state = {  };
+    this.state = {  }; 
   }
 
   navigateToScreen = (route) => () => {
@@ -52,7 +52,7 @@ class SideMenu extends Component {
         >
         <View style={styles.imageContainer} >
           <Image 
-            source={{uri:'https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_400x400.jpg'}}
+            source={{uri:'https://cdn4.iconfinder.com/data/icons/people-of-business/512/People_Business_man_tie_shirt-512.png'}}
             style={{width: 120, height: 120, borderRadius: 120/2}}
           />
          </View>

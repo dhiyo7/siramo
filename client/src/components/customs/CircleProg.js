@@ -26,6 +26,7 @@ class CircleProg extends Component {
           formatText={() => this.ProgText(convertValue, maxValue, textTitle)}
           thickness={10}
           color={colorValue}
+          spinDuration={3000}
           textStyle={{fontSize: 16, textAlign: 'center'}}
         />
       </View>

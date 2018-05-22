@@ -6,6 +6,7 @@ import HomeStack from './HomeStack'
 import History from '../../views/History'
 import WelcomeScreen from '../../views/WelcomeScreen'
 import SiramoLogo from '../customs/SiramoLogo'
+import { Ionicons } from '@expo/vector-icons'
 
 export default RootStack = createStackNavigator({
   Welcome: {
@@ -22,11 +23,12 @@ export default RootStack = createStackNavigator({
   }
 },{
   initialRouteName: 'Welcome',
-  navigationOptions: {
+  navigationOptions: ({ navigation }) => ({
     headerTitle: <SiramoLogo />,
     headerStyle: {
       // backgroundColor: '#EFEBE9',
+      paddingLeft: 10
     },
-    headerLeft: null
-  }
+    headerLeft: <Ionicons name="md-reorder" size={32} onPress={ () => navigation.navigate('Home') } />
+  })
 })

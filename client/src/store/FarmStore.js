@@ -39,7 +39,6 @@ class FarmStore {
   @observable navigation = {}
 
   clearAll = () => {
-    return new Promise((resolve, reject) => {
       this.farmData.historyHumidity= []
       this.farmData.historyWaterRatio= []
       this.farmData.historyTemperature= []
@@ -59,9 +58,6 @@ class FarmStore {
       this.FarmDetail.ready_siram= 2
       this.FarmDetail.loading= false
       this.FarmDetail.automaticMode = false
-      resolve()
-      reject()
-    })
   }
 
   getFarmData = () => {
@@ -88,7 +84,6 @@ class FarmStore {
   }
 
   getHistory = (key) => {
-    return new Promise((resolve, reject) => {
       this.farmData.historyLoading = true
       db.ref('/history/' + key).on('value', (snapshot) => {
         snapshot.forEach(snap => {
@@ -110,10 +105,7 @@ class FarmStore {
           })
         })
         this.farmData.historyLoading = false
-        resolve()
-        reject()
       })
-    })
   }
 
   setSchedule = (cronFormat, max, min) => {
@@ -126,7 +118,6 @@ class FarmStore {
       }
       db.ref(`/farms/${uid}`).update(updatedValue)
       db.ref(`/farms/${uid}`).once('value', snapshot => {
-        console.log('FarmStore ======', updatedValue)
         this.FarmDetail.minWaterRatio = snapshot.val().minWaterRatio
         this.FarmDetail.maxWaterRatio = snapshot.val().maxWaterRatio
         this.FarmDetail.cronSchedule = snapshot.val().cronSchedule
@@ -158,8 +149,8 @@ class FarmStore {
           '',
           'Your plant is still have enough water',
           [
-            {text: 'OK', onPress: async () => {
-              // await this.updateSiram(userId, farmUpdate)
+            {text: 'Keep Watering?', onPress: async () => {
+              await this.updateSiram(userId, farmUpdate)
               resolve()
             }}
           ]
