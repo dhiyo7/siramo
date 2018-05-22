@@ -25,7 +25,7 @@ export default RootStack = createStackNavigator({
   navigationOptions: ({ navigation }) => ({
     headerTitle: <SiramoLogo />,
     headerStyle: {
-      // backgroundColor: '#EFEBE9',
+      // backgroundColor: '#EFEBE9'
       paddingLeft: 10
     },
     headerLeft: <Ionicons name="md-reorder" size={32} onPress={ () => navigation.navigate('Home') } />
