@@ -19,7 +19,9 @@ class UserStore {
     this.userData.uid = data.uid
     this.userData.email = data.email
     let token = this.userData.token
-    db.ref(`/farms/${data.uid}`).update({token})
+    if (data.uid && token) {
+      db.ref(`/farms/${data.uid}`).update({token})
+    }
   }
 
   firebaseLogin = (data, navigation) => {
@@ -87,6 +89,8 @@ class UserStore {
         await AsyncStorage.removeItem('email')
         User.signOut()
         .then( async() => {
+          let uid = this.userData.uid
+          db.ref(`/farms/${uid}`).update({token:''})
           this.assignUserData({uid:'',email:''})
           await FarmStore.clearAll()
           resolve()

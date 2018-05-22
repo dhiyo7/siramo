@@ -6,36 +6,32 @@ import RootStack from './src/components/stack/RootStack'
 import UserStore from './src/store/UserStore'
 import FarmStore from './src/store/FarmStore'
 import { db } from './src/store/firebase'
-import { Permissions, Notifications } from 'expo'
-import userStore from './src/store/UserStore';
+import registerForPushNotificationsAsync from './src/store/RegisterDevicesToken'
+// import { Permissions, Notifications } from 'expo'
+import userStore from './src/store/UserStore'
 
-async function registerForPushNotificationsAsync() {
-  const {status: existingStatus} = await Permissions.getAsync(
-    Permissions.NOTIFICATIONS
-  )
-  let finalStatus = existingStatus
-  if (existingStatus !== 'granted') {
-    const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
-    finalStatus = status
-  }
+// async function registerForPushNotificationsAsync() {
+//   const {status: existingStatus} = await Permissions.getAsync(
+//     Permissions.NOTIFICATIONS
+//   )
+//   let finalStatus = existingStatus
+//   if (existingStatus !== 'granted') {
+//     const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
+//     finalStatus = status
+//   }
 
-  if (finalStatus !== 'granted') {
-    return
-  }
+//   if (finalStatus !== 'granted') {
+//     return
+//   }
 
-  let token = await Notifications.getExpoPushTokenAsync()
-  // console.log(token)
-  // let uid = userStore.userData.uid
-  userStore.userData.token = token
-  // if (uid) {
-  //   db.ref(`/farms/${uid}`).update({token})
-  // }
-}
+//   let token = await Notifications.getExpoPushTokenAsync()
+
+//   userStore.userData.token = token
+// }
 
 export default class App extends React.Component {
   componentWillMount() {
     registerForPushNotificationsAsync()
-
   }
   
   render() {
