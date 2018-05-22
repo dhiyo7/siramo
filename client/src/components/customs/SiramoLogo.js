@@ -15,13 +15,12 @@ class SiramoLogo extends Component {
     //   source={backgroundImage}
     //   style={{width: '100%', height: '100%'}}
     // >
-        <View style={styles.mainContainer}>
-        
-              <Image
-                style={styles.imageContainer}
-                source={background}
-              />
-        </View>
+      <View style={styles.mainContainer}>
+        <Image
+          style={styles.imageContainer}
+          source={background}
+        />
+      </View>
       // </ImageBackground>
     );
   }
@@ -30,6 +29,7 @@ class SiramoLogo extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    marginLeft: 20,
     justifyContent: 'center',
     padding: 16,
     paddingLeft: 0,

@@ -25,7 +25,7 @@ const SecondRoute = () => <Graph sensorData={FarmStore.farmData.historyTemperatu
 const ThirdRoute = () => <Graph sensorData={FarmStore.farmData.historyWaterLevel} waterLevelDetail={'level'} color="red" navigation={FarmStore.navigation}/>
 const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRatio} waterRatioDetail={'water ratio'} color="green" navigation={FarmStore.navigation}/>
 
-class History extends Component {
+@observer class History extends Component {
 
   constructor(props) {
     super(props);

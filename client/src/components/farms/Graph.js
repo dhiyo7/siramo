@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, StyleSheet, TouchableHighlight, Image } from 'react-native'
+import { View, ScrollView, Text, StyleSheet, TouchableHighlight, Image, ActivityIndicator } from 'react-native'
 import PureChart from 'react-native-pure-chart';
 import { inject, observer } from 'mobx-react'
 import FarmStore from '../../store/FarmStore'
@@ -12,12 +12,18 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
 
   render() {
     let sensorArr = []
+    let historyLoading = FarmStore.farmData.historyLoading
+    let sensorData = this.props.sensorData
+    console.log(historyLoading)
+    console.log(sensorData.length)
+    console.log(sensorData)
     this.props.sensorData.forEach(element => {
       sensorArr.push({
         x: UserStore.dateFormat(element.x),
         y: element.y
       })
     })
+    console.log(sensorArr)
     if (this.props.humidityDetail !== undefined) {
       return (
         <ScrollView style={styles.mainContainer}>
@@ -31,7 +37,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
                 Humidity is the amount of water vapor present in the air. Water vapor is the gaseous state of water and is invisible to the human eye. Humidity indicates the likelihood of precipitation, dew, or fog.
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -56,7 +62,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
                 Moisture is the presence of a liquid, especially water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in various commercial products. 
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -81,7 +87,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
                 Temperature, measure of hotness or coldness expressed in terms of any of several arbitrary scales and indicating the direction in which heat energy will spontaneously flow—i.e., from a hotter body (one at a higher temperature) to a colder body (one at a lower temperature).  
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
@@ -106,7 +112,7 @@ import { Card, ListItem, Button, Divider } from 'react-native-elements'
                 A water level is a device used for matching elevations of locations that are too far apart for a spirit level to span. The simplest water level is a section of clear tubing, partially filled with water.
               </Text>
               <Text style={styles.head}>History</Text>
-              <PureChart style={styles.chart} data={sensorArr} type='line'  width={'100%'}/>
+              {(!historyLoading) ? <PureChart style={styles.chart} data={sensorArr} type='line' width={'100%'}/>:<ActivityIndicator size="large" color="#33a815"/>}
               <Button
                 backgroundColor='#4CAF50'
                 buttonStyle={{borderRadius: 0, marginTop: 8, marginRight: 0, marginBottom: 8}}
