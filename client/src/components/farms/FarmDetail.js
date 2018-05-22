@@ -46,7 +46,7 @@ import ButtonOnOff from '../farms/ButtonOnOff'
             color='rgba(0, 167, 5, 1)' 
           />
           <CircleProg 
-            sensor={water_level}
+            sensor={(water_level/35)*100}
             textTitle={'Water Level'}
             maxValue={'%'}
             color='rgb(41, 177, 237)' 

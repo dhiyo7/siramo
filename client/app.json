@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "Siramo",
+    "icon": "./src/assets/logo/appLogo.png",
+    "version": "1.0.0",
+    "slug": "Siramo",
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "com.ragrani.siramo"
+    },
+    "android": {
+      "package": "com.ragrani.siramo"
+    }
   }
 }
