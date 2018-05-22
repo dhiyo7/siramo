@@ -30,11 +30,11 @@ class SiramoLogo extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
     padding: 16,
     paddingLeft: 0,
-    height: 40
+    height: 40,
+    marginLeft: 20
   },
   imageContainer: {
     width: 160,
