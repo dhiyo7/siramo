@@ -7,6 +7,7 @@ import FarmStore from '../store/FarmStore'
 
 class UserStore {
   @observable userData = {
+    token: '',
     uid: '',
     email: '',
     loading: false
@@ -15,8 +16,10 @@ class UserStore {
   @observable isLogin = false
 
   assignUserData = (data) => {
-      this.userData.uid = data.uid
-      this.userData.email = data.email
+    this.userData.uid = data.uid
+    this.userData.email = data.email
+    let token = this.userData.token
+    db.ref(`/farms/${data.uid}`).update({token})
   }
 
   firebaseLogin = (data, navigation) => {
@@ -26,8 +29,11 @@ class UserStore {
         .then( async(response) => {
           // console.log(response.user.uid)
           if (response.user) {
-            this.userData.uid = response.user.uid
-            this.userData.email = response.user.email
+            // this.userData.uid = response.user.uid
+            // this.userData.email = response.user.email
+            let uid = response.user.uid
+            let email = response.user.email
+            this.assignUserData({uid, email})
             this.isLogin = true
             this.userData.loading = false
             await FarmStore.getFarmData()
@@ -52,8 +58,9 @@ class UserStore {
       User.createUserWithEmailAndPassword(data.email, data.password)
         .then(response => {
           if (response.user) {
-            this.userData.uid = response.user.uid
-            this.userData.email = response.user.email
+            let uid = response.user.uid
+            let email = response.user.email
+            this.assignUserData({uid, email})
             this.isLogin = true
             this.userData.loading = false
             // FarmStore.getFarmData()
