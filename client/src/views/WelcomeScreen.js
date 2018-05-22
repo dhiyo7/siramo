@@ -3,47 +3,74 @@ import { View, StyleSheet, Image, AsyncStorage, ImageBackground} from 'react-nat
 import UserStore from '../store/UserStore'
 import FarmStore from '../store/FarmStore'
 import { User } from '../store/firebase'
-import { observer } from 'mobx-react'
+import { Asset, AppLoading } from 'expo';
+
 
 const background = require('../assets/logo/Drawing1-ModelEdit.png')
 const imageBackground = require('../assets/logo/3147-compressor.jpg')
 
 
 class WelcomeScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  };
+  constructor() {
+    super()
+    this.state = {
+      isReady: false
+    }
   }
 
   static navigationOptions = {
     header: null
   }
-  componentDidMount = async() => {
-    setTimeout( async () => {
-      let uid = await AsyncStorage.getItem('userId')
-      let email = await AsyncStorage.getItem('email')
-      await UserStore.assignUserData({
-        uid,
-        email
-      })
-      await FarmStore.getFarmData()
-      uid == null?
-      this.props.navigation.push('Login'):this.props.navigation.push('Home')
-    }, 2000)
+
+
+  _cacheResourcesAsync = async() => {
+    let uid = await AsyncStorage.getItem('userId')
+    let email = await AsyncStorage.getItem('email')
+    await UserStore.assignUserData({
+      uid,
+      email
+    })
+    await FarmStore.getFarmData()
+    uid == null?
+    this.props.navigation.push('Login'):this.props.navigation.push('Home')
   }
+
+  // componentDidMount = async() => {
+      
+  //   // setTimeout( async () => {
+  //   //   let uid = await AsyncStorage.getItem('userId')
+  //   //   let email = await AsyncStorage.getItem('email')
+  //   //   await UserStore.assignUserData({
+  //   //     uid,
+  //   //     email
+  //   //   })
+  //   //   await FarmStore.getFarmData()
+  //   //   uid == null?
+  //   //   this.props.navigation.push('Login'):this.props.navigation.push('Home')
+  //   // }, 2000)
+  // }
   render() {
+    if(!this.state.isReady){
+      return (
+        <AppLoading
+          startAsync={this._cacheResourcesAsync}
+          onFinish={() => this.setState({ isReady: true })}
+          onError={console.warn}
+        />
+      );
+    }
     return (
     //   <ImageBackground 
     //   source={imageBackground}
     //   style={{width: '100%', height: '100%'}}
     // >
         <View style={styles.mainContainer}>
-            <View style={styles.container}>
+            {/* <View style={styles.container}>
             <Image
               style={styles.imageContainer}
               source={background}
             />
-            </View>
+            </View> */}
         </View>
       // </ImageBackground>
     );

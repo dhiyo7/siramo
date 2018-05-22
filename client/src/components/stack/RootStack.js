@@ -22,7 +22,6 @@ export default RootStack = createStackNavigator({
     screen: HomeStack,
   }
 },{
-  initialRouteName: 'Welcome',
   navigationOptions: ({ navigation }) => ({
     headerTitle: <SiramoLogo />,
     headerStyle: {
