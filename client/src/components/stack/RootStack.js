@@ -28,6 +28,6 @@ export default RootStack = createStackNavigator({
       // backgroundColor: '#EFEBE9'
       paddingLeft: 10
     },
-    headerLeft: <Ionicons name="md-reorder" size={32} onPress={ () => navigation.navigate('Home') } />
+    headerLeft: <Ionicons name="md-reorder" size={32} onPress={ () => navigation.navigate('DrawerToggle') } />
   })
 })
