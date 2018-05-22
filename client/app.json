@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Siramo",
-    "icon": "./src/assets/logo/appLogo.png",
+    "icon": "./src/assets/logo/Drawing1-ModelEdit.png",
     "version": "1.0.0",
     "slug": "Siramo",
     "sdkVersion": "27.0.0",

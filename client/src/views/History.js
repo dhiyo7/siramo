@@ -41,7 +41,9 @@ const FourthRoute = () => <Graph  sensorData={FarmStore.farmData.historyWaterRat
   }
   
   componentDidMount = async () => {
-    FarmStore.getHistory(await AsyncStorage.getItem('userId'))
+    if(FarmStore.farmData.historyHumidity.length == 0){
+      FarmStore.getHistory(await AsyncStorage.getItem('userId'))
+    }
     FarmStore.navigation = this.props.navigation
   }
 
