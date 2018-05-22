@@ -158,8 +158,8 @@ class FarmStore {
           '',
           'Your plant is still have enough water',
           [
-            {text: 'Watering anyway', onPress: async () => {
-              await this.updateSiram(userId, farmUpdate)
+            {text: 'OK', onPress: async () => {
+              // await this.updateSiram(userId, farmUpdate)
               resolve()
             }}
           ]

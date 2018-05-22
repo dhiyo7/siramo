@@ -4,7 +4,7 @@ const cron = require('node-cron')
 db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').once('value', snapshot => {
   let schedule = snapshot.val().cronSchedule
   let task = cron.schedule(schedule, function() {
-    if(snapshot.val().automaticMode) {
+    if(snapshot.val().automaticMode && snapshot.val().water_ratio <= snapshot.val().minWaterRatio) {
       db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').update({
         ready_siram: 1
       })
