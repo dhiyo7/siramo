@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { View, StyleSheet, Image, AsyncStorage, ImageBackground} from 'react-native'
 import UserStore from '../store/UserStore'
 import FarmStore from '../store/FarmStore'
 import { User } from '../store/firebase'
-import { Asset, AppLoading } from 'expo';
-
-
+import { Asset, AppLoading } from 'expo'
+import registerForPushNotificationsAsync from '../store/RegisterDevicesToken'
 const background = require('../assets/logo/Drawing1-ModelEdit.png')
 const imageBackground = require('../assets/logo/3147-compressor.jpg')
 
@@ -24,6 +23,7 @@ class WelcomeScreen extends Component {
 
 
   _cacheResourcesAsync = async() => {
+    registerForPushNotificationsAsync()
     let uid = await AsyncStorage.getItem('userId')
     let email = await AsyncStorage.getItem('email')
     await UserStore.assignUserData({

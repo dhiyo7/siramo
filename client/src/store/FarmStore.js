@@ -121,6 +121,7 @@ class FarmStore {
         this.FarmDetail.minWaterRatio = snapshot.val().minWaterRatio
         this.FarmDetail.maxWaterRatio = snapshot.val().maxWaterRatio
         this.FarmDetail.cronSchedule = snapshot.val().cronSchedule
+        Alert.alert('Watering Schedule', 'Successfully changed')
         resolve()
         reject()
       })

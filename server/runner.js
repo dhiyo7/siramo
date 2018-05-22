@@ -13,8 +13,8 @@ db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').once('value', snapshot => {
           body: 'Your plant has been watered now'
         }, {
           Accept: 'application/json',
-          [Accept-Encoding]: 'gzip, deflate',
-          [Content-Type]: ' application/json/x-www-form-urlencoded'
+          ['Accept-Encoding']: 'gzip, deflate',
+          ['Content-Type']: ' application/json/x-www-form-urlencoded'
         })
       } catch (error) {
         console.log(error)
@@ -37,7 +37,7 @@ db.ref('/farms/Hmyc0z9azhQbKE4mcv0NNZwDfPB3').once('value', snapshot => {
           })
           try {
             await axios.post('https://expo.io/--/api/v2/push/send', {
-            to: 'ExponentPushToken[vCQT7pCk00R2eSOQRxBxX_]',
+            to: snapshot.val().token,
             title: 'Automated Watering ON!',
             body: 'Your plant has been watered now'
           }, {

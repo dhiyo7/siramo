@@ -1,38 +1,72 @@
 import React from 'react'
 import { Provider } from 'mobx-react'
-import { AsyncStorage } from 'react-native'
-import { NavigationAction } from 'react-navigation'
+import { StyleSheet, Text, View, Alert } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 import RootStack from './src/components/stack/RootStack'
 import UserStore from './src/store/UserStore'
 import FarmStore from './src/store/FarmStore'
-import { Asset, AppLoading } from 'expo';
+import { db } from './src/store/firebase'
+<<<<<<< HEAD
+import registerForPushNotificationsAsync from './src/store/RegisterDevicesToken'
+// import { Permissions, Notifications } from 'expo'
+import userStore from './src/store/UserStore'
+
+// async function registerForPushNotificationsAsync() {
+//   const {status: existingStatus} = await Permissions.getAsync(
+//     Permissions.NOTIFICATIONS
+//   )
+//   let finalStatus = existingStatus
+//   if (existingStatus !== 'granted') {
+//     const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
+//     finalStatus = status
+//   }
+
+//   if (finalStatus !== 'granted') {
+//     return
+//   }
+
+//   let token = await Notifications.getExpoPushTokenAsync()
+
+//   userStore.userData.token = token
+// }
+=======
+import { Permissions, Notifications } from 'expo'
+import userStore from './src/store/UserStore';
+
+async function registerForPushNotificationsAsync() {
+  const {status: existingStatus} = await Permissions.getAsync(
+    Permissions.NOTIFICATIONS
+  )
+  let finalStatus = existingStatus
+  if (existingStatus !== 'granted') {
+    const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS)
+    finalStatus = status
+  }
+
+  if (finalStatus !== 'granted') {
+    return
+  }
+
+  let token = await Notifications.getExpoPushTokenAsync()
+  // console.log(token)
+  // let uid = userStore.userData.uid
+  userStore.userData.token = token
+  // if (uid) {
+  //   db.ref(`/farms/${uid}`).update({token})
+  // }
+}
+>>>>>>> bf816fc197b49f328f8b55da96e983f4cd6a27c5
 
 export default class App extends React.Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     isReady: false
-  //   }
-  // }
-
-  // _cacheResourcesAsync = async() => {
-  //   console.log('kesainiiii', await AsyncStorage.getItem('userId'))
-  //   await AsyncStorage.getItem('userId') == null?
-  //   console.log("ke login", this.props): console.log("kenhome")
-  // }
-
+  componentWillMount() {
+    registerForPushNotificationsAsync()
+<<<<<<< HEAD
+=======
+    // this.listener = Notification.addListener(this.listen)
+>>>>>>> bf816fc197b49f328f8b55da96e983f4cd6a27c5
+  }
+  
   render() {
-
-    // if(!this.state.isReady){
-    //   return (
-    //     <AppLoading
-    //       startAsync={this._cacheResourcesAsync}
-    //       onFinish={() => this.setState({ isReady: true })}
-    //       onError={console.warn}
-    //     />
-    //   );
-    // }
     return (
       <Provider UserStore={UserStore} FarmStore={FarmStore}>
         <RootStack/>
